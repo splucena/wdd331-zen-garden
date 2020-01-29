@@ -1,0 +1,2 @@
+- Testing git connectivity
+- Testing pushing to remote branch splucena
