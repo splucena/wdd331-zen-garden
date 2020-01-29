@@ -1,3 +1,4 @@
 - Testing git and slack integration.
 - Resending
 - Resending the second time
+- Activated notification for commits in slack
