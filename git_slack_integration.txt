@@ -2,3 +2,4 @@
 - Resending
 - Resending the second time
 - Activated notification for commits in slack
+- Activated notification for all commits
