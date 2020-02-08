@@ -2,7 +2,7 @@
 		color swatch
 	********************/
 //convert rgba color to hex color
-const rbgToHex = function(elem) {
+const rbgToHex = function (elem) {
   if (elem.currentStyle) var bg = elem.currentStyle['background-color'];
   else if (window.getComputedStyle)
     var bg = document.defaultView
@@ -11,6 +11,7 @@ const rbgToHex = function(elem) {
   if (bg.search('rgb') == -1) return bg;
   else {
     bg = bg.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+
     function hex(x) {
       return ('0' + parseInt(x).toString(16)).slice(-2);
     }
@@ -20,9 +21,9 @@ const rbgToHex = function(elem) {
 
 //set a label for each color swatch
 const colorBoxes = document.querySelectorAll('.cd-color-swatch');
-colorBoxes.forEach(function(element) {
+colorBoxes.forEach(function (element) {
   let newElement = document.createElement('b');
-  newElement.innerText = rbgToHex(element);
+  //newElement.innerText = rbgToHex(element);
   element.parentNode.appendChild(newElement);
 });
 
@@ -37,7 +38,7 @@ containerHtml.classList.add('cd-box');
 buttonsWrapper.parentNode.appendChild(containerHtml);
 buttonsHtmlText = buttonsHtml.split('</button>');
 
-buttonsHtmlText.map(function(value) {
+buttonsHtmlText.map(function (value) {
   if (value.indexOf('button') >= 0) {
     const splitText = value.split('class="'),
       block1 = splitText[0] + 'class="';
@@ -65,7 +66,7 @@ const heading = document.querySelector('#typography h1'),
 
 setTypography(heading, headingDescriptionText);
 setTypography(body, bodyDescriptionText);
-window.addEventListener('resize', function() {
+window.addEventListener('resize', function () {
   setTypography(heading, headingDescriptionText);
   setTypography(body, bodyDescriptionText);
 });
@@ -74,9 +75,9 @@ function setTypography(element, textElement) {
   const cs = document.defaultView.getComputedStyle(element, null);
   let fontSize = Math.round(cs.fontSize.replace('px', '')) + 'px',
     fontFamily = cs.fontFamily
-      .split(',')[0]
-      .replace(/\'/g, '')
-      .replace(/\"/g, ''),
+    .split(',')[0]
+    .replace(/\'/g, '')
+    .replace(/\"/g, ''),
     fontWeight = cs.fontWeight;
   textElement.innerText = fontWeight + ' ' + fontFamily + ' ' + fontSize;
 }
@@ -88,7 +89,7 @@ const contentSections = document.querySelectorAll('main section');
 //build navigation links
 const mainNavElement = document.querySelector('.cd-main-nav');
 mainNavElement.innerHTML = '';
-contentSections.forEach(function(section) {
+contentSections.forEach(function (section) {
   let item = document.createElement('li');
   item.innerHTML = `<a href="#${section.id}">${
     section.children[0].innerHTML
@@ -97,19 +98,19 @@ contentSections.forEach(function(section) {
 });
 
 // open navigation on mobile
-document.querySelector('.cd-nav-trigger').addEventListener('click', function() {
+document.querySelector('.cd-nav-trigger').addEventListener('click', function () {
   document.querySelector('header').classList.toggle('nav-is-visible');
 });
 // smooth scroll to the selected section
-document.querySelectorAll('.cd-main-nav a[href^="#"]').forEach(function(link) {
-  link.addEventListener('click', function(event) {
+document.querySelectorAll('.cd-main-nav a[href^="#"]').forEach(function (link) {
+  link.addEventListener('click', function (event) {
     event.preventDefault();
     const header = document.querySelector('header');
     header.classList.remove('nav-is-visible');
     const target = document.querySelector(this.hash),
       topMargin = document.defaultView
-        .getComputedStyle(target, null)
-        .marginTop.replace('px', ''),
+      .getComputedStyle(target, null)
+      .marginTop.replace('px', ''),
       headerHeight = header.scrollHeight;
     scrollTo(
       document.body,
@@ -124,7 +125,7 @@ function scrollTo(element, to, duration) {
   var difference = to - element.scrollTop;
   var perTick = (difference / duration) * 10;
 
-  setTimeout(function() {
+  setTimeout(function () {
     element.scrollTop = element.scrollTop + perTick;
     if (element.scrollTop === to) return;
     scrollTo(element, to, duration - 10);
@@ -132,12 +133,12 @@ function scrollTo(element, to, duration) {
 }
 
 //update selected navigation element
-window.addEventListener('scroll', function(event) {
+window.addEventListener('scroll', function (event) {
   updateNavigation(event.target);
 });
 
 function updateNavigation() {
-  contentSections.forEach(function(target) {
+  contentSections.forEach(function (target) {
     const actual = target;
     const cs = document.defaultView.getComputedStyle(actual, null);
     const actualHeight = actual.height,
@@ -149,8 +150,8 @@ function updateNavigation() {
     if (
       parseInt(
         actual.offsetTop -
-          document.querySelector('.cd-main-nav').height -
-          topMargin
+        document.querySelector('.cd-main-nav').height -
+        topMargin
       ) <= window.scrollY &&
       parseInt(actual.offsetTop + actualHeight - topMargin) > window.scrollY + 1
     ) {
