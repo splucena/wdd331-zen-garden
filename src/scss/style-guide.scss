@@ -22,10 +22,8 @@ $color-5: #ffffff; // white
 $alert: $color-3; // red
 
 // fonts
-$primary-font: 'Merriweather',
-serif;
-$secondary-font: 'Open Sans',
-sans-serif;
+$primary-font: $font-family-oswald;
+$secondary-font: $font-family-cardo;
 
 
 /* -------------------------------- 
