@@ -1,6 +1,7 @@
 @import 'partials/reset';
 @import 'partials/button';
 @import 'partials/navigation';
+@import 'partials/text';
 @import 'partials/prefix-mixins';
 @import 'partials/layout'; // responsive grid and media queries
 
@@ -14,13 +15,17 @@ $color-5: #ffffff; // white
 
 
 // additional colors
-
+.primary-brand-color {
+  color: $primary-brand-color;
+}
 
 $alert: $color-3; // red
 
 // fonts
-$primary-font: 'Merriweather', serif;
-$secondary-font: 'Open Sans', sans-serif;
+$primary-font: 'Merriweather',
+serif;
+$secondary-font: 'Open Sans',
+sans-serif;
 
 
 /* -------------------------------- 
@@ -47,12 +52,12 @@ xPatterns
   background: $color-5;
   box-shadow: 0 1px 1px rgba(#000, 0.05);
   padding: 6px;
-    
-    figure{
-        img {
-            max-width: 20%;
-        }
+
+  figure {
+    img {
+      max-width: 20%;
     }
+  }
 }
 
 /* -------------------------------- 
@@ -147,7 +152,7 @@ xPage title
 
 -------------------------------- */
 
-main > h1 {
+main>h1 {
   color: $color-2;
 
   @include MQ(L) {
@@ -194,7 +199,7 @@ h2 {
   }
 }
 
-section > h2::before {
+section>h2::before {
   /* number before each section title */
   color: darken($color-4, 15%);
 }
@@ -217,6 +222,3 @@ p {
 
 @import 'partials/basic-style';
 //Wireframes
-
-
-

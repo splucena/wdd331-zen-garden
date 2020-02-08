@@ -137,8 +137,8 @@ var rbgToHex = function rbgToHex(elem) {
 
 var colorBoxes = document.querySelectorAll('.cd-color-swatch');
 colorBoxes.forEach(function (element) {
-  var newElement = document.createElement('b');
-  newElement.innerText = rbgToHex(element);
+  var newElement = document.createElement('b'); //newElement.innerText = rbgToHex(element);
+
   element.parentNode.appendChild(newElement);
 });
 /*******************
@@ -276,7 +276,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55865" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55909" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
