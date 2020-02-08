@@ -1,4 +1,4 @@
-@import 'partials/button';
+@import 'partials/variables';
 
 @mixin gen-ul-style {
   list-style-type: none;
@@ -20,18 +20,18 @@
     
 ul {
     @include gen-ul-style;
-    border: 1px solid $normal;
+    border: 1px solid $secondary-base-color;
     }
 li a {@include gen-a-style;
      color: black;
     } 
     
    a.active {
-  background-color: #000;
+  background-color: $primary-base-color;
   color: white;
     }
     a:hover:not(.active) {
-  background-color: $normal;
+  background-color: $secondary-base-color;
   color: white;
     }
     
@@ -44,18 +44,18 @@ li a {@include gen-a-style;
 .cd-secondary-nav {
     ul{
         @include gen-ul-style;
-         background: darken($success, 30%);
+         background: darken($primary-brand-color, 30%);
         li{
             a{
                 @include gen-a-style;
                 color: white;
             }
             a:active{
-                background-color: $outline;
-                color: black;
+                background-color: $light-color;
+                color: $primary-base-color;
             }
             a:hover{
-                background-color: #000;
+                background-color:$primary-base-color;
   color: white;
             }
         }
@@ -70,15 +70,15 @@ li a {@include gen-a-style;
         li{
             a{
                 @include gen-a-style;
-                color: $success;
+                color: $primary-brand-color;
                 
             }
                 a:active{
-                    color: $normal;
+                    color: $secondary-base-color;
                 }
              a:hover{
                
-                 color: black;}
+                 color: $primary-base-color;}
         }
     }
     
