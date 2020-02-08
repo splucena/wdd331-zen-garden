@@ -190,7 +190,7 @@ h1 {
 
 h2 {
   font-weight: bold;
-  text-transform: uppercase;
+  //text-transform: uppercase;
   margin: 1em 0;
 
   @include MQ(S) {

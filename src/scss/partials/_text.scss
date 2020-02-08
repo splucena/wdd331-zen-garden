@@ -1,4 +1,4 @@
-$sizes: 12px,
+$font-sizes: 12px,
 14px,
 16px,
 18px,
@@ -9,8 +9,32 @@ $sizes: 12px,
 28px,
 30px;
 
-@each $size in $sizes {
-    .font-size-#{$size} {
-        font-size: $size;
+@each $font-size in $font-sizes {
+    .font-size-#{$font-size} {
+        font-size: $font-size;
     }
+}
+
+$header-sizes: (h1: (2em, 0.67em), h2: (1.5em, 0.83em), h3: (1.17em, 1em), h4: (1.33em, 1.33m), h5: (.83em, 1.67em), h6: (.67em, 2.33em));
+
+@each $key,
+$value in $header-sizes {
+    .header-#{$key} {
+        display: block;
+        font-size: nth($value, 1);
+        margin-top: nth($value, 2);
+        margin-bottom: nth($value, 2);
+        margin-left: 0;
+        margin-right: 0;
+        font-weight: bold;
+        color: $primary-base-color;
+        font-family: $font-family-cardo;
+    }
+}
+
+.li {
+    list-style-type: square;
+    color: $primary-base-color;
+    margin-left: 20px;
+    padding: 4px;
 }
