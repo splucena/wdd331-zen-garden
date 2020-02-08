@@ -1,6 +1,6 @@
 @import 'partials/reset';
 @import 'partials/button';
-// Sum
+@import 'partials/navigation';
 @import 'partials/text';
 @import 'partials/prefix-mixins';
 @import 'partials/layout'; // responsive grid and media queries
@@ -26,6 +26,7 @@ $primary-font: 'Merriweather',
 serif;
 $secondary-font: 'Open Sans',
 sans-serif;
+
 
 /* -------------------------------- 
 
