@@ -1,6 +1,6 @@
 node_modules
-build
-.cache
+build/*
+.cache/*
 *.css
 *.txt
 .DS_Store
