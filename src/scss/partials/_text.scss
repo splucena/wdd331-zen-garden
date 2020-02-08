@@ -1,1 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Cardo|Oswald&display=swap');
+$sizes: 12px,
+14px,
+16px,
+18px,
+20px,
+22px,
+24px,
+26px,
+28px,
+30px;
+
+@each $size in $sizes {
+    .font-size-#{$size} {
+        font-size: $size;
+    }
+}
