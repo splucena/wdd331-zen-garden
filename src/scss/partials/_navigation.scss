@@ -1,0 +1,85 @@
+@import 'partials/button';
+
+@mixin gen-ul-style {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+}
+
+@mixin gen-a-style {
+ display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+    
+    
+    // Primary Nav
+.cd-primary-nav 
+{
+    
+ul {
+    @include gen-ul-style;
+    border: 1px solid $normal;
+    }
+li a {@include gen-a-style;
+     color: black;
+    } 
+    
+   a.active {
+  background-color: #000;
+  color: white;
+    }
+    a:hover:not(.active) {
+  background-color: $normal;
+  color: white;
+    }
+    
+}
+
+
+// Seconadry Nav
+
+
+.cd-secondary-nav {
+    ul{
+        @include gen-ul-style;
+         background: darken($success, 30%);
+        li{
+            a{
+                @include gen-a-style;
+                color: white;
+            }
+            a:active{
+                background-color: $outline;
+                color: black;
+            }
+            a:hover{
+                background-color: #000;
+  color: white;
+            }
+        }
+    }
+}
+
+// Other Nav
+
+.otherlinks {
+    ul{
+        @include gen-ul-style;
+        li{
+            a{
+                @include gen-a-style;
+                color: $success;
+                
+            }
+                a:active{
+                    color: $normal;
+                }
+             a:hover{
+               
+                 color: black;}
+        }
+    }
+    
+}

@@ -79,6 +79,94 @@ table {
   /* CSS class name color */
   color: #2B7A78; }
 
+.btn {
+  border: none;
+  box-shadow: none;
+  border-radius: 0.25em;
+  font-size: 1.4rem;
+  font-family: "Open Sans", sans-serif;
+  color: #DEF2f1;
+  padding: 0.6em 2.2em;
+  cursor: pointer;
+  background: #2B7A78; }
+  .btn:focus {
+    outline: none; }
+  .no-touch .btn:hover {
+    background: #328d8b; }
+  .btn.btn-success {
+    background: #3AAFA9; }
+    .no-touch .btn.btn-success:hover {
+      background: #42c0ba; }
+  .btn.btn-alert {
+    background: #e87a75; }
+    .no-touch .btn.btn-alert:hover {
+      background: #ec8f8b; }
+  .btn.btn-outline {
+    color: #2B7A78;
+    background: transparent;
+    box-shadow: inset 0 0 0 1px #DEF2f1; }
+    .no-touch .btn.btn-outline:hover {
+      color: #2B7A78;
+      background: #DEF2f1; }
+
+.cd-buttons .cd-box:nth-of-type(2) span {
+  /* CSS class name color */
+  color: #2B7A78; }
+
+.cd-primary-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  border: 1px solid #2B7A78; }
+
+.cd-primary-nav li a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: black; }
+
+.cd-primary-nav a.active {
+  background-color: #000;
+  color: white; }
+
+.cd-primary-nav a:hover:not(.active) {
+  background-color: #2B7A78;
+  color: white; }
+
+.cd-secondary-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background: #143c3a; }
+  .cd-secondary-nav ul li a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: white; }
+  .cd-secondary-nav ul li a:active {
+    background-color: #DEF2f1;
+    color: black; }
+  .cd-secondary-nav ul li a:hover {
+    background-color: #000;
+    color: white; }
+
+.otherlinks ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px; }
+  .otherlinks ul li a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #3AAFA9; }
+  .otherlinks ul li a:active {
+    color: #2B7A78; }
+  .otherlinks ul li a:hover {
+    color: black; }
+
 /* -------------------------------- 
 
 xBackground 

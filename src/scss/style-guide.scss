@@ -1,5 +1,6 @@
 @import 'partials/reset';
 @import 'partials/button';
+@import 'partials/navigation';
 @import 'partials/prefix-mixins';
 @import 'partials/layout'; // responsive grid and media queries
 
@@ -20,6 +21,7 @@ $alert: $color-3; // red
 // fonts
 $primary-font: 'Merriweather', serif;
 $secondary-font: 'Open Sans', sans-serif;
+
 
 /* -------------------------------- 
 
