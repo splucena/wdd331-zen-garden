@@ -1,20 +1,28 @@
 // breakpoints
-   
-$S:     768px;   
-$M:     1024px;     
-$L:     1600px;   
+
+$S: 768px;
+$M: 1024px;
+$L: 1600px;
 
 // media queries
 
 @mixin MQ($canvas) {
-  @if $canvas == S {
-   @media only screen and (min-width: $S) { @content; } 
+  @if $canvas==S {
+    @media only screen and (min-width: $S) {
+      @content;
+    }
   }
-  @else if $canvas == M {
-   @media only screen and (min-width: $M) { @content; } 
+
+  @else if $canvas==M {
+    @media only screen and (min-width: $M) {
+      @content;
+    }
   }
-  @else if $canvas == L {
-   @media only screen and (min-width: $L) { @content; } 
+
+  @else if $canvas==L {
+    @media only screen and (min-width: $L) {
+      @content;
+    }
   }
 }
 
@@ -25,3 +33,284 @@ $L:     1600px;
   float: $float-direction;
 }
 
+// splucena
+@import "text";
+
+@mixin for-phone-only {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+
+@mixin for-desktop-up {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}
+
+// | | | | | | | | | | | |
+@mixin create-cols($start, $end) {
+  .col-#{$start}-to-#{$end} {
+    grid-column: $start #{"/"} $end;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css?family=Cardo|Oswald&display=swap");
+
+// font-family
+$font-family-oswald: "Oswald",
+sans-serif;
+$font-family-cardo: "Cardo",
+serif;
+
+// colors
+/*$primary-base-color: #17252a;
+$secondary-base-color: #2b7a78;
+$primary-brand-color: #3aafa9;
+$secondary-brand-color: #def2f1;
+$light-color: #feffff;*/
+$primary-base-color: #24305E;
+$secondary-base-color: #374785;
+$primary-brand-color: #F76C6C;
+$secondary-brand-color: #A8D0E6;
+$light-color: #F8E9A1;
+
+// rgba
+$primary-base-color-bg-dark: rgba(36, 48, 94, 1);
+$primary-base-color-bg-light: rgba(36, 48, 94, 1);
+
+//$bg-color: (green red);
+/*@for $x from 1 through 13 {
+  @for $y from 1 through 13 {
+    @if $y>=$x {
+      @include create-cols($x, $y);
+    }
+  }
+}
+
+.container {
+  display: grid;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.bg-color-green {
+  background-color: green;
+}
+
+.bg-color-red {
+  background-color: red;
+}
+
+.bg-color-blue {
+  background-color: blue;
+}*/
+
+// main container
+// class: page-wrapper
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-oswald;
+}
+
+h3 {
+  color: $secondary-brand-color;
+  text-transform: uppercase;
+}
+
+.page-wrapper {
+  display: grid;
+  font-family: $font-family-cardo;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-column-gap: 0.25em;
+  grid-row-gap: 0.2em;
+  width: 50%;
+  margin: 0 auto;
+  // start: section
+  // class: intro
+  // id: zen-intro
+  // header
+  // div
+  // class: summary
+  // id: zen-summary
+  // div
+  // class: preamble
+  // id: zen-preamble
+  // end: section
+
+  a {
+    text-decoration: none;
+  }
+
+  ul {
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  li {
+    text-decoration: none;
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .intro {
+    color: $light-color;
+    display: grid;
+    grid-column: 5 / 13;
+    grid-row: 1 / 2;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 7em 8em 18em;
+    grid-column-gap: 0.25em;
+    grid-row-gap: 0.25em;
+    z-index: 2;
+    top: 0;
+
+    header {
+      background-color: $primary-base-color;
+      color: $primary-brand-color;
+      grid-column: 1 / 13;
+      grid-row: 1 / 2;
+      padding: 1em;
+
+      h1 {
+        text-transform: uppercase;
+      }
+
+      h2 {
+        color: $secondary-brand-color;
+      }
+    }
+
+    .summary {
+      background-color: $primary-base-color-bg-dark;
+      grid-column: 1 / 13;
+      grid-row: 2 / 3;
+      padding: 1em;
+    }
+
+    .preamble {
+      background-color: $primary-base-color-bg-light;
+      grid-column: 1 / 13;
+      grid-row: 3 / 4;
+      padding: 1em;
+    }
+  }
+
+  // aside
+  .sidebar {
+    background: url(../img/svg/leaf.svg);
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+    background-position-x: center;
+    background-position-y: 8px;
+    /*background-color: dodgerblue;*/
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 7em 1fr;
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+    grid-column-gap: 0.25em;
+    grid-row-gap: 0.25em;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    overflow-x: hidden;
+
+    a:visited {
+      color: $primary-base-color;
+    }
+
+    h3 {
+      color: $primary-base-color;
+    }
+
+    .wrapper {
+      background-color: $primary-brand-color;
+      color: $primary-base-color;
+      grid-row: 2 / 3;
+      padding: 1em;
+    }
+  }
+
+  // main
+  .main {
+    background: $light-color url(../img/svg/tree-oak.svg) no-repeat center;
+    background-color: #FFF;
+    color: $light-color;
+    display: grid;
+    grid-column: 5 / 13;
+    grid-row: 1 / 3;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 7em 8em 18em auto auto auto auto 3em; // first 3 rows should equal .intro grid-template-rows
+    grid-column-gap: 0.25em;
+    grid-row-gap: 0.25em;
+    z-index: 1;
+
+    .explanation {
+      background-color: $primary-base-color-bg-light;
+      grid-column: 1 / 13;
+      grid-row: 4 / 5;
+      padding: 1em;
+    }
+
+    .participation {
+      background-color: $primary-base-color-bg-light;
+      grid-column: 1 / 13;
+      grid-row: 5 / 6;
+      padding: 1em;
+    }
+
+    .benefits {
+      background-color: $primary-base-color-bg-light;
+      grid-column: 1 / 13;
+      grid-row: 6 / 7;
+      padding: 1em;
+    }
+
+    .requirements {
+      background-color: $primary-base-color-bg-light;
+      grid-column: 1 / 13;
+      grid-row: 7 / 8;
+      padding: 1em;
+    }
+
+    footer {
+      background-color: $primary-base-color-bg-light;
+      grid-column: 1 / 13;
+      grid-row: 8 / 9;
+      width: 100%;
+      margin: 0 auto;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      text-align: center;
+    }
+  }
+}
