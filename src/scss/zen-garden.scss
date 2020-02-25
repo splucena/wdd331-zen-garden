@@ -304,12 +304,13 @@ h3 {
 		.intro { 
 		order: -3;
 			header {
-			background: url(../assets/logo.svg);
+			
+				h1 ,h2 {position:  relative;
+				padding-left: 100px;}
+				background: url(../assets/logo.svg);
 			background-repeat: no-repeat;
         		background-size: 100px 100px;
 		
-				h1 ,h2 {position:  relative;
-				left: 100px;}
 		
 			
 			}
