@@ -119,7 +119,7 @@ h3 {
     grid-template-rows: repeat(3, auto);
     grid-column-gap: 0.25em;
     grid-row-gap: 0.25em;
-    
+
     width: 50%;
     margin: 0 auto;
     // start: section
@@ -172,10 +172,44 @@ h3 {
 
             h1 {
                 text-transform: uppercase;
+                animation-duration: 3s;
+                animation-name: slidein;
+            }
+
+            @keyframes slidein {
+                from {
+                    margin-left: 100%;
+                    width: 300px;
+                }
+
+                to {
+                    margin-left: 0%;
+                    width: 100%;
+                }
             }
 
             h2 {
                 color: $secondary-brand-color;
+                animation-duration: 9s;
+                animation-name: showup;
+            }
+
+            @keyframes showup {
+                0% {
+                    opacity: 0;
+                }
+
+                20% {
+                    opacity: 1;
+                }
+
+                80% {
+                    opacity: 1;
+                }
+
+                100% {
+                    opacity: 0;
+                }
             }
         }
 
@@ -229,10 +263,35 @@ h3 {
         }
 
         .wrapper {
-            background-color: $primary-brand-color;
+            /*background-color: $primary-brand-color;*/
             color: $primary-base-color;
             grid-row: 2 / 3;
-            padding: 1em;
+            /*padding: 1em;*/
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, auto);
+            grid-row-gap: .25em;
+
+            .design-selection {
+                border-top: .25em solid $primary-base-color;
+                background-color: $secondary-base-color;
+                grid-row: 1 / 2;
+                padding: 1em;
+            }
+
+            .design-archives {
+                border-top: .25em solid $primary-base-color;
+                background-color: $primary-brand-color;
+                grid-row: 2 / 3;
+                padding: 1em;
+            }
+
+            .zen-resources {
+                border-top: .25em solid $primary-base-color;
+                background-color: $secondary-brand-color;
+                grid-row: 3 / 4;
+                padding: 1em;
+            }
         }
     }
 
@@ -245,7 +304,8 @@ h3 {
         grid-column: 5 / 13;
         grid-row: 2 / 3;
         grid-template-columns: repeat(12, 1fr);
-        /*grid-template-rows: 7em 8em 18em auto auto auto auto 3em;*/ // first 3 rows should equal .intro grid-template-rows
+        /*grid-template-rows: 7em 8em 18em auto auto auto auto 3em;*/
+        // first 3 rows should equal .intro grid-template-rows
         grid-template-rows: repeat(5, auto);
         grid-column-gap: 0.25em;
         grid-row-gap: 0.25em;

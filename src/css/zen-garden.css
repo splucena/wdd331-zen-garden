@@ -97,9 +97,37 @@ h3 {
 }
 .page-wrapper .intro header h1 {
   text-transform: uppercase;
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300px;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 .page-wrapper .intro header h2 {
   color: #def2f1;
+  animation-duration: 9s;
+  animation-name: showup;
+}
+@keyframes showup {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 .page-wrapper .intro .summary {
   background-color: #17252a;
@@ -141,9 +169,31 @@ h3 {
   color: #17252a;
 }
 .page-wrapper .sidebar .wrapper {
-  background-color: #3aafa9;
+  /*background-color: $primary-brand-color;*/
   color: #17252a;
   grid-row: 2 / 3;
+  /*padding: 1em;*/
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-row-gap: .25em;
+}
+.page-wrapper .sidebar .wrapper .design-selection {
+  border-top: 0.25em solid #17252a;
+  background-color: #2b7a78;
+  grid-row: 1 / 2;
+  padding: 1em;
+}
+.page-wrapper .sidebar .wrapper .design-archives {
+  border-top: 0.25em solid #17252a;
+  background-color: #3aafa9;
+  grid-row: 2 / 3;
+  padding: 1em;
+}
+.page-wrapper .sidebar .wrapper .zen-resources {
+  border-top: 0.25em solid #17252a;
+  background-color: #def2f1;
+  grid-row: 3 / 4;
   padding: 1em;
 }
 .page-wrapper .main {
