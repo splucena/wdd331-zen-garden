@@ -244,3 +244,35 @@ h3 {
   padding-bottom: 1em;
   text-align: center;
 }
+
+@media all and (min-width: 200px) and (max-width: 767px) {
+  .page-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .page-wrapper .intro {
+    order: -3;
+  }
+  .page-wrapper .intro header {
+    background: url(../assets/logo.svg);
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+  }
+  .page-wrapper .intro header h1, .page-wrapper .intro header h2 {
+    position: relative;
+    padding-left: 100px;
+  }
+  .page-wrapper .main supporting {
+    order: 1;
+  }
+  .page-wrapper .sidebar {
+    display: flex;
+    position: relative;
+    order: -2;
+  }
+  .page-wrapper .sidebar .wrapper {
+    display: block;
+    width: 100%;
+  }
+}
