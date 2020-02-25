@@ -1,6 +1,7 @@
 @mixin for-phone-only {
     @media (max-width: 599px) {
         @content;
+	    
     }
 }
 
@@ -290,4 +291,57 @@ h3 {
             text-align: center;
         }
     }
+}
+
+@media all and (min-width: 200px) and (max-width: 767px) 
+{
+	.page-wrapper {
+		
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		
+		.intro { 
+		order: -3;
+			header {
+			background: url(../assets/logo.svg);
+			background-repeat: no-repeat;
+        		background-size: 100px 100px;
+		
+				h1 ,h2 {position:  relative;
+				left: 100px;}
+		
+			
+			}
+			.summary {}
+			.preamble {}
+		}
+		
+		
+		.main supporting {
+			order: 1;
+			.explanation{}
+			.participation {}
+			.benefits {}
+			.requirements {}
+			 footer {}
+		}
+		
+		.sidebar {
+			display: flex;
+			position: relative;
+			order: -2;
+			
+			.wrapper{
+				display: block;
+			width: 100%;
+			.design-selection{}
+			.design-archives {}
+			.zen-resources {}
+			}
+			
+			
+		}
+		
+	}
 }

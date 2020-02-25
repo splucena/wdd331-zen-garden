@@ -78,8 +78,8 @@ h3 {
 .page-wrapper .intro {
   color: #feffff;
   display: grid;
-  grid-column: 5 / 13;
-  grid-row: 1 / 2;
+  grid-column: 5/13;
+  grid-row: 1/2;
   grid-template-columns: repeat(12, 1fr);
   /*grid-template-rows: 7em 8em 18em;*/
   grid-template-rows: repeat(3, auto);
@@ -91,8 +91,8 @@ h3 {
 .page-wrapper .intro header {
   background-color: #17252a;
   color: #3aafa9;
-  grid-column: 1 / 13;
-  grid-row: 1 / 2;
+  grid-column: 1/13;
+  grid-row: 1/2;
   padding: 1em;
 }
 .page-wrapper .intro header h1 {
@@ -103,14 +103,14 @@ h3 {
 }
 .page-wrapper .intro .summary {
   background-color: #17252a;
-  grid-column: 1 / 13;
-  grid-row: 2 / 3;
+  grid-column: 1/13;
+  grid-row: 2/3;
   padding: 1em;
 }
 .page-wrapper .intro .preamble {
   background-color: #17252a;
-  grid-column: 1 / 13;
-  grid-row: 3 / 4;
+  grid-column: 1/13;
+  grid-row: 3/4;
   padding: 1em;
   /* workaround height: fit-content; removed the row gap;
   code below will add that row gap */
@@ -125,8 +125,8 @@ h3 {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 7em 1fr;
-  grid-column: 1 / 5;
-  grid-row: 1 / 2;
+  grid-column: 1/5;
+  grid-row: 1/2;
   grid-column-gap: 0.25em;
   grid-row-gap: 0.25em;
   position: sticky;
@@ -143,7 +143,7 @@ h3 {
 .page-wrapper .sidebar .wrapper {
   background-color: #3aafa9;
   color: #17252a;
-  grid-row: 2 / 3;
+  grid-row: 2/3;
   padding: 1em;
 }
 .page-wrapper .main {
@@ -151,8 +151,8 @@ h3 {
   background-color: #FFF;
   color: #feffff;
   display: grid;
-  grid-column: 5 / 13;
-  grid-row: 2 / 3;
+  grid-column: 5/13;
+  grid-row: 2/3;
   grid-template-columns: repeat(12, 1fr);
   /*grid-template-rows: 7em 8em 18em auto auto auto auto 3em;*/
   grid-template-rows: repeat(5, auto);
@@ -162,35 +162,69 @@ h3 {
 }
 .page-wrapper .main .explanation {
   background-color: #17252a;
-  grid-column: 1 / 13;
-  grid-row: 1 / 2;
+  grid-column: 1/13;
+  grid-row: 1/2;
   padding: 1em;
 }
 .page-wrapper .main .participation {
   background-color: #17252a;
-  grid-column: 1 / 13;
-  grid-row: 2 / 3;
+  grid-column: 1/13;
+  grid-row: 2/3;
   padding: 1em;
 }
 .page-wrapper .main .benefits {
   background-color: #17252a;
-  grid-column: 1 / 13;
-  grid-row: 3 / 4;
+  grid-column: 1/13;
+  grid-row: 3/4;
   padding: 1em;
 }
 .page-wrapper .main .requirements {
   background-color: #17252a;
-  grid-column: 1 / 13;
-  grid-row: 4 / 5;
+  grid-column: 1/13;
+  grid-row: 4/5;
   padding: 1em;
 }
 .page-wrapper .main footer {
   background-color: #17252a;
-  grid-column: 1 / 13;
-  grid-row: 5 / 6;
+  grid-column: 1/13;
+  grid-row: 5/6;
   width: 100%;
   margin: 0 auto;
   padding-top: 1em;
   padding-bottom: 1em;
   text-align: center;
 }
+
+@media all and (min-width: 200px) and (max-width: 767px) {
+  .page-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .page-wrapper .intro {
+    order: -3;
+  }
+  .page-wrapper .intro header {
+    background: url(../assets/logo.svg);
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+  }
+  .page-wrapper .intro header h1, .page-wrapper .intro header h2 {
+    position: relative;
+    left: 100px;
+  }
+  .page-wrapper .main supporting {
+    order: 1;
+  }
+  .page-wrapper .sidebar {
+    display: flex;
+    position: relative;
+    order: -2;
+  }
+  .page-wrapper .sidebar .wrapper {
+    display: block;
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=zen-garden.css.map */
