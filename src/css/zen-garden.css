@@ -3,7 +3,7 @@
 $secondary-base-color: #374785;
 $primary-brand-color: #F76C6C;
 $secondary-brand-color: #A8D0E6;
-$light-color: #F8E9A1;*/
+$text-color: #F8E9A1;*/
 /*@for $x from 1 through 13 {
   @for $y from 1 through 13 {
     @if $y>=$x {
@@ -48,8 +48,9 @@ h2 {
 }
 
 h3 {
-  color: #def2f1;
+  color: black;
   text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .page-wrapper {
@@ -63,6 +64,7 @@ h3 {
   margin: 0 auto;
 }
 .page-wrapper a {
+  color: black;
   text-decoration: none;
 }
 .page-wrapper ul {
@@ -73,26 +75,27 @@ h3 {
   text-decoration: none;
   list-style-type: none;
   margin-left: 0;
-  padding-left: 0;
+  padding-top: 10px;
+}
+.page-wrapper ul > li:before {
+  content: ">";
+  text-indent: -5px;
 }
 .page-wrapper .intro {
-  color: #feffff;
+  color: black;
   display: grid;
-  grid-column: 5 / 13;
-  grid-row: 1 / 2;
+  grid-column: 5/13;
+  grid-row: 1/2;
   grid-template-columns: repeat(12, 1fr);
   /*grid-template-rows: 7em 8em 18em;*/
   grid-template-rows: repeat(3, auto);
-  grid-column-gap: 0.25em;
-  grid-row-gap: 0.25em;
   z-index: 2;
   top: 0;
 }
 .page-wrapper .intro header {
-  background-color: #17252a;
-  color: #3aafa9;
-  grid-column: 1 / 13;
-  grid-row: 1 / 2;
+  color: #93c754;
+  grid-column: 1/13;
+  grid-row: 1/3;
   padding: 1em;
 }
 .page-wrapper .intro header h1 {
@@ -111,7 +114,7 @@ h3 {
   }
 }
 .page-wrapper .intro header h2 {
-  color: #def2f1;
+  color: #999125;
   animation-duration: 9s;
   animation-name: showup;
 }
@@ -130,15 +133,15 @@ h3 {
   }
 }
 .page-wrapper .intro .summary {
-  background-color: #17252a;
-  grid-column: 1 / 13;
-  grid-row: 2 / 3;
+  grid-column: 1/13;
+  grid-row: 2/3;
   padding: 1em;
 }
 .page-wrapper .intro .preamble {
-  background-color: #17252a;
-  grid-column: 1 / 13;
-  grid-row: 3 / 4;
+  border: 2px solid #98cc55;
+  padding: 10px;
+  border-radius: 15px;
+  grid-column: 1/13;
   padding: 1em;
   /* workaround height: fit-content; removed the row gap;
   code below will add that row gap */
@@ -149,12 +152,12 @@ h3 {
   background-size: 100px 100px;
   background-position-x: center;
   background-position-y: 8px;
-  /*background-color: dodgerblue;*/
+  /*background-color: $secondary-base-color;*/
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 7em 1fr;
-  grid-column: 1 / 5;
-  grid-row: 1 / 2;
+  grid-column: 1/5;
+  grid-row: 1/2;
   grid-column-gap: 0.25em;
   grid-row-gap: 0.25em;
   position: sticky;
@@ -163,46 +166,43 @@ h3 {
   overflow-x: hidden;
 }
 .page-wrapper .sidebar a:visited {
-  color: #17252a;
+  color: #609848;
 }
 .page-wrapper .sidebar h3 {
-  color: #17252a;
+  color: black;
 }
 .page-wrapper .sidebar .wrapper {
-  /*background-color: $primary-brand-color;*/
-  color: #17252a;
-  grid-row: 2 / 3;
+  background: #cdc555;
+  border-radius: 20px;
+  grid-row: 2/3;
   /*padding: 1em;*/
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, auto);
-  grid-row-gap: .25em;
+  grid-row-gap: 0.25em;
 }
 .page-wrapper .sidebar .wrapper .design-selection {
-  border-top: 0.25em solid #17252a;
-  background-color: #2b7a78;
-  grid-row: 1 / 2;
+  padding: 10px;
+  border-radius: 15px;
+  grid-row: 1/2;
   padding: 1em;
 }
 .page-wrapper .sidebar .wrapper .design-archives {
-  border-top: 0.25em solid #17252a;
-  background-color: #3aafa9;
-  grid-row: 2 / 3;
+  border-top: 0.15em solid black;
+  grid-row: 2/3;
   padding: 1em;
 }
 .page-wrapper .sidebar .wrapper .zen-resources {
-  border-top: 0.25em solid #17252a;
-  background-color: #def2f1;
-  grid-row: 3 / 4;
+  border-top: 0.15em solid black;
+  grid-row: 3/4;
   padding: 1em;
 }
 .page-wrapper .main {
-  /*background: $light-color url(../img/svg/tree-oak.svg) no-repeat center;*/
+  /*background: $text-color url(../img/svg/tree-oak.svg) no-repeat center;*/
   background-color: #FFF;
-  color: #feffff;
   display: grid;
-  grid-column: 5 / 13;
-  grid-row: 2 / 3;
+  grid-column: 5/13;
+  grid-row: 2/3;
   grid-template-columns: repeat(12, 1fr);
   /*grid-template-rows: 7em 8em 18em auto auto auto auto 3em;*/
   grid-template-rows: repeat(5, auto);
@@ -211,37 +211,46 @@ h3 {
   z-index: 1;
 }
 .page-wrapper .main .explanation {
-  background-color: #17252a;
-  grid-column: 1 / 13;
-  grid-row: 1 / 2;
+  border: 2px solid #98cc55;
+  padding: 10px;
+  border-radius: 15px;
+  grid-column: 1/13;
+  grid-row: 1/2;
   padding: 1em;
 }
 .page-wrapper .main .participation {
-  background-color: #17252a;
-  grid-column: 1 / 13;
-  grid-row: 2 / 3;
+  border: 2px solid #98cc55;
+  padding: 10px;
+  border-radius: 15px;
+  grid-column: 1/13;
+  grid-row: 2/3;
   padding: 1em;
 }
 .page-wrapper .main .benefits {
-  background-color: #17252a;
-  grid-column: 1 / 13;
-  grid-row: 3 / 4;
+  border: 2px solid #98cc55;
+  padding: 10px;
+  border-radius: 15px;
+  padding: 10px;
+  border-radius: 15px;
+  grid-column: 1/13;
+  grid-row: 3/4;
   padding: 1em;
 }
 .page-wrapper .main .requirements {
-  background-color: #17252a;
-  grid-column: 1 / 13;
-  grid-row: 4 / 5;
+  border: 2px solid #98cc55;
+  padding: 10px;
+  border-radius: 15px;
+  padding: 10px;
+  border-radius: 15px;
+  grid-column: 1/13;
+  grid-row: 4/5;
   padding: 1em;
 }
 .page-wrapper .main footer {
-  background-color: #17252a;
-  grid-column: 1 / 13;
-  grid-row: 5 / 6;
+  grid-column: 1/13;
+  grid-row: 5/6;
   width: 100%;
   margin: 0 auto;
-  padding-top: 1em;
-  padding-bottom: 1em;
   text-align: center;
 }
 
@@ -252,6 +261,8 @@ h3 {
     width: 100%;
   }
   .page-wrapper .intro {
+    display: flex;
+    flex-direction: column;
     order: -3;
   }
   .page-wrapper .intro header {
@@ -260,7 +271,7 @@ h3 {
     background-size: 100px 100px;
   }
   .page-wrapper .intro header h1,
-  .page-wrapper .intro header h2 {
+.page-wrapper .intro header h2 {
     position: relative;
     padding-left: 100px;
   }
@@ -277,3 +288,5 @@ h3 {
     width: 100%;
   }
 }
+
+/*# sourceMappingURL=zen-garden.css.map */

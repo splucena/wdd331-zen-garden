@@ -36,6 +36,12 @@
     }
 }
 
+@mixin border-box-green{
+	border: 2px solid $primary-base-color-bg-light;
+			padding: 10px;
+			border-radius: 15px;
+}
+
 @import url("https://fonts.googleapis.com/css?family=Cardo|Oswald&display=swap");
 
 // font-family
@@ -45,20 +51,20 @@ $font-family-cardo: "Cardo",
 serif;
 
 // colors
-$primary-base-color: #17252a;
-$secondary-base-color: #2b7a78;
-$primary-brand-color: #3aafa9;
-$secondary-brand-color: #def2f1;
-$light-color: #feffff;
+$primary-base-color: #609848;
+$secondary-base-color:#cdc555;
+$primary-brand-color: #93c754;
+$secondary-brand-color: #999125;
+$text-color: black;
 /*$primary-base-color: #24305E;
 $secondary-base-color: #374785;
 $primary-brand-color: #F76C6C;
 $secondary-brand-color: #A8D0E6;
-$light-color: #F8E9A1;*/
+$text-color: #F8E9A1;*/
 
 // rgba
-$primary-base-color-bg-dark: rgba(23, 37, 42, 1);
-$primary-base-color-bg-light: rgba(23, 37, 42, 1);
+$primary-base-color-bg-dark: #70a74c;
+$primary-base-color-bg-light:#98cc55;
 
 //$bg-color: (green red);
 /*@for $x from 1 through 13 {
@@ -109,8 +115,9 @@ h2 {
 }
 
 h3 {
-    color: $secondary-brand-color;
+    color: $text-color;
     text-transform: uppercase;
+	letter-spacing: 2px
 }
 
 .page-wrapper {
@@ -136,7 +143,9 @@ h3 {
     // end: section
 
     a {
-        text-decoration: none;
+        color: $text-color;
+	    text-decoration: none;
+	   
     }
 
     ul {
@@ -148,27 +157,31 @@ h3 {
         text-decoration: none;
         list-style-type: none;
         margin-left: 0;
-        padding-left: 0;
+        padding-top: 10px;
+	 
     }
-
+	ul> li:before {
+  content: ">";
+  text-indent: -5px;
+}
     .intro {
-        color: $light-color;
+        color: $text-color;
         display: grid;
         grid-column: 5 / 13;
         grid-row: 1 / 2;
         grid-template-columns: repeat(12, 1fr);
         /*grid-template-rows: 7em 8em 18em;*/
         grid-template-rows: repeat(3, auto);
-        grid-column-gap: 0.25em;
-        grid-row-gap: 0.25em;
+     
+
         z-index: 2;
         top: 0;
 
         header {
-            background-color: $primary-base-color;
-            color: $primary-brand-color;
+       
+    	     color: $primary-brand-color;
             grid-column: 1 / 13;
-            grid-row: 1 / 2;
+            grid-row: 1 / 3;
             padding: 1em;
 
             h1 {
@@ -215,7 +228,8 @@ h3 {
         }
 
         .summary {
-            background-color: $primary-base-color-bg-dark;
+		   
+		  
             grid-column: 1 / 13;
             grid-row: 2 / 3;
             padding: 1em;
@@ -223,9 +237,8 @@ h3 {
         }
 
         .preamble {
-            background-color: $primary-base-color-bg-light;
-            grid-column: 1 / 13;
-            grid-row: 3 / 4;
+            @include border-box-green;
+            grid-column: 1/13;
             padding: 1em;
             //height: fit-content; // workaround for fixed height
             /* workaround height: fit-content; removed the row gap;
@@ -242,7 +255,7 @@ h3 {
         background-size: 100px 100px;
         background-position-x: center;
         background-position-y: 8px;
-        /*background-color: dodgerblue;*/
+        /*background-color: $secondary-base-color;*/
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 7em 1fr;
@@ -260,12 +273,14 @@ h3 {
         }
 
         h3 {
-            color: $primary-base-color;
+            color: $text-color;
         }
 
         .wrapper {
-            /*background-color: $primary-brand-color;*/
-            color: $primary-base-color;
+          
+		   background:  $secondary-base-color;
+		   border-radius: 20px;
+           
             grid-row: 2 / 3;
             /*padding: 1em;*/
             display: grid;
@@ -274,22 +289,23 @@ h3 {
             grid-row-gap: .25em;
 
             .design-selection {
-                border-top: .25em solid $primary-base-color;
-                background-color: $secondary-base-color;
-                grid-row: 1 / 2;
-                padding: 1em;
+			
+			padding: 10px;
+			border-radius: 15px;
+			grid-row: 1 / 2;
+			padding: 1em;
             }
 
             .design-archives {
-                border-top: .25em solid $primary-base-color;
-                background-color: $primary-brand-color;
+                border-top: .15em solid $text-color;
+                
                 grid-row: 2 / 3;
                 padding: 1em;
             }
 
             .zen-resources {
-                border-top: .25em solid $primary-base-color;
-                background-color: $secondary-brand-color;
+                border-top: .15em solid $text-color;
+                
                 grid-row: 3 / 4;
                 padding: 1em;
             }
@@ -298,9 +314,9 @@ h3 {
 
     // main
     .main {
-        /*background: $light-color url(../img/svg/tree-oak.svg) no-repeat center;*/
+        /*background: $text-color url(../img/svg/tree-oak.svg) no-repeat center;*/
         background-color: #FFF;
-        color: $light-color;
+    
         display: grid;
         grid-column: 5 / 13;
         grid-row: 2 / 3;
@@ -313,41 +329,46 @@ h3 {
         z-index: 1;
 
         .explanation {
-            background-color: $primary-base-color-bg-light;
+     
+		  @include border-box-green;
             grid-column: 1 / 13;
             grid-row: 1 / 2;
             padding: 1em;
         }
 
         .participation {
-            background-color: $primary-base-color-bg-light;
+           @include border-box-green;
             grid-column: 1 / 13;
             grid-row: 2 / 3;
             padding: 1em;
         }
 
         .benefits {
-            background-color: $primary-base-color-bg-light;
+             @include border-box-green;
+			padding: 10px;
+			border-radius: 15px;
             grid-column: 1 / 13;
             grid-row: 3 / 4;
             padding: 1em;
         }
 
         .requirements {
-            background-color: $primary-base-color-bg-light;
+             @include border-box-green;
+			padding: 10px;
+			border-radius: 15px;
             grid-column: 1 / 13;
             grid-row: 4 / 5;
             padding: 1em;
         }
 
         footer {
-            background-color: $primary-base-color-bg-light;
+            
+			
             grid-column: 1 / 13;
             grid-row: 5 / 6;
             width: 100%;
             margin: 0 auto;
-            padding-top: 1em;
-            padding-bottom: 1em;
+           
             text-align: center;
         }
     }
@@ -361,6 +382,8 @@ h3 {
         width: 100%;
 
         .intro {
+		    display: flex;
+        flex-direction: column;
             order: -3;
 
             header {
