@@ -259,7 +259,8 @@ h3 {
     background-repeat: no-repeat;
     background-size: 100px 100px;
   }
-  .page-wrapper .intro header h1, .page-wrapper .intro header h2 {
+  .page-wrapper .intro header h1,
+  .page-wrapper .intro header h2 {
     position: relative;
     padding-left: 100px;
   }
