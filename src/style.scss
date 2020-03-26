@@ -250,7 +250,7 @@ h3 {
 
     // aside
     .sidebar {
-        background: url(../assets/logo.svg);
+        background: url(assets/logo.svg);
         background-repeat: no-repeat;
         background-size: 100px 100px;
         background-position-x: center;
@@ -382,43 +382,32 @@ h3 {
         width: 100%;
 
         .intro {
-		    display: flex;
+		display: flex;
         flex-direction: column;
-            order: -3;
+          order: -3;
 
             header {
-
                 h1,
                 h2 {
                     position: relative;
                     padding-left: 100px;
                 }
-
-                background: url(../assets/logo.svg);
+                background: url(assets/logo.svg);
                 background-repeat: no-repeat;
                 background-size: 100px 100px;
-
-
 
             }
 
             .summary {}
-
             .preamble {}
         }
 
-
         .main supporting {
             order: 1;
-
             .explanation {}
-
             .participation {}
-
             .benefits {}
-
             .requirements {}
-
             footer {}
         }
 
@@ -426,15 +415,11 @@ h3 {
             display: flex;
             position: relative;
             order: -2;
-
             .wrapper {
                 display: block;
                 width: 100%;
-
                 .design-selection {}
-
                 .design-archives {}
-
                 .zen-resources {}
             }
 
