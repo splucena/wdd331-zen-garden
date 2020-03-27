@@ -85,7 +85,7 @@
 }
 .intro h1::after {
   content: "";
-  background-image: url(logo-ver-2.png);
+  background-image: url(assets/logo-ver-2.png);
   background-size: 100% 100%;
   display: inline-block;
   /*size of your image*/
@@ -118,6 +118,7 @@ aside .wrapper li .design-name::before {
   /*if you want to change the position you can use margins or:*/
   position: relative;
   top: 5px;
+  right: 5px;
 }
 aside .wrapper h3 {
   padding: 1em;
@@ -134,6 +135,7 @@ aside .wrapper h3:after {
   /*if you want to change the position you can use margins or:*/
   position: relative;
   top: 5px;
+  left: 5px;
 }
 aside .wrapper ul {
   display: block;

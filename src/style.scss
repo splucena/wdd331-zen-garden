@@ -105,7 +105,7 @@
 	h1::after{
 			//content: url('logo-ver-2.png');
 		content: "";
-		background-image:url(logo-ver-2.png);
+		background-image:url(assets/logo-ver-2.png);
 		background-size: 100% 100%;
 		display: inline-block;
 
@@ -147,6 +147,7 @@ aside{
 		/*if you want to change the position you can use margins or:*/
 		position:relative;
 		top:5px;
+		right: 5px;
 			
 		}
 	}
@@ -169,6 +170,7 @@ aside{
 		/*if you want to change the position you can use margins or:*/
 		position:relative;
 		top:5px;
+		left: 5px;
 		}
 	
 	ul{
