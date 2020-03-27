@@ -4,14 +4,13 @@
 }
 
 
-//Large view
-@media all and (min-width: 1024px){
+@media all and (min-width: 768px){
 
 		
 	#css-zen-garden{
 		margin: 0 auto;
 		width: 50%;
-		
+		margin: 0 auto;
 	}
 	.page-wrapper {
 		display: grid;
@@ -37,17 +36,12 @@
 		
 		#zen-supporting {
 			position: relative;
-			bottom:37em;
+			bottom:50em;
 			grid-column: 2/3;
 			grid-row: 2/3;
 			max-width: 25rem;
 		}
 	}
-}
-
-//Medium view
-@media all and (min-width: 768px) and (max-width:1024){
-
 }
 
 //Mobile View and General
@@ -66,12 +60,18 @@
 		text-align: center;
 		}
 		h3::before{
-		content: url('assets/logo-ver-1.png');
-		max-width: 15%;
-		height: auto;
-		top: 3px;
-		display: inline-flex;
-		position: relative;
+		content: "";
+		background-image:url(assets/logo-ver-1.png);
+		background-size: 100% 100%;
+		display: inline-block;
+
+		/*size of your image*/
+		height: 32px;
+		width:50px;
+
+		/*if you want to change the position you can use margins or:*/
+		position:relative;
+		top:5px;
 			
 		}
 		p{
@@ -103,12 +103,19 @@
 		padding: .3em;
 	}
 	h1::after{
-			content: url('assets/logo-ver-2.png');
-			max-width: 15%;
-			height: auto;
-			top: 3px;
-			display: inline-flex;
-			position: relative;
+			//content: url('logo-ver-2.png');
+		content: "";
+		background-image:url(logo-ver-2.png);
+		background-size: 100% 100%;
+		display: inline-block;
+
+		/*size of your image*/
+		height: 42px;
+		width:60px;
+
+		/*if you want to change the position you can use margins or:*/
+		position:relative;
+		top:5px;
 			
 		}
 	
@@ -127,13 +134,19 @@ aside{
 	padding: 1.2em;
 	
 		.design-name::before{
-			content: url('assets/green-tea-leaves-clipart.png');
-			max-width: 10%;
-			height: auto;
-			top: 3px;
-			right: 10px;
-			display: inline-flex;
-			position: relative;
+			//content: url('green-tea-leaves-clipart.png');
+		content: "";
+		background-image:url(assets/green-tea-leaves-clipart.png);
+		background-size: 100% 100%;
+		display: inline-block;
+
+		/*size of your image*/
+		height: 32px;
+		width:30px;
+
+		/*if you want to change the position you can use margins or:*/
+		position:relative;
+		top:5px;
 			
 		}
 	}
@@ -143,13 +156,19 @@ aside{
 	}
 		
 		h3:after{
-			content: url('assets/clipart-leaf-clear-background-4.png');
-			max-width: 10%;
-			height: auto;
-			top: 3px;
-			left: 10px;
-			display: inline-flex;
-			position: relative;
+			//content: url('clipart-leaf-clear-background-4.png');
+			content: "";
+			background-image:url(assets/clipart-leaf-clear-background-4.png);
+			background-size: 100% 100%;
+			display: inline-block;
+
+		/*size of your image*/
+		height: 32px;
+		width:30px;
+
+		/*if you want to change the position you can use margins or:*/
+		position:relative;
+		top:5px;
 		}
 	
 	ul{
@@ -166,13 +185,19 @@ aside{
 	
 	.design-archives, zen-resources {
 		a::before{
-			content: url('green-tea-leaves-clipart.png');
-			max-width: 10%;
-			height: auto;
-			top: 3px;
-			right: 10px;
-			display: inline-flex;
-			position: relative;
+			//content: url('green-tea-leaves-clipart.png');
+			content: "";
+		background-image:url(assets/green-tea-leaves-clipart.png);
+		background-size: 100% 100%;
+		display: inline-block;
+
+		/*size of your image*/
+		height: 32px;
+		width:30px;
+
+		/*if you want to change the position you can use margins or:*/
+		position:relative;
+		top:5px;
 		}
 	}
 }
@@ -191,5 +216,4 @@ footer{
 	}
 	
 }
-
 

@@ -3,10 +3,11 @@
   padding: 0;
 }
 
-@media all and (min-width: 1024px) {
+@media all and (min-width: 768px) {
   #css-zen-garden {
     margin: 0 auto;
     width: 50%;
+    margin: 0 auto;
   }
 
   .page-wrapper {
@@ -29,7 +30,7 @@
   }
   .page-wrapper #zen-supporting {
     position: relative;
-    bottom: 37em;
+    bottom: 50em;
     grid-column: 2/3;
     grid-row: 2/3;
     max-width: 25rem;
@@ -49,12 +50,16 @@
   text-align: center;
 }
 .page-wrapper .summary h3::before, .page-wrapper .preamble h3::before, .page-wrapper .explanation h3::before, .page-wrapper .participation h3::before, .page-wrapper .benefits h3::before, .page-wrapper .requirements h3::before {
-  content: url("assets/logo-ver-1.png");
-  max-width: 15%;
-  height: auto;
-  top: 3px;
-  display: inline-flex;
+  content: "";
+  background-image: url(assets/logo-ver-1.png);
+  background-size: 100% 100%;
+  display: inline-block;
+  /*size of your image*/
+  height: 32px;
+  width: 50px;
+  /*if you want to change the position you can use margins or:*/
   position: relative;
+  top: 5px;
 }
 .page-wrapper .summary p, .page-wrapper .preamble p, .page-wrapper .explanation p, .page-wrapper .participation p, .page-wrapper .benefits p, .page-wrapper .requirements p {
   padding: 0.4em 0;
@@ -79,12 +84,16 @@
   padding: 0.3em;
 }
 .intro h1::after {
-  content: url("assets/logo-ver-2.png");
-  max-width: 15%;
-  height: auto;
-  top: 3px;
-  display: inline-flex;
+  content: "";
+  background-image: url(logo-ver-2.png);
+  background-size: 100% 100%;
+  display: inline-block;
+  /*size of your image*/
+  height: 42px;
+  width: 60px;
+  /*if you want to change the position you can use margins or:*/
   position: relative;
+  top: 5px;
 }
 
 aside {
@@ -99,26 +108,32 @@ aside .wrapper li {
   padding: 1.2em;
 }
 aside .wrapper li .design-name::before {
-  content: url("assets/green-tea-leaves-clipart.png");
-  max-width: 10%;
-  height: auto;
-  top: 3px;
-  right: 10px;
-  display: inline-flex;
+  content: "";
+  background-image: url(assets/green-tea-leaves-clipart.png);
+  background-size: 100% 100%;
+  display: inline-block;
+  /*size of your image*/
+  height: 32px;
+  width: 30px;
+  /*if you want to change the position you can use margins or:*/
   position: relative;
+  top: 5px;
 }
 aside .wrapper h3 {
   padding: 1em;
   border-bottom: 1px solid #ccc;
 }
 aside .wrapper h3:after {
-  content: url("assets/clipart-leaf-clear-background-4.png");
-  max-width: 10%;
-  height: auto;
-  top: 3px;
-  left: 10px;
-  display: inline-flex;
+  content: "";
+  background-image: url(assets/clipart-leaf-clear-background-4.png);
+  background-size: 100% 100%;
+  display: inline-block;
+  /*size of your image*/
+  height: 32px;
+  width: 30px;
+  /*if you want to change the position you can use margins or:*/
   position: relative;
+  top: 5px;
 }
 aside .wrapper ul {
   display: block;
@@ -131,13 +146,16 @@ aside .wrapper ul a {
   color: black;
 }
 aside .design-archives a::before, aside zen-resources a::before {
-  content: url("green-tea-leaves-clipart.png");
-  max-width: 10%;
-  height: auto;
-  top: 3px;
-  right: 10px;
-  display: inline-flex;
+  content: "";
+  background-image: url(assets/green-tea-leaves-clipart.png);
+  background-size: 100% 100%;
+  display: inline-block;
+  /*size of your image*/
+  height: 32px;
+  width: 30px;
+  /*if you want to change the position you can use margins or:*/
   position: relative;
+  top: 5px;
 }
 
 footer {
