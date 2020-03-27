@@ -1,430 +1,195 @@
-@mixin for-phone-only {
-    @media (max-width: 599px) {
-        @content;
-
-    }
+* {
+    margin: 0;
+    padding: 0;
 }
 
-@mixin for-tablet-portrait-up {
-    @media (min-width: 600px) {
-        @content;
-    }
-}
 
-@mixin for-tablet-landscape-up {
-    @media (min-width: 900px) {
-        @content;
-    }
-}
+//Large view
+@media all and (min-width: 1024px){
 
-@mixin for-desktop-up {
-    @media (min-width: 1200px) {
-        @content;
-    }
-}
-
-@mixin for-big-desktop-up {
-    @media (min-width: 1800px) {
-        @content;
-    }
-}
-
-// | | | | | | | | | | | |
-@mixin create-cols($start, $end) {
-    .col-#{$start}-to-#{$end} {
-        grid-column: $start #{"/"} $end;
-    }
-}
-
-@mixin border-box-green{
-	border: 2px solid $primary-base-color-bg-light;
-			padding: 10px;
-			border-radius: 15px;
-}
-
-@import url("https://fonts.googleapis.com/css?family=Cardo|Oswald&display=swap");
-
-// font-family
-$font-family-oswald: "Oswald",
-sans-serif;
-$font-family-cardo: "Cardo",
-serif;
-
-// colors
-$primary-base-color: #609848;
-$secondary-base-color:#cdc555;
-$primary-brand-color: #93c754;
-$secondary-brand-color: #999125;
-$text-color: black;
-/*$primary-base-color: #24305E;
-$secondary-base-color: #374785;
-$primary-brand-color: #F76C6C;
-$secondary-brand-color: #A8D0E6;
-$text-color: #F8E9A1;*/
-
-// rgba
-$primary-base-color-bg-dark: #70a74c;
-$primary-base-color-bg-light:#98cc55;
-
-//$bg-color: (green red);
-/*@for $x from 1 through 13 {
-  @for $y from 1 through 13 {
-    @if $y>=$x {
-      @include create-cols($x, $y);
-    }
-  }
-}
-
-.container {
-  display: grid;
-}
-
-.row {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-}
-
-.bg-color-green {
-  background-color: green;
-}
-
-.bg-color-red {
-  background-color: red;
-}
-
-.bg-color-blue {
-  background-color: blue;
-}*/
-
-// main container
-// class: page-wrapper
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: $font-family-oswald;
-}
-
-h1,
-h2 {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-h3 {
-    color: $text-color;
-    text-transform: uppercase;
-	letter-spacing: 2px
-}
-
-.page-wrapper {
-    display: grid;
-    font-family: $font-family-cardo;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(3, auto);
-    grid-column-gap: 0.25em;
-    grid-row-gap: 0.25em;
-
-    width: 50%;
-    margin: 0 auto;
-    // start: section
-    // class: intro
-    // id: zen-intro
-    // header
-    // div
-    // class: summary
-    // id: zen-summary
-    // div
-    // class: preamble
-    // id: zen-preamble
-    // end: section
-
-    a {
-        color: $text-color;
-	    text-decoration: none;
-	   
-    }
-
-    ul {
-        padding-left: 0;
-        margin-left: 0;
-    }
-
-    li {
-        text-decoration: none;
-        list-style-type: none;
-        margin-left: 0;
-        padding-top: 10px;
-	 
-    }
-	ul> li:before {
-  content: ">";
-  text-indent: -5px;
-}
-    .intro {
-        color: $text-color;
-        display: grid;
-        grid-column: 5 / 13;
-        grid-row: 1 / 2;
-        grid-template-columns: repeat(12, 1fr);
-        /*grid-template-rows: 7em 8em 18em;*/
-        grid-template-rows: repeat(3, auto);
-     
-
-        z-index: 2;
-        top: 0;
-
-        header {
-       
-    	     color: $primary-brand-color;
-            grid-column: 1 / 13;
-            grid-row: 1 / 3;
-            padding: 1em;
-
-            h1 {
-                text-transform: uppercase;
-                animation-duration: 3s;
-                animation-name: slidein;
-            }
-
-            @keyframes slidein {
-                from {
-                    margin-left: 100%;
-                    width: 300px;
-                }
-
-                to {
-                    margin-left: 0%;
-                    width: 100%;
-                }
-            }
-
-            h2 {
-                color: $secondary-brand-color;
-                animation-duration: 9s;
-                animation-name: showup;
-            }
-
-            @keyframes showup {
-                0% {
-                    opacity: 0;
-                }
-
-                20% {
-                    opacity: 1;
-                }
-
-                80% {
-                    opacity: 1;
-                }
-
-                100% {
-                    opacity: 0;
-                }
-            }
-        }
-
-        .summary {
-		   
-		  
-            grid-column: 1 / 13;
-            grid-row: 2 / 3;
-            padding: 1em;
-            //height: fit-content; // workaround for fixed height
-        }
-
-        .preamble {
-            @include border-box-green;
-            grid-column: 1/13;
-            padding: 1em;
-            //height: fit-content; // workaround for fixed height
-            /* workaround height: fit-content; removed the row gap;
-            code below will add that row gap */
-            //border-bottom: .25em solid #FFF; 
-            //border-top: .25em solid #FFF;
-        }
-    }
-
-    // aside
-    .sidebar {
-        background: url(assets/logo.svg);
-        background-repeat: no-repeat;
-        background-size: 100px 100px;
-        background-position-x: center;
-        background-position-y: 8px;
-        /*background-color: $secondary-base-color;*/
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 7em 1fr;
-        grid-column: 1 / 5;
-        grid-row: 1 / 2;
-        grid-column-gap: 0.25em;
-        grid-row-gap: 0.25em;
-        position: sticky;
-        position: -webkit-sticky;
-        top: 0;
-        overflow-x: hidden;
-
-        a:visited {
-            color: $primary-base-color;
-        }
-
-        h3 {
-            color: $text-color;
-        }
-
-        .wrapper {
-          
-		   background:  $secondary-base-color;
-		   border-radius: 20px;
-           
-            grid-row: 2 / 3;
-            /*padding: 1em;*/
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: repeat(3, auto);
-            grid-row-gap: .25em;
-
-            .design-selection {
+		
+	#css-zen-garden{
+		margin: 0 auto;
+		width: 50%;
+		
+	}
+	.page-wrapper {
+		display: grid;
+		grid-template-columns: 210px 470px;
+		grid-template-rows: 1fr 100px;
+		margin: 0 auto;
+  		
+  		
+		
+		.sidebar{
+			grid-column: 1/2;
+			grid-row: 1/2;
+			max-width: 20rem;
+			top: 5em;
+			position: relative;
 			
-			padding: 10px;
-			border-radius: 15px;
-			grid-row: 1 / 2;
-			padding: 1em;
-            }
+		}
+		.intro {
+			grid-column: 2/3;
+			grid-row: 1/2;
+			max-width: 25rem;
+		}
+		
+		#zen-supporting {
+			position: relative;
+			bottom:37em;
+			grid-column: 2/3;
+			grid-row: 2/3;
+			max-width: 25rem;
+		}
+	}
+}
 
-            .design-archives {
-                border-top: .15em solid $text-color;
-                
-                grid-row: 2 / 3;
-                padding: 1em;
-            }
+//Medium view
+@media all and (min-width: 768px) and (max-width:1024){
 
-            .zen-resources {
-                border-top: .15em solid $text-color;
-                
-                grid-row: 3 / 4;
-                padding: 1em;
-            }
-        }
-    }
+}
 
-    // main
-    .main {
-        /*background: $text-color url(../img/svg/tree-oak.svg) no-repeat center;*/
-        background-color: #FFF;
-    
-        display: grid;
-        grid-column: 5 / 13;
-        grid-row: 2 / 3;
-        grid-template-columns: repeat(12, 1fr);
-        /*grid-template-rows: 7em 8em 18em auto auto auto auto 3em;*/
-        // first 3 rows should equal .intro grid-template-rows
-        grid-template-rows: repeat(5, auto);
-        grid-column-gap: 0.25em;
-        grid-row-gap: 0.25em;
-        z-index: 1;
-
-        .explanation {
-     
-		  @include border-box-green;
-            grid-column: 1 / 13;
-            grid-row: 1 / 2;
-            padding: 1em;
-        }
-
-        .participation {
-           @include border-box-green;
-            grid-column: 1 / 13;
-            grid-row: 2 / 3;
-            padding: 1em;
-        }
-
-        .benefits {
-             @include border-box-green;
-			padding: 10px;
-			border-radius: 15px;
-            grid-column: 1 / 13;
-            grid-row: 3 / 4;
-            padding: 1em;
-        }
-
-        .requirements {
-             @include border-box-green;
-			padding: 10px;
-			border-radius: 15px;
-            grid-column: 1 / 13;
-            grid-row: 4 / 5;
-            padding: 1em;
-        }
-
-        footer {
-            
+//Mobile View and General
+.page-wrapper{
+	
+	p{
+	text-align: justify;
+	}
+	.summary, .preamble, .explanation, .participation, .benefits, .requirements{
+	padding: 1em;
+	margin: .5em 2em;
+	border-bottom: 1px solid #ccc;	
+		h3{
+		font-size: 1em;
+		margin-bottom: 1em;
+		text-align: center;
+		}
+		h3::before{
+		content: url('assets/logo-ver-1.png');
+		max-width: 15%;
+		height: auto;
+		top: 3px;
+		display: inline-flex;
+		position: relative;
 			
-            grid-column: 1 / 13;
-            grid-row: 5 / 6;
-            width: 100%;
-            margin: 0 auto;
-           
-            text-align: center;
-        }
-    }
+		}
+		p{
+			padding: .4em 0;
+		}
+		a{
+		text-decoration: none;
+		color: red;	
+		}
+	}
 }
 
-@media all and (min-width: 200px) and (max-width: 767px) {
-    .page-wrapper {
-
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-
-        .intro {
-		display: flex;
-        flex-direction: column;
-          order: -3;
-
-            header {
-                h1,
-                h2 {
-                    position: relative;
-                    padding-left: 100px;
-                }
-                background: url(assets/logo.svg);
-                background-repeat: no-repeat;
-                background-size: 100px 100px;
-
-            }
-
-            .summary {}
-            .preamble {}
-        }
-
-        .main supporting {
-            order: 1;
-            .explanation {}
-            .participation {}
-            .benefits {}
-            .requirements {}
-            footer {}
-        }
-
-        .sidebar {
-            display: flex;
-            position: relative;
-            order: -2;
-            .wrapper {
-                display: block;
-                width: 100%;
-                .design-selection {}
-                .design-archives {}
-                .zen-resources {}
-            }
-
-
-        }
-
-    }
+.intro{
+	
+	header{
+	margin: .6em;
+	
+	}
+	h1{
+		color: #6ba24a;
+		font-size: 2.4em;	
+		border-bottom: 1px solid #cdc555;
+		text-align: center;
+		
+	}
+	h2{
+		text-align: right;
+		font-size: 1.2em;
+		padding: .3em;
+	}
+	h1::after{
+			content: url('assets/logo-ver-2.png');
+			max-width: 15%;
+			height: auto;
+			top: 3px;
+			display: inline-flex;
+			position: relative;
+			
+		}
+	
 }
+
+aside{
+	
+	margin-top: 2em;
+	.wrapper {
+	
+	display: block;
+	
+	li{
+	background: white;
+	list-style-type: none;
+	padding: 1.2em;
+	
+		.design-name::before{
+			content: url('assets/green-tea-leaves-clipart.png');
+			max-width: 10%;
+			height: auto;
+			top: 3px;
+			right: 10px;
+			display: inline-flex;
+			position: relative;
+			
+		}
+	}
+	h3{
+	padding: 1em;
+	border-bottom: 1px solid #ccc;	
+	}
+		
+		h3:after{
+			content: url('assets/clipart-leaf-clear-background-4.png');
+			max-width: 10%;
+			height: auto;
+			top: 3px;
+			left: 10px;
+			display: inline-flex;
+			position: relative;
+		}
+	
+	ul{
+	display: block;
+	.design-name{
+	color: #6ba24a;
+	}
+		a{
+		text-decoration: none;
+		color: black;	
+		}
+	}
+}
+	
+	.design-archives, zen-resources {
+		a::before{
+			content: url('green-tea-leaves-clipart.png');
+			max-width: 10%;
+			height: auto;
+			top: 3px;
+			right: 10px;
+			display: inline-flex;
+			position: relative;
+		}
+	}
+}
+
+footer{
+	background: black;
+	display: block;
+	text-align: center;
+	padding: 1em;
+	margin-top: 1.2em;
+	a{
+	text-decoration: none;
+	color: white;
+	padding: 0 1em;
+		
+	}
+	
+}
+
+
