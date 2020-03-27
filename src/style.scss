@@ -3,20 +3,34 @@
     padding: 0;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
-@media all and (min-width: 768px){
+// font-family
+$serif: "",
+serif;
+$sans-serif: "Open sans",
+sans-serif;
+
+// colors
+$primary-base-color: #6ba24a;
+$secondary-base-color:#cdc555;
+$primary-brand-color: #000;
+$secondary-brand-color: #fff;
+
+
+
+
+//large-view
+@media all and (min-width: 1024px){
 
 		
-	#css-zen-garden{
-		margin: 0 auto;
-		width: 50%;
-		margin: 0 auto;
-	}
-	.page-wrapper {
+
+		.page-wrapper {
 		display: grid;
-		grid-template-columns: 210px 470px;
+		grid-template-columns: 230px 470px;
 		grid-template-rows: 1fr 100px;
 		margin: 0 auto;
+		max-width: 50%;
   		
   		
 		
@@ -36,7 +50,40 @@
 		
 		#zen-supporting {
 			position: relative;
-			bottom:50em;
+			bottom:49.8em;
+			grid-column: 2/3;
+			grid-row: 2/3;
+			max-width: 25rem;
+		}
+	}
+}
+//medium-view
+@media all and (min-width: 768px) and (max-width: 1024px){
+
+		
+
+		.page-wrapper {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		grid-template-rows: 1fr 100px;
+		
+		.sidebar{
+			grid-column: 1/2;
+			grid-row: 1/2;
+			max-width: 20rem;
+			top: 5em;
+			position: relative;
+			
+		}
+		.intro {
+			grid-column: 2/3;
+			grid-row: 1/2;
+			max-width: 25rem;
+		}
+		
+		#zen-supporting {
+			position: relative;
+			bottom:48em;
 			grid-column: 2/3;
 			grid-row: 2/3;
 			max-width: 25rem;
@@ -45,15 +92,25 @@
 }
 
 //Mobile View and General
-.page-wrapper{
+		
+		h1,h2,h3,h4,h5,h6 {font-family: $sans-serif;}
+
+		.page-wrapper{
+		
+		//Paragraph (General)
 	
-	p{
-	text-align: justify;
-	}
-	.summary, .preamble, .explanation, .participation, .benefits, .requirements{
-	padding: 1em;
-	margin: .5em 2em;
-	border-bottom: 1px solid #ccc;	
+		p{
+		text-align: justify;
+		font-family: $serif;
+		}
+	
+		//Each Section (General)
+		.summary, .preamble, .explanation, .participation, .benefits, .requirements{
+		padding: 1em;
+		margin: .5em 1em;
+		border-bottom: 1px solid #ccc;
+		
+		//Each Section (H3-General)
 		h3{
 		font-size: 1em;
 		margin-bottom: 1em;
@@ -84,26 +141,53 @@
 	}
 }
 
-.intro{
+		.intro{
 	
-	header{
-	margin: .6em;
+		header{
+		margin: .6em;
+		}
 	
-	}
-	h1{
-		color: #6ba24a;
+		h1{
+		color: $primary-base-color;
 		font-size: 2.4em;	
-		border-bottom: 1px solid #cdc555;
+		border-bottom: 1px solid $secondary-base-color;
 		text-align: center;
+		animation-duration: 3s;
+          animation-name: slidein;
+		}
 		
-	}
-	h2{
+		//animation h1
+		 @keyframes slidein {
+           from {
+           margin-left: 100%;
+           width: 500px;
+           }
+
+           to {
+           margin-left: 0%;
+           width: 100%;
+                }
+           }
+	
+		h2{
 		text-align: right;
 		font-size: 1.2em;
 		padding: .3em;
-	}
-	h1::after{
-			//content: url('logo-ver-2.png');
+		animation-duration: 9s;
+          animation-name: showup;
+		color: $secondary-base-color;
+		}
+		
+		//animation h2
+		@keyframes showup {
+                0% {opacity: 0;}
+                20% {opacity: 1;}
+                80% {opacity: 1;}
+                100% {opacity: 0;}
+            }
+	
+		h1::after{
+		//content: url('logo-ver-2.png');
 		content: "";
 		background-image:url(assets/logo-ver-2.png);
 		background-size: 100% 100%;
@@ -120,20 +204,74 @@
 		}
 	
 }
-
-aside{
+		//Sidebar (General)
+		aside{
+		position: sticky;
+     	position: -webkit-sticky;
+		margin-top: 2em;
+			
+		.wrapper {
+		display: block;
 	
-	margin-top: 2em;
-	.wrapper {
-	
-	display: block;
-	
-	li{
-	background: white;
-	list-style-type: none;
-	padding: 1.2em;
+		li{
+		background: $secondary-brand-color;
+		list-style-type: none;
+		padding: 1.2em;
 	
 		.design-name::before{
+		//content: url('green-tea-leaves-clipart.png');
+		content: "";
+		background-image:url(assets/green-tea-leaves-clipart.png);
+		background-size: 100% 100%;
+		display: inline-block;
+
+		/*size of your image*/
+		height: 32px;
+		width:30px;
+
+		/*if you want to change the position you can use margins or:*/
+		position:relative;
+		top:5px;
+		right: 5px;		
+		}
+	}
+			
+		h3{
+		padding: 1em;
+		border-bottom: 1px solid #ccc;	
+		}
+		
+		h3:after{
+		//content: url('clipart-leaf-clear-background-4.png');
+		content: "";
+		background-image:url(assets/clipart-leaf-clear-background-4.png);
+		background-size: 100% 100%;
+		display: inline-block;
+
+		/*size of your image*/
+		height: 32px;
+		width:30px;
+
+		/*if you want to change the position you can use margins or:*/
+		position:relative;
+		top:5px;
+		left: 5px;
+		}
+	
+		ul{
+		display: block;
+		.design-name{
+		color: $primary-base-color;
+		}
+		a{
+		text-decoration: none;
+		color: $primary-brand-color;	
+		}
+	}
+}
+	
+		.design-archives, zen-resources {
+		a::before{
 			//content: url('green-tea-leaves-clipart.png');
 		content: "";
 		background-image:url(assets/green-tea-leaves-clipart.png);
@@ -147,75 +285,21 @@ aside{
 		/*if you want to change the position you can use margins or:*/
 		position:relative;
 		top:5px;
-		right: 5px;
-			
 		}
 	}
-	h3{
-	padding: 1em;
-	border-bottom: 1px solid #ccc;	
-	}
-		
-		h3:after{
-			//content: url('clipart-leaf-clear-background-4.png');
-			content: "";
-			background-image:url(assets/clipart-leaf-clear-background-4.png);
-			background-size: 100% 100%;
-			display: inline-block;
-
-		/*size of your image*/
-		height: 32px;
-		width:30px;
-
-		/*if you want to change the position you can use margins or:*/
-		position:relative;
-		top:5px;
-		left: 5px;
-		}
-	
-	ul{
-	display: block;
-	.design-name{
-	color: #6ba24a;
-	}
+}
+		//Footer (General)
+		footer{
+		background: $primary-brand-color;
+		display: block;
+		text-align: center;
+		padding: 1em;
+		margin-top: 1.2em;
 		a{
 		text-decoration: none;
-		color: black;	
+		color: $secondary-brand-color;
+		padding: 0 1em;	
 		}
-	}
-}
-	
-	.design-archives, zen-resources {
-		a::before{
-			//content: url('green-tea-leaves-clipart.png');
-			content: "";
-		background-image:url(assets/green-tea-leaves-clipart.png);
-		background-size: 100% 100%;
-		display: inline-block;
-
-		/*size of your image*/
-		height: 32px;
-		width:30px;
-
-		/*if you want to change the position you can use margins or:*/
-		position:relative;
-		top:5px;
-		}
-	}
-}
-
-footer{
-	background: black;
-	display: block;
-	text-align: center;
-	padding: 1em;
-	margin-top: 1.2em;
-	a{
-	text-decoration: none;
-	color: white;
-	padding: 0 1em;
-		
-	}
 	
 }
 
