@@ -75,6 +75,13 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1em;
   margin-bottom: 1em;
   text-align: center;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out 0.2s;
+}
+.page-wrapper .summary h3:hover, .page-wrapper .preamble h3:hover, .page-wrapper .explanation h3:hover, .page-wrapper .participation h3:hover, .page-wrapper .benefits h3:hover, .page-wrapper .requirements h3:hover {
+  transform: scale(1.2);
+  transition: all 0.3s ease-in-out 0.1s;
+  color: #cdc555;
 }
 .page-wrapper .summary h3::before, .page-wrapper .preamble h3::before, .page-wrapper .explanation h3::before, .page-wrapper .participation h3::before, .page-wrapper .benefits h3::before, .page-wrapper .requirements h3::before {
   content: "";
@@ -101,7 +108,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .intro h1 {
   color: #6ba24a;
-  font-size: 2.4em;
+  font-size: 2em;
   border-bottom: 1px solid #cdc555;
   text-align: center;
   animation-duration: 3s;
@@ -153,17 +160,32 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 aside {
-  position: sticky;
-  position: -webkit-sticky;
   margin-top: 2em;
+  animation-duration: 3s;
+  animation-name: slideinright;
+}
+@keyframes slideinright {
+  from {
+    margin-left: -400%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 aside .wrapper {
   display: block;
+}
+aside .wrapper li:hover {
+  transform: scale(1.2);
+  transition: all 0.3s ease-in-out 0.1s;
 }
 aside .wrapper li {
   background: #fff;
   list-style-type: none;
   padding: 1.2em;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out 0.2s;
 }
 aside .wrapper li .design-name::before {
   content: "";
