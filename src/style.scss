@@ -56,6 +56,31 @@ $secondary-brand-color: #fff;
 			max-width: 25rem;
 		}
 	}
+	
+	//bird-animation
+	   .extra1 {
+      background-image: url('assets/bird-cells.svg');
+      background-size: auto 100%;
+	 bottom: 93rem;
+	 left: 24em;
+	 position: relative;
+      width: 80px;
+      height: 125px;
+	 transform: rotate(-10deg);
+      will-change: background-position;
+	 animation-name: fly-cycle;   
+	 animation-timing-function: steps(10);
+      animation-iteration-count: infinite;
+      animation-duration: 1s;
+	 animation-delay: -0.5s;
+    }
+    @keyframes fly-cycle {
+      100% {
+      background-position: -900px 0px;
+      } 
+	    
+    
+   }
 }
 //medium-view
 @media all and (min-width: 768px) and (max-width: 1024px){
@@ -119,10 +144,9 @@ $secondary-brand-color: #fff;
   		transition: all 0.3s ease-in-out 0.2s;
 		}
 		//h3 animation
-		h3:hover {
-		transform: scale(1.2);
- 		transition: all 0.3s ease-in-out 0.1s;
-		color: $secondary-base-color;
+		h3:hover:before {
+		content: "";
+		background-image: url('assets/logo-ver-2.png');
      
     }
 		h3::before{
@@ -330,4 +354,7 @@ $secondary-brand-color: #fff;
 		}
 	
 }
+
+
+ 
 
