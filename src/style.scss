@@ -1,35 +1,37 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-
-// font-family
-$serif: "",
-serif;
-$sans-serif: "Open sans",
-sans-serif;
-
-// colors
-$primary-base-color: #6ba24a;
-$secondary-base-color:#cdc555;
-$primary-brand-color: #000;
-$secondary-brand-color: #fff;
+		* {
+		margin: 0;
+		padding: 0;
+		}
+		*, *:after, *:before {
+		box-sizing: border-box;
+		}
 
 
+		@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+		// font-family
+		$serif: "",
+		serif;
+		$sans-serif: "Open sans",
+		sans-serif;
+
+		// colors
+		$primary-base-color: #6ba24a;
+		$secondary-base-color:#cdc555;
+		$primary-brand-color: #000;
+		$secondary-brand-color: #fff;
 
 
-//large-view
-@media all and (min-width: 1024px){
+		//large-view
+		@media all and (min-width: 1024px){
 		body{
 		background-image: url("assets/backg.svg") ;
 		background-repeat: no-repeat;
-  		background-size: cover;
+		background-size: cover;
 		background-attachment: fixed;
-			
+
 		}
-		
+
 
 		.page-wrapper {
 		display: grid;
@@ -37,126 +39,138 @@ $secondary-brand-color: #fff;
 		grid-template-rows: 1fr 100px;
 		margin: 0 auto;
 		max-width: 50%;
-  		
-  		
-		
+
+
+
 		.sidebar{
-			grid-column: 1/2;
-			grid-row: 1/2;
-			max-width: 20rem;
-			top: 5em;
-			position: relative;
-			
+		grid-column: 1/2;
+		grid-row: 1/2;
+		max-width: 20rem;
+		top: 5em;
+		position: relative;
+
 		}
 		.intro {
-			grid-column: 2/3;
-			grid-row: 1/2;
-			max-width: 25rem;
+		grid-column: 2/3;
+		grid-row: 1/2;
+		max-width: 25rem;
 		}
-		
-		#zen-supporting {
-			position: relative;
-			bottom:55.3em;
-			grid-column: 2/3;
-			grid-row: 2/3;
-			max-width: 25rem;
-		}
-	}
-	
-	//bird-animation
-	   .extra1 {
-      background-image: url('assets/bird-cells.svg');
-      background-size: auto 100%;
-	 bottom: 98rem;
-	 left: 25em;
-	 position: relative;
-      width: 80px;
-      height: 125px;
-	 transform: rotate(-10deg);
-      will-change: background-position;
-	 animation-name: fly-cycle;   
-	 animation-timing-function: steps(10);
-      animation-iteration-count: infinite;
-      animation-duration: 1s;
-	 animation-delay: -0.5s;
-    }
-    @keyframes fly-cycle {
-      100% {
-      background-position: -900px 0px;
-      } 
-	    
-    
-   }
-}
-//medium-view
-@media all and (min-width: 768px) and (max-width: 1024px){
 
-		
+		#zen-supporting {
+		position: relative;
+		bottom:55.3em;
+		grid-column: 2/3;
+		grid-row: 2/3;
+		max-width: 25rem;
+		}
+		}
+
+		//bird-animation
+		.extra1 {
+		background-image: url('assets/bird-cells.svg');
+		background-size: auto 100%;
+		bottom: 98rem;
+		left: 25em;
+		position: relative;
+		width: 80px;
+		height: 125px;
+		transform: rotate(-10deg);
+		will-change: background-position;
+		animation-name: fly-cycle;   
+		animation-timing-function: steps(10);
+		animation-iteration-count: infinite;
+		animation-duration: 1s;
+		animation-delay: -0.5s;
+		}
+		@keyframes fly-cycle {
+		100% {
+		background-position: -900px 0px;
+		} 
+
+
+		}
+		}
+		//medium-view
+		@media all and (min-width: 768px) and (max-width: 1024px){
+
+
 
 		.page-wrapper {
 		display: grid;
 		grid-template-columns: 300px 460px;
 		grid-template-rows: 1fr 100px;
-		
+
 		.sidebar{
-			grid-column: 1/2;
-			grid-row: 1/2;
-			max-width: 20rem;
-			top: 5em;
-			position: relative;
-			
+		grid-column: 1/2;
+		grid-row: 1/2;
+		max-width: 20rem;
+		top: 5em;
+		position: relative;
+
 		}
 		.intro {
-			grid-column: 2/3;
-			grid-row: 1/2;
-			max-width: 30rem;
+		grid-column: 2/3;
+		grid-row: 1/2;
+		max-width: 30rem;
 		}
-		
-		#zen-supporting {
-			position: relative;
-			bottom:48em;
-			grid-column: 2/3;
-			grid-row: 2/3;
-			max-width: 30rem;
-		}
-	}
-}
 
-//Mobile View and General
-		
-		
+		#zen-supporting {
+		position: relative;
+		bottom:48em;
+		grid-column: 2/3;
+		grid-row: 2/3;
+		max-width: 30rem;
+		}
+		}
+		}
+
+		//Mobile View and General
+
+
 
 		h1,h2,h3,h4,h5,h6 {font-family: $sans-serif;}
 
 		.page-wrapper{
-		
-		//Paragraph (General)
-	
+
 		p{
 		text-align: justify;
 		font-family: $serif;
 		}
-	
+		p:first-child:first-letter {
+		color:$primary-base-color;
+		float: left;
+		font-family: $serif;
+		font-size: 75px;
+		line-height: 60px;
+		padding-top: 4px;
+		padding-right: 8px;
+		padding-left: 3px;
+		}
 		//Each Section (General)
 		.summary, .preamble, .explanation, .participation, .benefits, .requirements{
 		padding: 1em;
 		margin: .5em 1em;
-		border-bottom: 1px solid #ccc;
-		
+		border-bottom: 1px solid $primary-base-color;
+
+
 		//Each Section (H3-General)
 		h3{
 		font-size: 1em;
 		margin-bottom: 1em;
 		text-align: center;
 		transform: scale(1);
-  		transition: all 0.3s ease-in-out 0.2s;
+		transition: all 0.3s ease-in-out 0.2s;
+		text-transform: uppercase;
+		font-family: 'Orienta', sans-serif;
+		letter-spacing: 1px;
+
 		}
 		//h3 animation
 		h3:hover:before {
 		content: "";
 		background-image: url('assets/logo-ver-2.png');
-     
-    }
+
+		}
 		h3::before{
 		content: "";
 		background-image:url(assets/logo-ver-1.png);
@@ -170,63 +184,63 @@ $secondary-brand-color: #fff;
 		/*if you want to change the position you can use margins or:*/
 		position:relative;
 		top:5px;
-			
+
 		}
 		p{
-			padding: .4em 0;
+		padding: .4em 0;
 		}
 		a{
 		text-decoration: none;
 		color: red;	
 		}
-	}
-}
+		}
+		}
 
 		.intro{
-	
+
 		header{
 		margin: .6em;
 		}
-	
+
 		h1{
 		color: $primary-base-color;
 		font-size: 2em;	
 		border-bottom: 1px solid $secondary-base-color;
 		text-align: center;
 		animation-duration: 3s;
-          animation-name: slidein;
+		animation-name: slidein;
 		}
-		
-		//animation h1
-		 @keyframes slidein {
-           from {
-           margin-left: 100%;
-           width: 500px;
-           }
 
-           to {
-           margin-left: 0%;
-           width: 100%;
-                }
-           }
-	
+		//animation h1
+		@keyframes slidein {
+		from {
+		margin-left: 100%;
+		width: 500px;
+		}
+
+		to {
+		margin-left: 0%;
+		width: 100%;
+		}
+		}
+
 		h2{
 		text-align: right;
 		font-size: 1.2em;
 		padding: .3em;
 		animation-duration: 9s;
-          animation-name: showup;
+		animation-name: showup;
 		color: $secondary-base-color;
 		}
-		
+
 		//animation h2
 		@keyframes showup {
-                0% {opacity: 0;}
-                20% {opacity: 1;}
-                80% {opacity: 1;}
-                100% {opacity: 0;}
-            }
-	
+		0% {opacity: 0;}
+		20% {opacity: 1;}
+		80% {opacity: 1;}
+		100% {opacity: 0;}
+		}
+
 		h1::after{
 		//content: url('logo-ver-2.png');
 		content: "";
@@ -241,42 +255,42 @@ $secondary-brand-color: #fff;
 		/*if you want to change the position you can use margins or:*/
 		position:relative;
 		top:5px;
-			
+
 		}
-	
-}
+
+		}
 		//Sidebar (General)
 		aside{
 		margin-top: 2em;
 		animation-duration: 3s;
-          animation-name: slideinright;
-			
-		 @keyframes slideinright {
-           from {
-           margin-left: -400%;
-         
-           }
+		animation-name: slideinright;
 
-           to {
-           margin-left: 0%;
-           width: 100%;
-                }
-           }
-			
+		@keyframes slideinright {
+		from {
+		margin-left: -400%;
+
+		}
+
+		to {
+		margin-left: 0%;
+		width: 100%;
+		}
+		}
+
 		.wrapper {
 		display: block;
-		
-	
+
+
 		li:hover{
-			transform: scale(1.2);
- 			transition: all 0.3s ease-in-out 0.1s;
-			}	
+		transform: scale(1.2);
+		transition: all 0.3s ease-in-out 0.1s;
+		}	
 		li{
 		list-style-type: none;
 		padding: 1.2em;
 		transform: scale(1);
-  		transition: all 0.3s ease-in-out 0.2s;
-			
+		transition: all 0.3s ease-in-out 0.2s;
+
 		.design-name::before{
 		//content: url('green-tea-leaves-clipart.png');
 		content: "";
@@ -293,13 +307,14 @@ $secondary-brand-color: #fff;
 		top:5px;
 		right: 5px;		
 		}
-	}
-			
+		}
+
 		h3{
 		padding: 1em;
-		border-bottom: 1px solid #ccc;	
+		border-bottom: 1px solid $primary-base-color;
+
 		}
-		
+
 		h3:after{
 		//content: url('clipart-leaf-clear-background-4.png');
 		content: "";
@@ -316,22 +331,24 @@ $secondary-brand-color: #fff;
 		top:5px;
 		left: 5px;
 		}
-	
+
 		ul{
 		display: block;
 		.design-name{
 		color: $primary-base-color;
+
 		}
 		a{
 		text-decoration: none;
 		color: $primary-brand-color;	
 		}
-	}
-}
-	
+		}
+		}
+
 		.design-archives {
+
 		a::before{
-			//content: url('green-tea-leaves-clipart.png');
+		//content: url('green-tea-leaves-clipart.png');
 		content: "";
 		background-image:url(assets/archives.svg);
 		background-size: 100% 100%;
@@ -345,12 +362,11 @@ $secondary-brand-color: #fff;
 		position:relative;
 		top:5px;
 		}
-	}
-}
+		}
+		}
 
 		.zen-resources {
 		a::before{
-			//content: url('green-tea-leaves-clipart.png');
 		content: "";
 		background-image:url(assets/leaves.svg);
 		background-size: 100% 100%;
@@ -367,19 +383,19 @@ $secondary-brand-color: #fff;
 		}
 		//Footer (General)
 		footer{
-		background: $primary-brand-color;
-		display: block;
+		background: $primary-base-color;
 		text-align: center;
-		padding: 1em;
-		margin-top: 1.2em;
+		padding: 1em ;
 		a{
 		text-decoration: none;
 		color: $secondary-brand-color;
-		padding: 0 1em;	
+		padding: 1em;	
 		}
-	
-}
+		a:hover{
+		background: $primary-brand-color;
+		}
+		}
 
 
- 
+
 
