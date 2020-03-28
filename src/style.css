@@ -5,6 +5,13 @@
 }
 
 @media all and (min-width: 1024px) {
+  body {
+    background-image: url("assets/backg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
   .page-wrapper {
     display: grid;
     grid-template-columns: 230px 470px;
@@ -26,7 +33,7 @@
   }
   .page-wrapper #zen-supporting {
     position: relative;
-    bottom: 49.8em;
+    bottom: 55.3em;
     grid-column: 2/3;
     grid-row: 2/3;
     max-width: 25rem;
@@ -35,8 +42,8 @@
   .extra1 {
     background-image: url("assets/bird-cells.svg");
     background-size: auto 100%;
-    bottom: 93rem;
-    left: 24em;
+    bottom: 98rem;
+    left: 25em;
     position: relative;
     width: 80px;
     height: 125px;
@@ -58,7 +65,7 @@
 @media all and (min-width: 768px) and (max-width: 1024px) {
   .page-wrapper {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 300px 460px;
     grid-template-rows: 1fr 100px;
   }
   .page-wrapper .sidebar {
@@ -71,14 +78,14 @@
   .page-wrapper .intro {
     grid-column: 2/3;
     grid-row: 1/2;
-    max-width: 25rem;
+    max-width: 30rem;
   }
   .page-wrapper #zen-supporting {
     position: relative;
     bottom: 48em;
     grid-column: 2/3;
     grid-row: 2/3;
-    max-width: 25rem;
+    max-width: 30rem;
   }
 }
 h1, h2, h3, h4, h5, h6 {
@@ -203,7 +210,6 @@ aside .wrapper li:hover {
   transition: all 0.3s ease-in-out 0.1s;
 }
 aside .wrapper li {
-  background: #fff;
   list-style-type: none;
   padding: 1.2em;
   transform: scale(1);
@@ -249,9 +255,22 @@ aside .wrapper ul a {
   text-decoration: none;
   color: #000;
 }
-aside .design-archives a::before, aside zen-resources a::before {
+aside .design-archives a::before {
   content: "";
-  background-image: url(assets/green-tea-leaves-clipart.png);
+  background-image: url(assets/archives.svg);
+  background-size: 100% 100%;
+  display: inline-block;
+  /*size of your image*/
+  height: 32px;
+  width: 30px;
+  /*if you want to change the position you can use margins or:*/
+  position: relative;
+  top: 5px;
+}
+
+.zen-resources a::before {
+  content: "";
+  background-image: url(assets/leaves.svg);
   background-size: 100% 100%;
   display: inline-block;
   /*size of your image*/
