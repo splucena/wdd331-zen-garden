@@ -14,6 +14,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    animation-duration: 0.5s;
+    animation-name: showup;
   }
 
   .page-wrapper {
@@ -224,17 +226,6 @@ h1, h2, h3, h4, h5, h6 {
 aside {
   margin-top: 2em;
   animation-duration: 3s;
-  animation-name: slideinright;
-  animation-timing-function: ease-in-out;
-}
-@keyframes slideinright {
-  from {
-    margin-left: -300%;
-  }
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
 }
 aside .wrapper {
   display: block;

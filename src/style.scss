@@ -29,6 +29,8 @@ $secondary-brand-color: #fff;
 		background-repeat: no-repeat;
   		background-size: cover;
 		background-attachment: fixed;
+		animation-duration: .5s;
+          animation-name: showup;
 			
 		}
 		
@@ -49,11 +51,13 @@ $secondary-brand-color: #fff;
 			top: 5em;
 			position: relative;
 			
+			
 		}
 		.intro {
 			grid-column: 2/3;
 			grid-row: 1/2;
 			max-width: 25rem;
+			
 		}
 		
 		#zen-supporting {
@@ -62,6 +66,7 @@ $secondary-brand-color: #fff;
 			grid-column: 2/3;
 			grid-row: 2/3;
 			max-width: 25rem;
+			
 		}
 	}
 	
@@ -272,19 +277,7 @@ $secondary-brand-color: #fff;
 		aside{
 		 margin-top: 2em;
 		 animation-duration: 3s;
-           animation-name: slideinright;
-		 animation-timing-function: ease-in-out;
-		 @keyframes slideinright {
-           from {
-           margin-left: -300%;
-         
-           }
-
-           to {
-           margin-left: 0%;
-           width: 100%;
-                }
-           }
+           
 			
 		.wrapper {
 		display: block;
