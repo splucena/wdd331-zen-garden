@@ -53,16 +53,30 @@
     height: 125px;
     transform: rotate(-10deg);
     will-change: background-position;
-    animation-name: fly-cycle;
+    animation-name: fly-cycle, showup;
     animation-timing-function: steps(10);
-    animation-iteration-count: infinite;
-    animation-duration: 1s;
-    animation-delay: -0.5s;
+    animation-iteration-count: infinite, 1;
+    animation-duration: 1s, 4s;
+    animation-delay: 1s, 0;
   }
 
   @keyframes fly-cycle {
     100% {
       background-position: -900px 0px;
+    }
+    @keyframes showup {
+      0% {
+        opacity: 0;
+      }
+      20% {
+        opacity: 0;
+      }
+      80% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
     }
   }
 }
@@ -159,11 +173,12 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   animation-duration: 3s;
   animation-name: slidein;
+  animation-timing-function: ease-in-out;
 }
 @keyframes slidein {
   from {
     margin-left: 100%;
-    width: 500px;
+    width: 100%;
   }
   to {
     margin-left: 0%;
@@ -174,22 +189,23 @@ h1, h2, h3, h4, h5, h6 {
   text-align: right;
   font-size: 1.2em;
   padding: 0.3em;
-  animation-duration: 9s;
+  animation-duration: 4s;
   animation-name: showup;
   color: #cdc555;
+  animation-timing-function: ease-in;
 }
 @keyframes showup {
   0% {
     opacity: 0;
   }
   20% {
-    opacity: 1;
+    opacity: 0;
   }
   80% {
-    opacity: 1;
+    opacity: 0;
   }
   100% {
-    opacity: 0;
+    opacity: 1;
   }
 }
 .intro h1::after {
@@ -209,10 +225,11 @@ aside {
   margin-top: 2em;
   animation-duration: 3s;
   animation-name: slideinright;
+  animation-timing-function: ease-in-out;
 }
 @keyframes slideinright {
   from {
-    margin-left: -400%;
+    margin-left: -300%;
   }
   to {
     margin-left: 0%;
