@@ -109,6 +109,7 @@
     margin-top: 10px;
   }
   .page-wrapper .sidebar li {
+    font-family: "Open sans", sans-serif;
     z-index: 2;
     text-decoration: none;
     position: relative;
@@ -118,7 +119,7 @@
     border-bottom: 0px;
     border-left: 5px solid #6ba24a;
     width: 100%;
-    padding: 18px;
+    padding: 15px;
     color: #000;
   }
   .page-wrapper .sidebar li:nth-child(even) {
