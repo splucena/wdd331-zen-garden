@@ -80,7 +80,7 @@ $secondary-brand-color: #fff;
 				color: #000;
 			}
 
-			li:hover {
+			li:hover>a:first-child {
 				border-bottom: 0px;
 				font-weight: bold;
 			}

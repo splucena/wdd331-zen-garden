@@ -127,7 +127,7 @@
   .page-wrapper .sidebar li a {
     color: #000;
   }
-  .page-wrapper .sidebar li:hover {
+  .page-wrapper .sidebar li:hover > a:first-child {
     border-bottom: 0px;
     font-weight: bold;
   }
