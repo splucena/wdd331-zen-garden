@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
 @media all and (min-width: 1024px) {
   #css-zen-garden {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-auto-rows: 100px;
   }
+
   #css-zen-garden .page-wrapper {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -12,6 +14,7 @@
     grid-column: 1/-1;
     grid-row: 1/2;
   }
+
   #css-zen-garden .page-wrapper .intro {
     width: 80em;
     margin: auto;
@@ -21,18 +24,22 @@
     grid-template-columns: repeat(12, 1fr);
     grid-auto-rows: auto;
   }
+
   #css-zen-garden .page-wrapper .intro header {
     grid-column: 6/10;
     grid-row: 1/2;
   }
+
   #css-zen-garden .page-wrapper .intro .summary {
     grid-column: 6/10;
     grid-row: 2/3;
   }
+
   #css-zen-garden .page-wrapper .intro .preamble {
     grid-column: 6/10;
     grid-row: 3/4;
   }
+
   #css-zen-garden .page-wrapper .main {
     width: 80em;
     margin: auto;
@@ -42,26 +49,32 @@
     grid-template-columns: repeat(12, 1fr);
     grid-auto-rows: auto;
   }
+
   #css-zen-garden .page-wrapper .main .explanation {
     grid-column: 6/10;
     grid-row: 1/2;
   }
+
   #css-zen-garden .page-wrapper .main .participation {
     grid-column: 6/10;
     grid-row: 2/3;
   }
+
   #css-zen-garden .page-wrapper .main .benefits {
     grid-column: 6/10;
     grid-row: 3/4;
   }
+
   #css-zen-garden .page-wrapper .main .requirements {
     grid-column: 6/10;
     grid-row: 4/5;
   }
+
   #css-zen-garden .page-wrapper .main footer {
     grid-column: 6/10;
     grid-row: 5/6;
   }
+
   #css-zen-garden .page-wrapper .sidebar {
     position: relative;
     bottom: 24.6em;
@@ -70,6 +83,7 @@
     grid-row: 4/5;
   }
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -90,6 +104,7 @@
     animation-duration: 0.5s;
     animation-name: showup;
   }
+
   #css-zen-garden .page-wrapper .sidebar {
     /*.design-selection {
     		border-right: solid 4px #000;
@@ -163,9 +178,11 @@
     	}
     */
   }
+
   #css-zen-garden .page-wrapper .sidebar li:first-child {
     margin-top: 10px;
   }
+
   #css-zen-garden .page-wrapper .sidebar li {
     font-family: "Open sans", sans-serif;
     z-index: 2;
@@ -180,16 +197,20 @@
     padding: 15px;
     color: #000;
   }
+
   #css-zen-garden .page-wrapper .sidebar li:nth-child(even) {
     border-left: 5px solid #FFBA49;
   }
+
   #css-zen-garden .page-wrapper .sidebar li a {
     color: #000;
   }
-  #css-zen-garden .page-wrapper .sidebar li:hover > a:first-child {
+
+  #css-zen-garden .page-wrapper .sidebar li:hover>a:first-child {
     border-bottom: 0px;
     font-weight: bold;
   }
+
   #css-zen-garden .page-wrapper .sidebar li:after {
     content: "";
     left: 0;
@@ -201,35 +222,43 @@
     z-index: -1;
     height: 100%;
   }
+
   #css-zen-garden .page-wrapper .sidebar li:nth-child(even):hover:after {
     width: 100%;
     background-color: #F7DBA7;
   }
+
   #css-zen-garden .page-wrapper .sidebar li:hover:after {
     width: 100%;
     background-color: #DBD56E;
   }
+
   @-webkit-keyframes swing {
     15% {
       -webkit-transform: translateX(5px);
       transform: translateX(5px);
     }
+
     30% {
       -webkit-transform: translateX(-5px);
       transform: translateX(-5px);
     }
+
     50% {
       -webkit-transform: translateX(3px);
       transform: translateX(3px);
     }
+
     65% {
       -webkit-transform: translateX(-3px);
       transform: translateX(-3px);
     }
+
     80% {
       -webkit-transform: translateX(2px);
       transform: translateX(2px);
     }
+
     100% {
       -webkit-transform: translateX(0);
       transform: translateX(0);
@@ -257,22 +286,27 @@
     100% {
       background-position: -900px 0px;
     }
+
     @keyframes showup {
       0% {
         opacity: 0;
       }
+
       20% {
         opacity: 0;
       }
+
       80% {
         opacity: 0;
       }
+
       100% {
         opacity: 1;
       }
     }
   }
 }
+
 @media all and (min-width: 200px) and (max-width: 768px) {
   #css-zen-garden {
     background-image: url("assets/mobile.png");
@@ -282,7 +316,13 @@
     background-position: center;
   }
 }
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Open sans", sans-serif;
 }
 
@@ -290,6 +330,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: justify;
   font-family: "", serif;
 }
+
 .page-wrapper p:first-child:first-letter {
   color: #6ba24a;
   float: left;
@@ -300,6 +341,7 @@ h1, h2, h3, h4, h5, h6 {
   padding-right: 8px;
   padding-left: 3px;
 }
+
 .page-wrapper .summary,
 .page-wrapper .preamble,
 .page-wrapper .explanation,
@@ -309,6 +351,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0.5em 2em;
   border-bottom: 1px solid #6ba24a;
 }
+
 .page-wrapper .summary h3,
 .page-wrapper .preamble h3,
 .page-wrapper .explanation h3,
@@ -323,7 +366,13 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   font-family: "Orienta", sans-serif;
   letter-spacing: 1px;
+  color: #6ba24a;
+  border-bottom: 1px solid #6ba24a;
+  animation-duration: 3s;
+  animation-name: showup;
+  animation-timing-function: ease-in-out;
 }
+
 .page-wrapper .summary h3:hover:before,
 .page-wrapper .preamble h3:hover:before,
 .page-wrapper .explanation h3:hover:before,
@@ -333,6 +382,7 @@ h1, h2, h3, h4, h5, h6 {
   content: "";
   background-image: url("assets/logo-ver-2.png");
 }
+
 .page-wrapper .summary h3::before,
 .page-wrapper .preamble h3::before,
 .page-wrapper .explanation h3::before,
@@ -350,6 +400,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   top: 5px;
 }
+
 .page-wrapper .summary p,
 .page-wrapper .preamble p,
 .page-wrapper .explanation p,
@@ -358,6 +409,7 @@ h1, h2, h3, h4, h5, h6 {
 .page-wrapper .requirements p {
   padding: 0.4em 0;
 }
+
 .page-wrapper .summary a,
 .page-wrapper .preamble a,
 .page-wrapper .explanation a,
@@ -371,6 +423,7 @@ h1, h2, h3, h4, h5, h6 {
 .intro header {
   margin: 0.6em;
 }
+
 .intro h1 {
   color: #6ba24a;
   font-size: 2em;
@@ -380,16 +433,19 @@ h1, h2, h3, h4, h5, h6 {
   animation-name: slidein;
   animation-timing-function: ease-in-out;
 }
+
 @keyframes slidein {
   from {
     margin-left: 100%;
     width: 100%;
   }
+
   to {
     margin-left: 0%;
     width: 100%;
   }
 }
+
 .intro h2 {
   text-align: right;
   font-size: 1.2em;
@@ -399,20 +455,25 @@ h1, h2, h3, h4, h5, h6 {
   color: #cdc555;
   animation-timing-function: ease-in;
 }
+
 @keyframes showup {
   0% {
     opacity: 0;
   }
+
   20% {
     opacity: 0;
   }
+
   80% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
 }
+
 .intro h1::after {
   content: "";
   background-image: url(assets/logo-ver-2.png);
@@ -430,6 +491,7 @@ aside {
   margin-top: 2em;
   animation-duration: 3s;
 }
+
 aside .wrapper {
   display: block;
   /*li:hover {
@@ -437,12 +499,14 @@ aside .wrapper {
   	transition: all 0.3s ease-in-out 0.1s;
   }*/
 }
+
 aside .wrapper li {
   list-style-type: none;
   padding: 1.2em;
   /*transform: scale(1);
   transition: all 0.3s ease-in-out 0.2s;*/
 }
+
 aside .wrapper li .design-name::before {
   content: "";
   background-image: url(assets/green-tea-leaves-clipart.png);
@@ -456,10 +520,12 @@ aside .wrapper li .design-name::before {
   top: 5px;
   right: 5px;
 }
+
 aside .wrapper h3 {
   padding: 1em;
   border-bottom: 1px solid #6ba24a;
 }
+
 aside .wrapper h3:after {
   content: "";
   background-image: url(assets/clipart-leaf-clear-background-4.png);
@@ -473,16 +539,20 @@ aside .wrapper h3:after {
   top: 5px;
   left: 5px;
 }
+
 aside .wrapper ul {
   display: block;
 }
+
 aside .wrapper ul .design-name {
   color: #6ba24a;
 }
+
 aside .wrapper ul a {
   text-decoration: none;
   color: #000;
 }
+
 aside .design-archives a::before {
   content: "";
   background-image: url(assets/archives.svg);
@@ -514,11 +584,13 @@ footer {
   text-align: center;
   padding: 1em 1em 1em 1em;
 }
+
 footer a {
   text-decoration: none;
   color: #fff;
   padding: 1em 1em 1em 1em;
 }
+
 footer a:hover {
   background: #000;
   padding: 1em;
