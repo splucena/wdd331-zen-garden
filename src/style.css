@@ -83,7 +83,7 @@
 
 @media all and (min-width: 1024px) {
   #css-zen-garden {
-    background-image: url("assets/backg.svg");
+    background-image: url("assets/agriculture.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -271,6 +271,15 @@
         opacity: 1;
       }
     }
+  }
+}
+@media all and (min-width: 200px) and (max-width: 768px) {
+  #css-zen-garden {
+    background-image: url("assets/mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
   }
 }
 h1, h2, h3, h4, h5, h6 {

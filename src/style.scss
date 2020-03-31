@@ -30,7 +30,7 @@ $secondary-brand-color: #fff;
 	
 	#css-zen-garden
 {
-	background-image: url("assets/backg.svg");
+	background-image: url("assets/agriculture.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -281,6 +281,20 @@ $secondary-brand-color: #fff;
 
 	}
 }
+//mobile view background
+@media all and (min-width: 200px) and (max-width:768px) 
+{
+	
+	#css-zen-garden
+{
+	background-image: url("assets/mobile.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	}
+}
+
 
 //Mobile View and General
 	h1,h2,h3,h4,h5,h6 {font-family: $sans-serif;}
