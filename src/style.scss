@@ -1,7 +1,7 @@
-* {
-	margin: 0;
-	padding: 0;
-}
+// Partials
+@import "partials/grid";
+
+* {margin: 0;padding: 0;}
 
 *,
 *:after,
@@ -25,182 +25,182 @@ $secondary-brand-color: #fff;
 
 
 //large-view
-@media all and (min-width: 1024px) {
-	body {
-		background-image: url("assets/backg.svg");
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-attachment: fixed;
-		animation-duration: .5s;
-		animation-name: showup;
+@media all and (min-width: 1024px) 
+{
+	
+	#css-zen-garden
+{
+	background-image: url("assets/backg.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	animation-duration: .5s;
+	animation-name: showup;
+	.page-wrapper
+	{
+			
+	.intro{
+			
+			header{
+				
+			}
+			.summary{
+				
+			}
+			.preamble{
+				
+			}
+			}
+	.main{
+			
+	.explanation{
+
+	}
+	.participation{
+
+	}
+	.benefits{
+
+	}
+	.requirements{
+
+	}
+	footer{
+
+	}
+	}
+	.sidebar {
+			
+	li:first-child {
+		margin-top: 10px;
+	}
+
+	li {
+		font-family: $sans-serif;
+		z-index: 2;
+		text-decoration: none;
+		position: relative;
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		border-bottom: 0px;
+		border-left: 5px solid $primary-base-color;
+		width: 100%;
+		padding: 15px;
+		color: #000;
 
 	}
 
-
-	.page-wrapper {
-		display: grid;
-		grid-template-columns: 230px 470px;
-		grid-template-rows: 1fr 100px;
-		margin: 0 auto;
-		max-width: 50%;
-
-
-
-		.sidebar {
-			grid-column: 1/2;
-			grid-row: 1/2;
-			max-width: 20rem;
-			top: 5em;
-			position: relative;
-
-			li:first-child {
-				margin-top: 10px;
-			}
-
-			li {
-				font-family: $sans-serif;
-				z-index: 2;
-				text-decoration: none;
-				position: relative;
-				box-sizing: border-box;
-				-moz-box-sizing: border-box;
-				-webkit-box-sizing: border-box;
-				border-bottom: 0px;
-				border-left: 5px solid $primary-base-color;
-				width: 100%;
-				padding: 15px;
-				color: #000;
-
-			}
-
-			li:nth-child(even) {
-				border-left: 5px solid #FFBA49;
-			}
-
-			li a {
-				color: #000;
-			}
-
-			li:hover>a:first-child {
-				border-bottom: 0px;
-				font-weight: bold;
-			}
-
-			li:after {
-				content: "";
-				left: 0;
-				top: 0;
-				width: 0px;
-				position: absolute;
-				transition: all 0.3s ease 0s;
-				-webkit-transition: all 0.3s ease 0s;
-				z-index: -1;
-				height: 100%;
-			}
-
-			li:nth-child(even):hover:after {
-				width: 100%;
-				background-color: #F7DBA7;
-			}
-
-			li:hover:after {
-				width: 100%;
-				background-color: #DBD56E;
-			}
-
-			/*.design-selection {
-					border-right: solid 4px #000;
-
-					>h3,
-					>nav {
-						visibility: hidden;
-						position: relative;
-						left: 250px;
-					}
-				}*/
-
-			/*.select+nav>ul li a {
-					position: relative;
-					transition: .5s;
-					cursor: pointer;
-					display: block;
-					overflow: hidden;
-					z-index: 1;
-				}
-
-			ul li a {
-				z-index: 1;
-			}
-
-			ul li {
-				padding: 14px;
-				border-radius: 10px 0 0 0;
-				margin-bottom: 4px;
-				overflow: hidden;
-				position: relative;
-				color: #262626;
-				transition: .5s;
-				border: solid 3px #FFF;
-				cursor: pointer;
-				display: block;
-				box-shadow: 1px 1px 4px #262626;
-			}
-
-			ul li:hover {
-				background-color: $secondary-base-color;
-					-webkit-animation: swing 1s ease;
-					animation: swing 1s ease;
-					-webkit-animation-iteration-count: 1;
-					animation-iteration-count: 1;
-				color: #FFF;
-				transform: rotateY(360deg);
-			}
-
-			ul li:before {
-				content: "";
-				position: absolute;
-				background-color: $primary-base-color;
-				mix-blend-mode: hard-light;
-				transition: .5s;
-				top: 100%;
-				width: 100%;
-				height: 100%;
-				z-index: 1;
-				left: 0;
-			}
-
-			ul li:hover:before {
-				top: 0;
-			}
-
-			.design-selection:active>h3,
-				.design-selection:active>nav {
-					left: 0px;
-					visibility: visible;
-					transition: 1s;
-				}
-			*/
-
-		}
-
-		.intro {
-			grid-column: 2/3;
-			grid-row: 1/2;
-			max-width: 25rem;
-
-		}
-
-		#zen-supporting {
-			position: relative;
-			bottom: 55.3em;
-			grid-column: 2/3;
-			grid-row: 2/3;
-			max-width: 25rem;
-
-		}
+	li:nth-child(even) {
+		border-left: 5px solid #FFBA49;
 	}
 
-	// list animation
+	li a {
+		color: #000;
+	}
+
+	li:hover>a:first-child {
+		border-bottom: 0px;
+		font-weight: bold;
+	}
+
+	li:after {
+		content: "";
+		left: 0;
+		top: 0;
+		width: 0px;
+		position: absolute;
+		transition: all 0.3s ease 0s;
+		-webkit-transition: all 0.3s ease 0s;
+		z-index: -1;
+		height: 100%;
+	}
+
+	li:nth-child(even):hover:after {
+		width: 100%;
+		background-color: #F7DBA7;
+	}
+
+	li:hover:after {
+		width: 100%;
+		background-color: #DBD56E;
+	}
+
+	/*.design-selection {
+			border-right: solid 4px #000;
+
+			>h3,
+			>nav {
+				visibility: hidden;
+				position: relative;
+				left: 250px;
+			}
+		}*/
+
+	/*.select+nav>ul li a {
+			position: relative;
+			transition: .5s;
+			cursor: pointer;
+			display: block;
+			overflow: hidden;
+			z-index: 1;
+		}
+
+	ul li a {
+		z-index: 1;
+	}
+
+	ul li {
+		padding: 14px;
+		border-radius: 10px 0 0 0;
+		margin-bottom: 4px;
+		overflow: hidden;
+		position: relative;
+		color: #262626;
+		transition: .5s;
+		border: solid 3px #FFF;
+		cursor: pointer;
+		display: block;
+		box-shadow: 1px 1px 4px #262626;
+	}
+
+	ul li:hover {
+		background-color: $secondary-base-color;
+			-webkit-animation: swing 1s ease;
+			animation: swing 1s ease;
+			-webkit-animation-iteration-count: 1;
+			animation-iteration-count: 1;
+		color: #FFF;
+		transform: rotateY(360deg);
+	}
+
+	ul li:before {
+		content: "";
+		position: absolute;
+		background-color: $primary-base-color;
+		mix-blend-mode: hard-light;
+		transition: .5s;
+		top: 100%;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		left: 0;
+	}
+
+	ul li:hover:before {
+		top: 0;
+	}
+
+	.design-selection:active>h3,
+		.design-selection:active>nav {
+			left: 0px;
+			visibility: visible;
+			transition: 1s;
+		}
+	*/
+
+		}
+	//list of animation
 	@-webkit-keyframes swing {
 		15% {
 			-webkit-transform: translateX(5px);
@@ -232,58 +232,29 @@ $secondary-brand-color: #fff;
 			transform: translateX(0);
 		}
 	}
-
-	@keyframes swing {
-		15% {
-			-webkit-transform: translateX(5px);
-			transform: translateX(5px);
-		}
-
-		30% {
-			-webkit-transform: translateX(-5px);
-			transform: translateX(-5px);
-		}
-
-		50% {
-			-webkit-transform: translateX(3px);
-			transform: translateX(3px);
-		}
-
-		65% {
-			-webkit-transform: translateX(-3px);
-			transform: translateX(-3px);
-		}
-
-		80% {
-			-webkit-transform: translateX(2px);
-			transform: translateX(2px);
-		}
-
-		100% {
-			-webkit-transform: translateX(0);
-			transform: translateX(0);
-		}
+		
 	}
-
+	
+}
 	//bird-animation
 	.extra1 {
-		background-image: url('assets/bird-cells.svg');
-		background-size: auto 100%;
-		bottom: 98rem;
-		left: 25em;
-		position: relative;
-		width: 80px;
-		height: 125px;
-		transform: rotate(-10deg);
-		will-change: background-position;
-		animation-name: fly-cycle, showup;
-		animation-timing-function: steps(10);
-		animation-iteration-count: infinite, 1;
-		animation-duration: 1s, 4s;
-		animation-delay: 1s, 0;
+	background-image: url('assets/bird-cells.svg');
+	background-size: auto 100%;
+	bottom: 2.5em;
+	left: 22.5em;
+	position: relative;
+	width: 80px;
+	height: 125px;
+	transform: rotate(-10deg);
+	will-change: background-position;
+	animation-name: fly-cycle, showup;
+	animation-timing-function: steps(10);
+	animation-iteration-count: infinite, 1;
+	animation-duration: 1s, 4s;
+	animation-delay: 1s, 0;
 		//opacity: 0;
 	}
-
+		
 	@keyframes fly-cycle {
 		100% {
 			background-position: -900px 0px;
@@ -311,55 +282,10 @@ $secondary-brand-color: #fff;
 	}
 }
 
-//medium-view
-@media all and (min-width: 768px) and (max-width: 1024px) {
-
-
+//Mobile View and General
+	h1,h2,h3,h4,h5,h6 {font-family: $sans-serif;}
 
 	.page-wrapper {
-		display: grid;
-		grid-template-columns: 300px 460px;
-		grid-template-rows: 1fr 100px;
-
-		.sidebar {
-			grid-column: 1/2;
-			grid-row: 1/2;
-			max-width: 20rem;
-			top: 5em;
-			position: relative;
-
-		}
-
-		.intro {
-			grid-column: 2/3;
-			grid-row: 1/2;
-			max-width: 30rem;
-		}
-
-		#zen-supporting {
-			position: relative;
-			bottom: 48em;
-			grid-column: 2/3;
-			grid-row: 2/3;
-			max-width: 30rem;
-		}
-	}
-}
-
-//Mobile View and General
-
-
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-family: $sans-serif;
-}
-
-.page-wrapper {
 
 	p {
 		text-align: justify;
@@ -384,8 +310,8 @@ h6 {
 	.participation,
 	.benefits,
 	.requirements {
-		padding: 1em;
-		margin: .5em 1em;
+		padding: .5em 2em;
+		//margin: .5em 1em;
 		border-bottom: 1px solid $primary-base-color;
 
 
@@ -434,9 +360,9 @@ h6 {
 			color: red;
 		}
 	}
-}
+	}
 
-.intro {
+	.intro {
 
 	header {
 		margin: .6em;
@@ -513,55 +439,31 @@ h6 {
 
 }
 
-//Sidebar (General)
-aside {
+	//Sidebar (General)
+	aside {
 	margin-top: 2em;
 	animation-duration: 3s;
 
 
 	.wrapper {
-		display: block;
+	display: block;
 
 
-		/*li:hover {
-			transform: scale(1.2);
-			transition: all 0.3s ease-in-out 0.1s;
-		}*/
+	/*li:hover {
+		transform: scale(1.2);
+		transition: all 0.3s ease-in-out 0.1s;
+	}*/
 
-		li {
-			list-style-type: none;
-			padding: 1.2em;
-			/*transform: scale(1);
-			transition: all 0.3s ease-in-out 0.2s;*/
+	li {
+		list-style-type: none;
+		padding: 1.2em;
+		/*transform: scale(1);
+		transition: all 0.3s ease-in-out 0.2s;*/
 
-			.design-name::before {
-				//content: url('green-tea-leaves-clipart.png');
-				content: "";
-				background-image: url(assets/green-tea-leaves-clipart.png);
-				background-size: 100% 100%;
-				display: inline-block;
-
-				/*size of your image*/
-				height: 32px;
-				width: 30px;
-
-				/*if you want to change the position you can use margins or:*/
-				position: relative;
-				top: 5px;
-				right: 5px;
-			}
-		}
-
-		h3 {
-			padding: 1em;
-			border-bottom: 1px solid $primary-base-color;
-
-		}
-
-		h3:after {
-			//content: url('clipart-leaf-clear-background-4.png');
+		.design-name::before {
+			//content: url('green-tea-leaves-clipart.png');
 			content: "";
-			background-image: url(assets/clipart-leaf-clear-background-4.png);
+			background-image: url(assets/green-tea-leaves-clipart.png);
 			background-size: 100% 100%;
 			display: inline-block;
 
@@ -572,49 +474,54 @@ aside {
 			/*if you want to change the position you can use margins or:*/
 			position: relative;
 			top: 5px;
-			left: 5px;
+			right: 5px;
+		}
+	}
+
+	h3 {
+		padding: 1em;
+		border-bottom: 1px solid $primary-base-color;
+
+	}
+
+	h3:after {
+		//content: url('clipart-leaf-clear-background-4.png');
+		content: "";
+		background-image: url(assets/clipart-leaf-clear-background-4.png);
+		background-size: 100% 100%;
+		display: inline-block;
+
+		/*size of your image*/
+		height: 32px;
+		width: 30px;
+
+		/*if you want to change the position you can use margins or:*/
+		position: relative;
+		top: 5px;
+		left: 5px;
+	}
+
+	ul {
+		display: block;
+
+		.design-name {
+			color: $primary-base-color;
+
 		}
 
-		ul {
-			display: block;
-
-			.design-name {
-				color: $primary-base-color;
-
-			}
-
-			a {
-				text-decoration: none;
-				color: $primary-brand-color;
-			}
+		a {
+			text-decoration: none;
+			color: $primary-brand-color;
 		}
+	}
 	}
 
 	.design-archives {
 
-		a::before {
-			//content: url('green-tea-leaves-clipart.png');
-			content: "";
-			background-image: url(assets/archives.svg);
-			background-size: 100% 100%;
-			display: inline-block;
-
-			/*size of your image*/
-			height: 32px;
-			width: 30px;
-
-			/*if you want to change the position you can use margins or:*/
-			position: relative;
-			top: 5px;
-		}
-	}
-}
-
-.zen-resources {
 	a::before {
 		//content: url('green-tea-leaves-clipart.png');
 		content: "";
-		background-image: url(assets/leaves.svg);
+		background-image: url(assets/archives.svg);
 		background-size: 100% 100%;
 		display: inline-block;
 
@@ -626,21 +533,41 @@ aside {
 		position: relative;
 		top: 5px;
 	}
-}
+	}
+	}
 
-//Footer (General)
-footer {
+	.zen-resources {
+	a::before {
+	//content: url('green-tea-leaves-clipart.png');
+	content: "";
+	background-image: url(assets/leaves.svg);
+	background-size: 100% 100%;
+	display: inline-block;
+
+	/*size of your image*/
+	height: 32px;
+	width: 30px;
+
+	/*if you want to change the position you can use margins or:*/
+	position: relative;
+	top: 5px;
+	}
+	}
+
+	//Footer (General)
+	footer {
 	background: $primary-base-color;
 	text-align: center;
-	padding: 1em;
+	padding: 1em 1em 1em 1em ;
 
 	a {
-		text-decoration: none;
-		color: $secondary-brand-color;
-		padding: 1em;
+	text-decoration: none;
+	color: $secondary-brand-color;
+	padding: 1em 1em 1em 1em;
 	}
 
 	a:hover {
-		background: $primary-brand-color;
+	background: $primary-brand-color;
+	padding:1em;
 	}
-}
+	}

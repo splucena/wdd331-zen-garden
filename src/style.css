@@ -1,4 +1,75 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+@media all and (min-width: 1024px) {
+  #css-zen-garden {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 100px;
+  }
+  #css-zen-garden .page-wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 1fr 1fr 1fr 1fr;
+    grid-column: 1/-1;
+    grid-row: 1/2;
+  }
+  #css-zen-garden .page-wrapper .intro {
+    width: 80em;
+    margin: auto;
+    grid-column: 1/-1;
+    grid-row: 3/4;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: auto;
+  }
+  #css-zen-garden .page-wrapper .intro header {
+    grid-column: 6/10;
+    grid-row: 1/2;
+  }
+  #css-zen-garden .page-wrapper .intro .summary {
+    grid-column: 6/10;
+    grid-row: 2/3;
+  }
+  #css-zen-garden .page-wrapper .intro .preamble {
+    grid-column: 6/10;
+    grid-row: 3/4;
+  }
+  #css-zen-garden .page-wrapper .main {
+    width: 80em;
+    margin: auto;
+    grid-column: 1/-1;
+    grid-row: 4/5;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: auto;
+  }
+  #css-zen-garden .page-wrapper .main .explanation {
+    grid-column: 6/10;
+    grid-row: 1/2;
+  }
+  #css-zen-garden .page-wrapper .main .participation {
+    grid-column: 6/10;
+    grid-row: 2/3;
+  }
+  #css-zen-garden .page-wrapper .main .benefits {
+    grid-column: 6/10;
+    grid-row: 3/4;
+  }
+  #css-zen-garden .page-wrapper .main .requirements {
+    grid-column: 6/10;
+    grid-row: 4/5;
+  }
+  #css-zen-garden .page-wrapper .main footer {
+    grid-column: 6/10;
+    grid-row: 5/6;
+  }
+  #css-zen-garden .page-wrapper .sidebar {
+    position: relative;
+    bottom: 24.6em;
+    left: 5em;
+    grid-column: 3/5;
+    grid-row: 4/5;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +82,7 @@
 }
 
 @media all and (min-width: 1024px) {
-  body {
+  #css-zen-garden {
     background-image: url("assets/backg.svg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -19,20 +90,7 @@
     animation-duration: 0.5s;
     animation-name: showup;
   }
-
-  .page-wrapper {
-    display: grid;
-    grid-template-columns: 230px 470px;
-    grid-template-rows: 1fr 100px;
-    margin: 0 auto;
-    max-width: 50%;
-  }
-  .page-wrapper .sidebar {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    max-width: 20rem;
-    top: 5em;
-    position: relative;
+  #css-zen-garden .page-wrapper .sidebar {
     /*.design-selection {
     		border-right: solid 4px #000;
 
@@ -105,10 +163,10 @@
     	}
     */
   }
-  .page-wrapper .sidebar li:first-child {
+  #css-zen-garden .page-wrapper .sidebar li:first-child {
     margin-top: 10px;
   }
-  .page-wrapper .sidebar li {
+  #css-zen-garden .page-wrapper .sidebar li {
     font-family: "Open sans", sans-serif;
     z-index: 2;
     text-decoration: none;
@@ -122,17 +180,17 @@
     padding: 15px;
     color: #000;
   }
-  .page-wrapper .sidebar li:nth-child(even) {
+  #css-zen-garden .page-wrapper .sidebar li:nth-child(even) {
     border-left: 5px solid #FFBA49;
   }
-  .page-wrapper .sidebar li a {
+  #css-zen-garden .page-wrapper .sidebar li a {
     color: #000;
   }
-  .page-wrapper .sidebar li:hover > a:first-child {
+  #css-zen-garden .page-wrapper .sidebar li:hover > a:first-child {
     border-bottom: 0px;
     font-weight: bold;
   }
-  .page-wrapper .sidebar li:after {
+  #css-zen-garden .page-wrapper .sidebar li:after {
     content: "";
     left: 0;
     top: 0;
@@ -143,27 +201,14 @@
     z-index: -1;
     height: 100%;
   }
-  .page-wrapper .sidebar li:nth-child(even):hover:after {
+  #css-zen-garden .page-wrapper .sidebar li:nth-child(even):hover:after {
     width: 100%;
     background-color: #F7DBA7;
   }
-  .page-wrapper .sidebar li:hover:after {
+  #css-zen-garden .page-wrapper .sidebar li:hover:after {
     width: 100%;
     background-color: #DBD56E;
   }
-  .page-wrapper .intro {
-    grid-column: 2/3;
-    grid-row: 1/2;
-    max-width: 25rem;
-  }
-  .page-wrapper #zen-supporting {
-    position: relative;
-    bottom: 55.3em;
-    grid-column: 2/3;
-    grid-row: 2/3;
-    max-width: 25rem;
-  }
-
   @-webkit-keyframes swing {
     15% {
       -webkit-transform: translateX(5px);
@@ -190,37 +235,12 @@
       transform: translateX(0);
     }
   }
-  @keyframes swing {
-    15% {
-      -webkit-transform: translateX(5px);
-      transform: translateX(5px);
-    }
-    30% {
-      -webkit-transform: translateX(-5px);
-      transform: translateX(-5px);
-    }
-    50% {
-      -webkit-transform: translateX(3px);
-      transform: translateX(3px);
-    }
-    65% {
-      -webkit-transform: translateX(-3px);
-      transform: translateX(-3px);
-    }
-    80% {
-      -webkit-transform: translateX(2px);
-      transform: translateX(2px);
-    }
-    100% {
-      -webkit-transform: translateX(0);
-      transform: translateX(0);
-    }
-  }
+
   .extra1 {
     background-image: url("assets/bird-cells.svg");
     background-size: auto 100%;
-    bottom: 98rem;
-    left: 25em;
+    bottom: 2.5em;
+    left: 22.5em;
     position: relative;
     width: 80px;
     height: 125px;
@@ -253,38 +273,7 @@
     }
   }
 }
-@media all and (min-width: 768px) and (max-width: 1024px) {
-  .page-wrapper {
-    display: grid;
-    grid-template-columns: 300px 460px;
-    grid-template-rows: 1fr 100px;
-  }
-  .page-wrapper .sidebar {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    max-width: 20rem;
-    top: 5em;
-    position: relative;
-  }
-  .page-wrapper .intro {
-    grid-column: 2/3;
-    grid-row: 1/2;
-    max-width: 30rem;
-  }
-  .page-wrapper #zen-supporting {
-    position: relative;
-    bottom: 48em;
-    grid-column: 2/3;
-    grid-row: 2/3;
-    max-width: 30rem;
-  }
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: "Open sans", sans-serif;
 }
 
@@ -308,8 +297,7 @@ h6 {
 .page-wrapper .participation,
 .page-wrapper .benefits,
 .page-wrapper .requirements {
-  padding: 1em;
-  margin: 0.5em 1em;
+  padding: 0.5em 2em;
   border-bottom: 1px solid #6ba24a;
 }
 .page-wrapper .summary h3,
@@ -515,15 +503,16 @@ aside .design-archives a::before {
 footer {
   background: #6ba24a;
   text-align: center;
-  padding: 1em;
+  padding: 1em 1em 1em 1em;
 }
 footer a {
   text-decoration: none;
   color: #fff;
-  padding: 1em;
+  padding: 1em 1em 1em 1em;
 }
 footer a:hover {
   background: #000;
+  padding: 1em;
 }
 
 /*# sourceMappingURL=style.css.map */
