@@ -83,24 +83,28 @@
 
 @media all and (min-width: 1024px) {
   #css-zen-garden {
-    background-image: url("assets/agriculture.jpg");
+    /*background-image: url("assets/agriculture.jpg");*/
+    background-image: url("assets/johann-siemens-EPy0gBJzzZU-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     animation-duration: 0.5s;
     animation-name: showup;
   }
+  #css-zen-garden .page-wrapper .intro .summary {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8));
+  }
   #css-zen-garden .page-wrapper .sidebar {
     /*.design-selection {
-    		border-right: solid 4px #000;
+    	border-right: solid 4px #000;
 
-    		>h3,
-    		>nav {
-    			visibility: hidden;
-    			position: relative;
-    			left: 250px;
-    		}
-    	}*/
+    	>h3,
+    	>nav {
+    		visibility: hidden;
+    		position: relative;
+    		left: 250px;
+    	}
+    }*/
     /*.select+nav>ul li a {
     		position: relative;
     		transition: .5s;
@@ -175,20 +179,30 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     border-bottom: 0px;
-    border-left: 5px solid #6ba24a;
+    border-left: 5px solid #d2e4c4;
     width: 100%;
     padding: 15px;
     color: #000;
+    background-color: rgba(175, 208, 191, 0.4);
+    cursor: pointer;
   }
   #css-zen-garden .page-wrapper .sidebar li:nth-child(even) {
-    border-left: 5px solid #FFBA49;
+    border-left: 5px solid #ebebd3;
   }
   #css-zen-garden .page-wrapper .sidebar li a {
     color: #000;
   }
+  #css-zen-garden .page-wrapper .sidebar li:hover {
+    border-left: 5px solid #9ad1d4;
+    color: #fff;
+  }
+  #css-zen-garden .page-wrapper .sidebar li:hover > a:nth-child(2) {
+    color: #fff;
+  }
   #css-zen-garden .page-wrapper .sidebar li:hover > a:first-child {
     border-bottom: 0px;
     font-weight: bold;
+    color: #e2efde;
   }
   #css-zen-garden .page-wrapper .sidebar li:after {
     content: "";
@@ -203,11 +217,11 @@
   }
   #css-zen-garden .page-wrapper .sidebar li:nth-child(even):hover:after {
     width: 100%;
-    background-color: #F7DBA7;
+    background-color: #14281d;
   }
   #css-zen-garden .page-wrapper .sidebar li:hover:after {
     width: 100%;
-    background-color: #DBD56E;
+    background-color: #4b296b;
   }
   @-webkit-keyframes swing {
     15% {
@@ -275,14 +289,20 @@
 }
 @media all and (min-width: 200px) and (max-width: 768px) {
   #css-zen-garden {
-    background-image: url("assets/mobile.png");
+    /*background-image: url("assets/mobile.png");*/
+    background-image: url("assets/johann-siemens-EPy0gBJzzZU-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
   }
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Open sans", sans-serif;
 }
 
