@@ -1,15 +1,18 @@
 // Partials
 @import "partials/grid";
 
-* {margin: 0;padding: 0;}
+* {
+  margin: 0;
+  padding: 0;
+}
 
 *,
 *:after,
 *:before {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 
 // font-family
 $serif: "",
@@ -19,114 +22,115 @@ sans-serif;
 
 // colors
 $primary-base-color: #6ba24a;
-$secondary-base-color:#cdc555;
+$secondary-base-color: #cdc555;
 $primary-brand-color: #000;
 $secondary-brand-color: #fff;
 
-
 //large-view
-@media all and (min-width: 1024px) 
-{
-	
-	#css-zen-garden
-{
-	background-image: url("assets/agriculture.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
-	animation-duration: .5s;
-	animation-name: showup;
-	.page-wrapper
-	{
-			
-	.intro{
-			
-			header{
-				
-			}
-			.summary{
-				
-			}
-			.preamble{
-				
-			}
-			}
-	.main{
-			
-	.explanation{
+@media all and (min-width: 1024px) {
+  #css-zen-garden {
+    /*background-image: url("assets/agriculture.jpg");*/
+    background-image: url("assets/johann-siemens-EPy0gBJzzZU-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    animation-duration: 0.5s;
+    animation-name: showup;
 
-	}
-	.participation{
+    .page-wrapper {
+      .intro {
+        header {}
 
-	}
-	.benefits{
+        .summary {
+          //background-color: rgba(255, 255, 255, 0.8);
+          background-image: linear-gradient(to right,
+              rgba(255, 255, 255, 0),
+              rgba(255, 255, 255, 0.8));
+        }
 
-	}
-	.requirements{
+        .preamble {}
+      }
 
-	}
-	footer{
+      .main {
+        .explanation {}
 
-	}
-	}
-	.sidebar {
-			
-	li:first-child {
-		margin-top: 10px;
-	}
+        .participation {}
 
-	li {
-		font-family: $sans-serif;
-		z-index: 2;
-		text-decoration: none;
-		position: relative;
-		box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		-webkit-box-sizing: border-box;
-		border-bottom: 0px;
-		border-left: 5px solid $primary-base-color;
-		width: 100%;
-		padding: 15px;
-		color: #000;
+        .benefits {}
 
-	}
+        .requirements {}
 
-	li:nth-child(even) {
-		border-left: 5px solid #FFBA49;
-	}
+        footer {}
+      }
 
-	li a {
-		color: #000;
-	}
+      .sidebar {
+        li:first-child {
+          margin-top: 10px;
+        }
 
-	li:hover>a:first-child {
-		border-bottom: 0px;
-		font-weight: bold;
-	}
+        li {
+          font-family: $sans-serif;
+          z-index: 2;
+          text-decoration: none;
+          position: relative;
+          box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+          border-bottom: 0px;
+          border-left: 5px solid #d2e4c4;
+          width: 100%;
+          padding: 15px;
+          color: #000;
+          background-color: rgba(175, 208, 191, 0.4);
+          cursor: pointer;
+        }
 
-	li:after {
-		content: "";
-		left: 0;
-		top: 0;
-		width: 0px;
-		position: absolute;
-		transition: all 0.3s ease 0s;
-		-webkit-transition: all 0.3s ease 0s;
-		z-index: -1;
-		height: 100%;
-	}
+        li:nth-child(even) {
+          border-left: 5px solid #ebebd3;
+        }
 
-	li:nth-child(even):hover:after {
-		width: 100%;
-		background-color: #F7DBA7;
-	}
+        li a {
+          color: #000;
+        }
 
-	li:hover:after {
-		width: 100%;
-		background-color: #DBD56E;
-	}
+        li:hover {
+          border-left: 5px solid #9ad1d4;
+          color: #fff;
+        }
 
-	/*.design-selection {
+        li:hover>a:nth-child(2) {
+          color: #fff;
+        }
+
+        li:hover>a:first-child {
+          border-bottom: 0px;
+          font-weight: bold;
+          color: #e2efde;
+        }
+
+        li:after {
+          content: "";
+          left: 0;
+          top: 0;
+          width: 0px;
+          position: absolute;
+          transition: all 0.3s ease 0s;
+          -webkit-transition: all 0.3s ease 0s;
+          z-index: -1;
+          height: 100%;
+        }
+
+        li:nth-child(even):hover:after {
+          width: 100%;
+          background-color: #14281d;
+        }
+
+        li:hover:after {
+          width: 100%;
+          background-color: #4b296b;
+        }
+
+        /*.design-selection {
 			border-right: solid 4px #000;
 
 			>h3,
@@ -137,7 +141,7 @@ $secondary-brand-color: #fff;
 			}
 		}*/
 
-	/*.select+nav>ul li a {
+        /*.select+nav>ul li a {
 			position: relative;
 			transition: .5s;
 			cursor: pointer;
@@ -198,390 +202,384 @@ $secondary-brand-color: #fff;
 			transition: 1s;
 		}
 	*/
+      }
 
-		}
-	//list of animation
-	@-webkit-keyframes swing {
-		15% {
-			-webkit-transform: translateX(5px);
-			transform: translateX(5px);
-		}
+      //list of animation
+      @-webkit-keyframes swing {
+        15% {
+          -webkit-transform: translateX(5px);
+          transform: translateX(5px);
+        }
 
-		30% {
-			-webkit-transform: translateX(-5px);
-			transform: translateX(-5px);
-		}
+        30% {
+          -webkit-transform: translateX(-5px);
+          transform: translateX(-5px);
+        }
 
-		50% {
-			-webkit-transform: translateX(3px);
-			transform: translateX(3px);
-		}
+        50% {
+          -webkit-transform: translateX(3px);
+          transform: translateX(3px);
+        }
 
-		65% {
-			-webkit-transform: translateX(-3px);
-			transform: translateX(-3px);
-		}
+        65% {
+          -webkit-transform: translateX(-3px);
+          transform: translateX(-3px);
+        }
 
-		80% {
-			-webkit-transform: translateX(2px);
-			transform: translateX(2px);
-		}
+        80% {
+          -webkit-transform: translateX(2px);
+          transform: translateX(2px);
+        }
 
-		100% {
-			-webkit-transform: translateX(0);
-			transform: translateX(0);
-		}
-	}
-		
-	}
-	
+        100% {
+          -webkit-transform: translateX(0);
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+
+  //bird-animation
+  .extra1 {
+    background-image: url("assets/bird-cells.svg");
+    background-size: auto 100%;
+    bottom: 2.5em;
+    left: 22.5em;
+    position: relative;
+    width: 80px;
+    height: 125px;
+    transform: rotate(-10deg);
+    will-change: background-position;
+    animation-name: fly-cycle, showup;
+    animation-timing-function: steps(10);
+    animation-iteration-count: infinite, 1;
+    animation-duration: 1s, 4s;
+    animation-delay: 1s, 0;
+    //opacity: 0;
+  }
+
+  @keyframes fly-cycle {
+    100% {
+      background-position: -900px 0px;
+    }
+
+    @keyframes showup {
+      0% {
+        opacity: 0;
+      }
+
+      20% {
+        opacity: 0;
+      }
+
+      80% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+  }
 }
-	//bird-animation
-	.extra1 {
-	background-image: url('assets/bird-cells.svg');
-	background-size: auto 100%;
-	bottom: 2.5em;
-	left: 22.5em;
-	position: relative;
-	width: 80px;
-	height: 125px;
-	transform: rotate(-10deg);
-	will-change: background-position;
-	animation-name: fly-cycle, showup;
-	animation-timing-function: steps(10);
-	animation-iteration-count: infinite, 1;
-	animation-duration: 1s, 4s;
-	animation-delay: 1s, 0;
-		//opacity: 0;
-	}
-		
-	@keyframes fly-cycle {
-		100% {
-			background-position: -900px 0px;
 
-		}
-
-		@keyframes showup {
-			0% {
-				opacity: 0;
-			}
-
-			20% {
-				opacity: 0;
-			}
-
-			80% {
-				opacity: 0;
-			}
-
-			100% {
-				opacity: 1;
-			}
-		}
-
-	}
-}
 //mobile view background
-@media all and (min-width: 200px) and (max-width:768px) 
-{
-	
-	#css-zen-garden
-{
-	background-image: url("assets/mobile.png");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
-	background-position: center;
-	}
+@media all and (min-width: 200px) and (max-width: 768px) {
+  #css-zen-garden {
+    /*background-image: url("assets/mobile.png");*/
+    background-image: url("assets/johann-siemens-EPy0gBJzzZU-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+  }
 }
-
 
 //Mobile View and General
-	h1,h2,h3,h4,h5,h6 {font-family: $sans-serif;}
-
-	.page-wrapper {
-
-	p {
-		text-align: justify;
-		font-family: $serif;
-	}
-
-	p:first-child:first-letter {
-		color: $primary-base-color;
-		float: left;
-		font-family: $serif;
-		font-size: 75px;
-		line-height: 60px;
-		padding-top: 4px;
-		padding-right: 8px;
-		padding-left: 3px;
-	}
-
-	//Each Section (General)
-	.summary,
-	.preamble,
-	.explanation,
-	.participation,
-	.benefits,
-	.requirements {
-		padding: .5em 2em;
-		//margin: .5em 1em;
-		border-bottom: 1px solid $primary-base-color;
-
-
-		//Each Section (H3-General)
-		h3 {
-			font-size: 1em;
-			margin-bottom: 1em;
-			text-align: center;
-			transform: scale(1);
-			transition: all 0.3s ease-in-out 0.2s;
-			text-transform: uppercase;
-			font-family: 'Orienta', sans-serif;
-			letter-spacing: 1px;
-
-		}
-
-		//h3 animation
-		h3:hover:before {
-			content: "";
-			background-image: url('assets/logo-ver-2.png');
-
-		}
-
-		h3::before {
-			content: "";
-			background-image: url(assets/logo-ver-1.png);
-			background-size: 100% 100%;
-			display: inline-block;
-
-			/*size of your image*/
-			height: 32px;
-			width: 50px;
-
-			/*if you want to change the position you can use margins or:*/
-			position: relative;
-			top: 5px;
-
-		}
-
-		p {
-			padding: .4em 0;
-		}
-
-		a {
-			text-decoration: none;
-			color: red;
-		}
-	}
-	}
-
-	.intro {
-
-	header {
-		margin: .6em;
-	}
-
-	h1 {
-		color: $primary-base-color;
-		font-size: 2em;
-		border-bottom: 1px solid $secondary-base-color;
-		text-align: center;
-		animation-duration: 3s;
-		animation-name: slidein;
-		animation-timing-function: ease-in-out;
-	}
-
-	//animation h1
-	@keyframes slidein {
-		from {
-			margin-left: 100%;
-			width: 100%;
-		}
-
-		to {
-			margin-left: 0%;
-			width: 100%;
-		}
-	}
-
-	h2 {
-		text-align: right;
-		font-size: 1.2em;
-		padding: .3em;
-		animation-duration: 4s;
-		animation-name: showup;
-		color: $secondary-base-color;
-		animation-timing-function: ease-in;
-	}
-
-	//animation h2
-	@keyframes showup {
-		0% {
-			opacity: 0;
-		}
-
-		20% {
-			opacity: 0;
-		}
-
-		80% {
-			opacity: 0;
-		}
-
-		100% {
-			opacity: 1;
-		}
-	}
-
-	h1::after {
-		//content: url('logo-ver-2.png');
-		content: "";
-		background-image: url(assets/logo-ver-2.png);
-		background-size: 100% 100%;
-		display: inline-block;
-
-		/*size of your image*/
-		height: 42px;
-		width: 60px;
-
-		/*if you want to change the position you can use margins or:*/
-		position: relative;
-		top: 5px;
-
-	}
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $sans-serif;
 }
 
-	//Sidebar (General)
-	aside {
-	margin-top: 2em;
-	animation-duration: 3s;
+.page-wrapper {
+  p {
+    text-align: justify;
+    font-family: $serif;
+  }
 
+  p:first-child:first-letter {
+    color: $primary-base-color;
+    float: left;
+    font-family: $serif;
+    font-size: 75px;
+    line-height: 60px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
+  }
 
-	.wrapper {
-	display: block;
+  //Each Section (General)
+  .summary,
+  .preamble,
+  .explanation,
+  .participation,
+  .benefits,
+  .requirements {
+    padding: 0.5em 2em;
+    //margin: .5em 1em;
+    border-bottom: 1px solid $primary-base-color;
 
+    //Each Section (H3-General)
+    h3 {
+      font-size: 1em;
+      margin-bottom: 1em;
+      text-align: center;
+      transform: scale(1);
+      transition: all 0.3s ease-in-out 0.2s;
+      text-transform: uppercase;
+      font-family: "Orienta", sans-serif;
+      letter-spacing: 1px;
+      color: #6ba24a;
+      border-bottom: 1px solid #6ba24a;
+      animation-duration: 3s;
+      animation-name: showup;
+      animation-timing-function: ease-in-out;
+    }
 
-	/*li:hover {
+    //h3 animation
+    h3:hover:before {
+      content: "";
+      background-image: url("assets/logo-ver-2.png");
+    }
+
+    h3::before {
+      content: "";
+      background-image: url(assets/logo-ver-1.png);
+      background-size: 100% 100%;
+      display: inline-block;
+
+      /*size of your image*/
+      height: 32px;
+      width: 50px;
+
+      /*if you want to change the position you can use margins or:*/
+      position: relative;
+      top: 5px;
+    }
+
+    p {
+      padding: 0.4em 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: red;
+    }
+  }
+}
+
+.intro {
+  header {
+    margin: 0.6em;
+  }
+
+  h1 {
+    color: $primary-base-color;
+    font-size: 2em;
+    border-bottom: 1px solid $secondary-base-color;
+    text-align: center;
+    animation-duration: 3s;
+    animation-name: slidein;
+    animation-timing-function: ease-in-out;
+  }
+
+  //animation h1
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 100%;
+    }
+
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+  h2 {
+    text-align: right;
+    font-size: 1.2em;
+    padding: 0.3em;
+    animation-duration: 4s;
+    animation-name: showup;
+    color: $secondary-base-color;
+    animation-timing-function: ease-in;
+  }
+
+  //animation h2
+  @keyframes showup {
+    0% {
+      opacity: 0;
+    }
+
+    20% {
+      opacity: 0;
+    }
+
+    80% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  h1::after {
+    //content: url('logo-ver-2.png');
+    content: "";
+    background-image: url(assets/logo-ver-2.png);
+    background-size: 100% 100%;
+    display: inline-block;
+
+    /*size of your image*/
+    height: 42px;
+    width: 60px;
+
+    /*if you want to change the position you can use margins or:*/
+    position: relative;
+    top: 5px;
+  }
+}
+
+//Sidebar (General)
+aside {
+  margin-top: 2em;
+  animation-duration: 3s;
+
+  .wrapper {
+    display: block;
+
+    /*li:hover {
 		transform: scale(1.2);
 		transition: all 0.3s ease-in-out 0.1s;
 	}*/
 
-	li {
-		list-style-type: none;
-		padding: 1.2em;
-		/*transform: scale(1);
+    li {
+      list-style-type: none;
+      padding: 1.2em;
+      /*transform: scale(1);
 		transition: all 0.3s ease-in-out 0.2s;*/
 
-		.design-name::before {
-			//content: url('green-tea-leaves-clipart.png');
-			content: "";
-			background-image: url(assets/green-tea-leaves-clipart.png);
-			background-size: 100% 100%;
-			display: inline-block;
+      .design-name::before {
+        //content: url('green-tea-leaves-clipart.png');
+        content: "";
+        background-image: url(assets/green-tea-leaves-clipart.png);
+        background-size: 100% 100%;
+        display: inline-block;
 
-			/*size of your image*/
-			height: 32px;
-			width: 30px;
+        /*size of your image*/
+        height: 32px;
+        width: 30px;
 
-			/*if you want to change the position you can use margins or:*/
-			position: relative;
-			top: 5px;
-			right: 5px;
-		}
-	}
+        /*if you want to change the position you can use margins or:*/
+        position: relative;
+        top: 5px;
+        right: 5px;
+      }
+    }
 
-	h3 {
-		padding: 1em;
-		border-bottom: 1px solid $primary-base-color;
+    h3 {
+      padding: 1em;
+      border-bottom: 1px solid $primary-base-color;
+    }
 
-	}
+    h3:after {
+      //content: url('clipart-leaf-clear-background-4.png');
+      content: "";
+      background-image: url(assets/clipart-leaf-clear-background-4.png);
+      background-size: 100% 100%;
+      display: inline-block;
 
-	h3:after {
-		//content: url('clipart-leaf-clear-background-4.png');
-		content: "";
-		background-image: url(assets/clipart-leaf-clear-background-4.png);
-		background-size: 100% 100%;
-		display: inline-block;
+      /*size of your image*/
+      height: 32px;
+      width: 30px;
 
-		/*size of your image*/
-		height: 32px;
-		width: 30px;
+      /*if you want to change the position you can use margins or:*/
+      position: relative;
+      top: 5px;
+      left: 5px;
+    }
 
-		/*if you want to change the position you can use margins or:*/
-		position: relative;
-		top: 5px;
-		left: 5px;
-	}
+    ul {
+      display: block;
 
-	ul {
-		display: block;
+      .design-name {
+        color: $primary-base-color;
+      }
 
-		.design-name {
-			color: $primary-base-color;
+      a {
+        text-decoration: none;
+        color: $primary-brand-color;
+      }
+    }
+  }
 
-		}
+  .design-archives {
+    a::before {
+      //content: url('green-tea-leaves-clipart.png');
+      content: "";
+      background-image: url(assets/archives.svg);
+      background-size: 100% 100%;
+      display: inline-block;
 
-		a {
-			text-decoration: none;
-			color: $primary-brand-color;
-		}
-	}
-	}
+      /*size of your image*/
+      height: 32px;
+      width: 30px;
 
-	.design-archives {
+      /*if you want to change the position you can use margins or:*/
+      position: relative;
+      top: 5px;
+    }
+  }
+}
 
-	a::before {
-		//content: url('green-tea-leaves-clipart.png');
-		content: "";
-		background-image: url(assets/archives.svg);
-		background-size: 100% 100%;
-		display: inline-block;
+.zen-resources {
+  a::before {
+    //content: url('green-tea-leaves-clipart.png');
+    content: "";
+    background-image: url(assets/leaves.svg);
+    background-size: 100% 100%;
+    display: inline-block;
 
-		/*size of your image*/
-		height: 32px;
-		width: 30px;
+    /*size of your image*/
+    height: 32px;
+    width: 30px;
 
-		/*if you want to change the position you can use margins or:*/
-		position: relative;
-		top: 5px;
-	}
-	}
-	}
+    /*if you want to change the position you can use margins or:*/
+    position: relative;
+    top: 5px;
+  }
+}
 
-	.zen-resources {
-	a::before {
-	//content: url('green-tea-leaves-clipart.png');
-	content: "";
-	background-image: url(assets/leaves.svg);
-	background-size: 100% 100%;
-	display: inline-block;
+//Footer (General)
+footer {
+  background: $primary-base-color;
+  text-align: center;
+  padding: 1em 1em 1em 1em;
 
-	/*size of your image*/
-	height: 32px;
-	width: 30px;
+  a {
+    text-decoration: none;
+    color: $secondary-brand-color;
+    padding: 1em 1em 1em 1em;
+  }
 
-	/*if you want to change the position you can use margins or:*/
-	position: relative;
-	top: 5px;
-	}
-	}
-
-	//Footer (General)
-	footer {
-	background: $primary-base-color;
-	text-align: center;
-	padding: 1em 1em 1em 1em ;
-
-	a {
-	text-decoration: none;
-	color: $secondary-brand-color;
-	padding: 1em 1em 1em 1em;
-	}
-
-	a:hover {
-	background: $primary-brand-color;
-	padding:1em;
-	}
-	}
+  a:hover {
+    background: $primary-brand-color;
+    padding: 1em;
+  }
+}

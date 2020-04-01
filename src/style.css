@@ -366,11 +366,6 @@ h6 {
   text-transform: uppercase;
   font-family: "Orienta", sans-serif;
   letter-spacing: 1px;
-  color: #6ba24a;
-  border-bottom: 1px solid #6ba24a;
-  animation-duration: 3s;
-  animation-name: showup;
-  animation-timing-function: ease-in-out;
 }
 
 .page-wrapper .summary h3:hover:before,
