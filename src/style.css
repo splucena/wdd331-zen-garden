@@ -1,126 +1,75 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 @media all and (min-width: 1024px) {
   #css-zen-garden {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[12];
-        grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(12, 1fr);
     grid-auto-rows: 100px;
   }
   #css-zen-garden .page-wrapper {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[12];
-        grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(12, 1fr);
     grid-auto-rows: 1fr 1fr 1fr 1fr;
     grid-column: 1/-1;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
     grid-row: 1/2;
   }
   #css-zen-garden .page-wrapper .intro {
     width: 80em;
     margin: auto;
     grid-column: 1/-1;
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 1;
     grid-row: 3/4;
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[12];
-        grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(12, 1fr);
     grid-auto-rows: auto;
   }
   #css-zen-garden .page-wrapper .intro header {
-    -ms-grid-column: 6;
-    -ms-grid-column-span: 4;
     grid-column: 6/10;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
     grid-row: 1/2;
   }
   #css-zen-garden .page-wrapper .intro .summary {
-    -ms-grid-column: 6;
-    -ms-grid-column-span: 4;
     grid-column: 6/10;
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 1;
     grid-row: 2/3;
   }
   #css-zen-garden .page-wrapper .intro .preamble {
-    -ms-grid-column: 6;
-    -ms-grid-column-span: 4;
     grid-column: 6/10;
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 1;
     grid-row: 3/4;
   }
   #css-zen-garden .page-wrapper .main {
     width: 80em;
     margin: auto;
     grid-column: 1/-1;
-    -ms-grid-row: 4;
-    -ms-grid-row-span: 1;
     grid-row: 4/5;
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[12];
-        grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(12, 1fr);
     grid-auto-rows: auto;
   }
   #css-zen-garden .page-wrapper .main .explanation {
-    -ms-grid-column: 6;
-    -ms-grid-column-span: 4;
     grid-column: 6/10;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
     grid-row: 1/2;
   }
   #css-zen-garden .page-wrapper .main .participation {
-    -ms-grid-column: 6;
-    -ms-grid-column-span: 4;
     grid-column: 6/10;
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 1;
     grid-row: 2/3;
   }
   #css-zen-garden .page-wrapper .main .benefits {
-    -ms-grid-column: 6;
-    -ms-grid-column-span: 4;
     grid-column: 6/10;
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 1;
     grid-row: 3/4;
   }
   #css-zen-garden .page-wrapper .main .requirements {
-    -ms-grid-column: 6;
-    -ms-grid-column-span: 4;
     grid-column: 6/10;
-    -ms-grid-row: 4;
-    -ms-grid-row-span: 1;
     grid-row: 4/5;
   }
   #css-zen-garden .page-wrapper .main footer {
-    -ms-grid-column: 6;
-    -ms-grid-column-span: 4;
     grid-column: 6/10;
-    -ms-grid-row: 5;
-    -ms-grid-row-span: 1;
     grid-row: 5/6;
   }
   #css-zen-garden .page-wrapper .sidebar {
     position: relative;
     bottom: 24.6em;
     left: 5em;
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 2;
     grid-column: 3/5;
-    -ms-grid-row: 4;
-    -ms-grid-row-span: 1;
     grid-row: 4/5;
   }
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -129,8 +78,7 @@
 *,
 *:after,
 *:before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 @media all and (min-width: 1024px) {
@@ -140,87 +88,81 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    -webkit-animation-duration: 0.5s;
-            animation-duration: 0.5s;
-    -webkit-animation-name: showup;
-            animation-name: showup;
-  }
-  #css-zen-garden .page-wrapper .intro .summary {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.8)));
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8));
+    animation-duration: 0.5s;
+    animation-name: showup;
   }
   #css-zen-garden .page-wrapper .sidebar {
     /*.design-selection {
-			border-right: solid 4px #000;
+    	border-right: solid 4px #000;
 
-			>h3,
-			>nav {
-				visibility: hidden;
-				position: relative;
-				left: 250px;
-			}
-		}*/
+    	>h3,
+    	>nav {
+    		visibility: hidden;
+    		position: relative;
+    		left: 250px;
+    	}
+    }*/
     /*.select+nav>ul li a {
-			position: relative;
-			transition: .5s;
-			cursor: pointer;
-			display: block;
-			overflow: hidden;
-			z-index: 1;
-		}
+    		position: relative;
+    		transition: .5s;
+    		cursor: pointer;
+    		display: block;
+    		overflow: hidden;
+    		z-index: 1;
+    	}
 
-	ul li a {
-		z-index: 1;
-	}
+    ul li a {
+    	z-index: 1;
+    }
 
-	ul li {
-		padding: 14px;
-		border-radius: 10px 0 0 0;
-		margin-bottom: 4px;
-		overflow: hidden;
-		position: relative;
-		color: #262626;
-		transition: .5s;
-		border: solid 3px #FFF;
-		cursor: pointer;
-		display: block;
-		box-shadow: 1px 1px 4px #262626;
-	}
+    ul li {
+    	padding: 14px;
+    	border-radius: 10px 0 0 0;
+    	margin-bottom: 4px;
+    	overflow: hidden;
+    	position: relative;
+    	color: #262626;
+    	transition: .5s;
+    	border: solid 3px #FFF;
+    	cursor: pointer;
+    	display: block;
+    	box-shadow: 1px 1px 4px #262626;
+    }
 
-	ul li:hover {
-		background-color: $secondary-base-color;
-			-webkit-animation: swing 1s ease;
-			animation: swing 1s ease;
-			-webkit-animation-iteration-count: 1;
-			animation-iteration-count: 1;
-		color: #FFF;
-		transform: rotateY(360deg);
-	}
+    ul li:hover {
+    	background-color: $secondary-base-color;
+    		-webkit-animation: swing 1s ease;
+    		animation: swing 1s ease;
+    		-webkit-animation-iteration-count: 1;
+    		animation-iteration-count: 1;
+    	color: #FFF;
+    	transform: rotateY(360deg);
+    }
 
-	ul li:before {
-		content: "";
-		position: absolute;
-		background-color: $primary-base-color;
-		mix-blend-mode: hard-light;
-		transition: .5s;
-		top: 100%;
-		width: 100%;
-		height: 100%;
-		z-index: 1;
-		left: 0;
-	}
+    ul li:before {
+    	content: "";
+    	position: absolute;
+    	background-color: $primary-base-color;
+    	mix-blend-mode: hard-light;
+    	transition: .5s;
+    	top: 100%;
+    	width: 100%;
+    	height: 100%;
+    	z-index: 1;
+    	left: 0;
+    }
 
-	ul li:hover:before {
-		top: 0;
-	}
+    ul li:hover:before {
+    	top: 0;
+    }
 
-	.design-selection:active>h3,
-		.design-selection:active>nav {
-			left: 0px;
-			visibility: visible;
-			transition: 1s;
-		}
-	*/
+    .design-selection:active>h3,
+    	.design-selection:active>nav {
+    		left: 0px;
+    		visibility: visible;
+    		transition: 1s;
+    	}
+    */
   }
   #css-zen-garden .page-wrapper .sidebar li:first-child {
     margin-top: 10px;
@@ -304,6 +246,7 @@
       transform: translateX(0);
     }
   }
+
   .extra1 {
     background-image: url("assets/bird-cells.svg");
     background-size: auto 100%;
@@ -312,56 +255,18 @@
     position: relative;
     width: 80px;
     height: 125px;
-    -webkit-transform: rotate(-10deg);
-            transform: rotate(-10deg);
+    transform: rotate(-10deg);
     will-change: background-position;
-    -webkit-animation-name: fly-cycle, showup;
-            animation-name: fly-cycle, showup;
-    -webkit-animation-timing-function: steps(10);
-            animation-timing-function: steps(10);
-    -webkit-animation-iteration-count: infinite, 1;
-            animation-iteration-count: infinite, 1;
-    -webkit-animation-duration: 1s, 4s;
-            animation-duration: 1s, 4s;
-    -webkit-animation-delay: 1s, 0;
-            animation-delay: 1s, 0;
+    animation-name: fly-cycle, showup;
+    animation-timing-function: steps(10);
+    animation-iteration-count: infinite, 1;
+    animation-duration: 1s, 4s;
+    animation-delay: 1s, 0;
   }
-  @-webkit-keyframes fly-cycle {
-    100% {
-      background-position: -900px 0px;
-    }
-    @keyframes showup {
-      0% {
-        opacity: 0;
-      }
-      20% {
-        opacity: 0;
-      }
-      80% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-  }
+
   @keyframes fly-cycle {
     100% {
       background-position: -900px 0px;
-    }
-    @-webkit-keyframes showup {
-      0% {
-        opacity: 0;
-      }
-      20% {
-        opacity: 0;
-      }
-      80% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
     }
     @keyframes showup {
       0% {
@@ -379,7 +284,6 @@
     }
   }
 }
-
 @media all and (min-width: 200px) and (max-width: 768px) {
   #css-zen-garden {
     /*background-image: url("assets/mobile.png");*/
@@ -390,7 +294,6 @@
     background-position: center;
   }
 }
-
 h1,
 h2,
 h3,
@@ -404,9 +307,8 @@ h6 {
   text-align: justify;
   font-family: "", serif;
 }
-
 .page-wrapper p:first-child:first-letter {
-  color: #6ba24a;
+  color: #14281d;
   float: left;
   font-family: "", serif;
   font-size: 75px;
@@ -415,17 +317,16 @@ h6 {
   padding-right: 8px;
   padding-left: 3px;
 }
-
 .page-wrapper .summary,
 .page-wrapper .preamble,
 .page-wrapper .explanation,
 .page-wrapper .participation,
 .page-wrapper .benefits,
 .page-wrapper .requirements {
+  background-image: -webkit-gradient(linear, right top, left top, from(white), to(rgba(255, 255, 255, 0)));
   padding: 0.5em 2em;
-  border-bottom: 1px solid #6ba24a;
+  border-bottom: 1px solid #14281d;
 }
-
 .page-wrapper .summary h3,
 .page-wrapper .preamble h3,
 .page-wrapper .explanation h3,
@@ -435,23 +336,17 @@ h6 {
   font-size: 1em;
   margin-bottom: 1em;
   text-align: center;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: all 0.3s ease-in-out 0.2s;
+  transform: scale(1);
   transition: all 0.3s ease-in-out 0.2s;
   text-transform: uppercase;
   font-family: "Orienta", sans-serif;
   letter-spacing: 1px;
-  color: #6ba24a;
-  border-bottom: 1px solid #6ba24a;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-name: showup;
-          animation-name: showup;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
+  color: #14281d;
+  border-bottom: 0.1px solid #6ba24a;
+  animation-duration: 3s;
+  animation-name: showup;
+  animation-timing-function: ease-in-out;
 }
-
 .page-wrapper .summary h3:hover:before,
 .page-wrapper .preamble h3:hover:before,
 .page-wrapper .explanation h3:hover:before,
@@ -459,9 +354,8 @@ h6 {
 .page-wrapper .benefits h3:hover:before,
 .page-wrapper .requirements h3:hover:before {
   content: "";
-  background-image: url("assets/logo-ver-2.png");
+  background-image: url("assets/logo-ver-1.png");
 }
-
 .page-wrapper .summary h3::before,
 .page-wrapper .preamble h3::before,
 .page-wrapper .explanation h3::before,
@@ -469,7 +363,7 @@ h6 {
 .page-wrapper .benefits h3::before,
 .page-wrapper .requirements h3::before {
   content: "";
-  background-image: url(assets/logo-ver-1.png);
+  background-image: url(assets/logo-ver-2.png);
   background-size: 100% 100%;
   display: inline-block;
   /*size of your image*/
@@ -479,7 +373,6 @@ h6 {
   position: relative;
   top: 5px;
 }
-
 .page-wrapper .summary p,
 .page-wrapper .preamble p,
 .page-wrapper .explanation p,
@@ -488,7 +381,6 @@ h6 {
 .page-wrapper .requirements p {
   padding: 0.4em 0;
 }
-
 .page-wrapper .summary a,
 .page-wrapper .preamble a,
 .page-wrapper .explanation a,
@@ -502,31 +394,15 @@ h6 {
 .intro header {
   margin: 0.6em;
 }
-
 .intro h1 {
-  color: #6ba24a;
+  color: #14281d;
   font-size: 2em;
-  border-bottom: 1px solid #cdc555;
+  border-bottom: 1px solid #716a0d;
   text-align: center;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-name: slidein;
-          animation-name: slidein;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-timing-function: ease-in-out;
 }
-
-@-webkit-keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 100%;
-  }
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-}
-
 @keyframes slidein {
   from {
     margin-left: 100%;
@@ -537,35 +413,15 @@ h6 {
     width: 100%;
   }
 }
-
 .intro h2 {
   text-align: right;
   font-size: 1.2em;
   padding: 0.3em;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
-  -webkit-animation-name: showup;
-          animation-name: showup;
-  color: #cdc555;
-  -webkit-animation-timing-function: ease-in;
-          animation-timing-function: ease-in;
+  animation-duration: 4s;
+  animation-name: showup;
+  color: #716a0d;
+  animation-timing-function: ease-in;
 }
-
-@-webkit-keyframes showup {
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 0;
-  }
-  80% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 @keyframes showup {
   0% {
     opacity: 0;
@@ -580,7 +436,6 @@ h6 {
     opacity: 1;
   }
 }
-
 .intro h1::after {
   content: "";
   background-image: url(assets/logo-ver-2.png);
@@ -596,25 +451,21 @@ h6 {
 
 aside {
   margin-top: 2em;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  animation-duration: 3s;
 }
-
 aside .wrapper {
   display: block;
   /*li:hover {
-		transform: scale(1.2);
-		transition: all 0.3s ease-in-out 0.1s;
-	}*/
+  	transform: scale(1.2);
+  	transition: all 0.3s ease-in-out 0.1s;
+  }*/
 }
-
 aside .wrapper li {
   list-style-type: none;
   padding: 1.2em;
   /*transform: scale(1);
-		transition: all 0.3s ease-in-out 0.2s;*/
+  transition: all 0.3s ease-in-out 0.2s;*/
 }
-
 aside .wrapper li .design-name::before {
   content: "";
   background-image: url(assets/green-tea-leaves-clipart.png);
@@ -628,12 +479,9 @@ aside .wrapper li .design-name::before {
   top: 5px;
   right: 5px;
 }
-
 aside .wrapper h3 {
   padding: 1em;
-  border-bottom: 1px solid #6ba24a;
 }
-
 aside .wrapper h3:after {
   content: "";
   background-image: url(assets/clipart-leaf-clear-background-4.png);
@@ -647,20 +495,16 @@ aside .wrapper h3:after {
   top: 5px;
   left: 5px;
 }
-
 aside .wrapper ul {
   display: block;
 }
-
 aside .wrapper ul .design-name {
-  color: #6ba24a;
+  color: #14281d;
 }
-
 aside .wrapper ul a {
   text-decoration: none;
   color: #000;
 }
-
 aside .design-archives a::before {
   content: "";
   background-image: url(assets/archives.svg);
@@ -688,19 +532,18 @@ aside .design-archives a::before {
 }
 
 footer {
-  background: #6ba24a;
+  background: #14281d;
   text-align: center;
   padding: 1em 1em 1em 1em;
 }
-
 footer a {
   text-decoration: none;
   color: #fff;
   padding: 1em 1em 1em 1em;
 }
-
 footer a:hover {
   background: #000;
   padding: 1em;
 }
+
 /*# sourceMappingURL=style.css.map */

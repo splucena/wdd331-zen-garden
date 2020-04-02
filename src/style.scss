@@ -21,8 +21,8 @@ $sans-serif: "Open sans",
 sans-serif;
 
 // colors
-$primary-base-color: #6ba24a;
-$secondary-base-color: #cdc555;
+$primary-base-color: #14281d;
+$secondary-base-color: #716a0d;
 $primary-brand-color: #000;
 $secondary-brand-color: #fff;
 
@@ -40,13 +40,6 @@ $secondary-brand-color: #fff;
     .page-wrapper {
       .intro {
         header {}
-
-        .summary {
-          //background-color: rgba(255, 255, 255, 0.8);
-          background-image: linear-gradient(to right,
-              rgba(255, 255, 255, 0),
-              rgba(255, 255, 255, 0.8));
-        }
 
         .preamble {}
       }
@@ -329,6 +322,11 @@ h6 {
   .participation,
   .benefits,
   .requirements {
+	
+  background-image: -webkit-gradient(
+          linear, right top, left top, from(rgba(255, 255, 255, 1.0)),
+          to(rgba(255, 255, 255, 0))
+        );
     padding: 0.5em 2em;
     //margin: .5em 1em;
     border-bottom: 1px solid $primary-base-color;
@@ -343,8 +341,8 @@ h6 {
       text-transform: uppercase;
       font-family: "Orienta", sans-serif;
       letter-spacing: 1px;
-      color: #6ba24a;
-      border-bottom: 1px solid #6ba24a;
+      color: $primary-base-color;
+      border-bottom: .1px solid #6ba24a;
       animation-duration: 3s;
       animation-name: showup;
       animation-timing-function: ease-in-out;
@@ -353,12 +351,12 @@ h6 {
     //h3 animation
     h3:hover:before {
       content: "";
-      background-image: url("assets/logo-ver-2.png");
+      background-image: url("assets/logo-ver-1.png");
     }
 
     h3::before {
       content: "";
-      background-image: url(assets/logo-ver-1.png);
+      background-image: url(assets/logo-ver-2.png);
       background-size: 100% 100%;
       display: inline-block;
 
@@ -495,7 +493,7 @@ aside {
 
     h3 {
       padding: 1em;
-      border-bottom: 1px solid $primary-base-color;
+      //border-bottom: 1px solid $primary-base-color;
     }
 
     h3:after {
