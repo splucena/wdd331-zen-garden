@@ -13,7 +13,6 @@
     grid-row: 1/2;
   }
   #css-zen-garden .page-wrapper .intro {
-    width: 80em;
     margin: auto;
     grid-column: 1/-1;
     grid-row: 3/4;
@@ -34,7 +33,6 @@
     grid-row: 3/4;
   }
   #css-zen-garden .page-wrapper .main {
-    width: 80em;
     margin: auto;
     grid-column: 1/-1;
     grid-row: 4/5;
@@ -91,160 +89,125 @@
     animation-duration: 0.5s;
     animation-name: showup;
   }
-  #css-zen-garden .page-wrapper .sidebar {
-    /*.design-selection {
-    	border-right: solid 4px #000;
-
-    	>h3,
-    	>nav {
-    		visibility: hidden;
-    		position: relative;
-    		left: 250px;
-    	}
-    }*/
-    /*.select+nav>ul li a {
-    		position: relative;
-    		transition: .5s;
-    		cursor: pointer;
-    		display: block;
-    		overflow: hidden;
-    		z-index: 1;
-    	}
-
-    ul li a {
-    	z-index: 1;
-    }
-
-    ul li {
-    	padding: 14px;
-    	border-radius: 10px 0 0 0;
-    	margin-bottom: 4px;
-    	overflow: hidden;
-    	position: relative;
-    	color: #262626;
-    	transition: .5s;
-    	border: solid 3px #FFF;
-    	cursor: pointer;
-    	display: block;
-    	box-shadow: 1px 1px 4px #262626;
-    }
-
-    ul li:hover {
-    	background-color: $secondary-base-color;
-    		-webkit-animation: swing 1s ease;
-    		animation: swing 1s ease;
-    		-webkit-animation-iteration-count: 1;
-    		animation-iteration-count: 1;
-    	color: #FFF;
-    	transform: rotateY(360deg);
-    }
-
-    ul li:before {
-    	content: "";
-    	position: absolute;
-    	background-color: $primary-base-color;
-    	mix-blend-mode: hard-light;
-    	transition: .5s;
-    	top: 100%;
-    	width: 100%;
-    	height: 100%;
-    	z-index: 1;
-    	left: 0;
-    }
-
-    ul li:hover:before {
-    	top: 0;
-    }
-
-    .design-selection:active>h3,
-    	.design-selection:active>nav {
-    		left: 0px;
-    		visibility: visible;
-    		transition: 1s;
-    	}
-    */
+  #css-zen-garden .page-wrapper .main footer {
+    background: #14281d;
+    padding: 1em 1em 1em 1em;
+    text-align: center;
+  }
+  #css-zen-garden .page-wrapper .main footer a {
+    border-bottom: 0px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: "Open sans", sans-serif;
+    margin-bottom: 5px;
+    padding: 1em;
+    position: relative;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: 100%;
+    z-index: 2;
+  }
+  #css-zen-garden .page-wrapper .main footer a:before,
+#css-zen-garden .page-wrapper .main footer a:after {
+    content: "";
+    position: absolute;
+    transition: inherit;
+    z-index: -1;
+  }
+  #css-zen-garden .page-wrapper .main footer a:before {
+    border: 1px solid #FFF;
+    border-left: 0;
+    border-right: 0;
+    bottom: 0;
+    height: 100%;
+    left: 50%;
+    width: 0;
+  }
+  #css-zen-garden .page-wrapper .main footer a:after {
+    background-color: #FFF;
+    height: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  #css-zen-garden .page-wrapper .main footer a:hover {
+    color: #000;
+    font-weight: bold;
+    transition-delay: 0.3s;
+  }
+  #css-zen-garden .page-wrapper .main footer a:hover:before {
+    left: 0;
+    width: 100%;
+    transition-delay: 0s;
+  }
+  #css-zen-garden .page-wrapper .main footer a:hover:after {
+    bottom: 0;
+    height: 100%;
+    transition-delay: 0.3s;
   }
   #css-zen-garden .page-wrapper .sidebar li:first-child {
     margin-top: 10px;
   }
   #css-zen-garden .page-wrapper .sidebar li {
-    font-family: "Open sans", sans-serif;
-    z-index: 2;
-    text-decoration: none;
-    position: relative;
+    background-image: gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.1)));
+    background-image: -moz-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.1)));
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.1)));
+    border-bottom: 0px;
+    border-left: 5px solid #14281d;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    border-bottom: 0px;
-    border-left: 5px solid #d2e4c4;
-    width: 100%;
-    padding: 15px;
     color: #000;
-    background-color: rgba(175, 208, 191, 0.4);
     cursor: pointer;
+    font-family: "Open sans", sans-serif;
+    padding: 15px;
+    position: relative;
+    text-decoration: none;
+    width: 100%;
+    z-index: 2;
   }
   #css-zen-garden .page-wrapper .sidebar li:nth-child(even) {
-    border-left: 5px solid #ebebd3;
+    border-left: 5px solid #235789;
   }
   #css-zen-garden .page-wrapper .sidebar li a {
     color: #000;
   }
   #css-zen-garden .page-wrapper .sidebar li:hover {
-    border-left: 5px solid #9ad1d4;
     color: #fff;
+    transition-delay: 0.1s;
   }
   #css-zen-garden .page-wrapper .sidebar li:hover > a:nth-child(2) {
+    transition-delay: 0.1s;
     color: #fff;
   }
   #css-zen-garden .page-wrapper .sidebar li:hover > a:first-child {
     border-bottom: 0px;
-    font-weight: bold;
     color: #e2efde;
+    font-weight: bold;
+    transition-delay: 0.1s;
   }
   #css-zen-garden .page-wrapper .sidebar li:after {
     content: "";
+    height: 100%;
     left: 0;
     top: 0;
     width: 0px;
     position: absolute;
-    transition: all 0.3s ease 0s;
-    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
     z-index: -1;
-    height: 100%;
   }
   #css-zen-garden .page-wrapper .sidebar li:nth-child(even):hover:after {
-    width: 100%;
     background-color: #14281d;
+    width: 100%;
   }
   #css-zen-garden .page-wrapper .sidebar li:hover:after {
+    background-color: #235789;
     width: 100%;
-    background-color: #4b296b;
-  }
-  @-webkit-keyframes swing {
-    15% {
-      -webkit-transform: translateX(5px);
-      transform: translateX(5px);
-    }
-    30% {
-      -webkit-transform: translateX(-5px);
-      transform: translateX(-5px);
-    }
-    50% {
-      -webkit-transform: translateX(3px);
-      transform: translateX(3px);
-    }
-    65% {
-      -webkit-transform: translateX(-3px);
-      transform: translateX(-3px);
-    }
-    80% {
-      -webkit-transform: translateX(2px);
-      transform: translateX(2px);
-    }
-    100% {
-      -webkit-transform: translateX(0);
-      transform: translateX(0);
-    }
   }
 
   .extra1 {
@@ -323,7 +286,7 @@ h6 {
 .page-wrapper .participation,
 .page-wrapper .benefits,
 .page-wrapper .requirements {
-  background-image: -webkit-gradient(linear, right top, left top, from(white), to(rgba(255, 255, 255, 0)));
+  background-image: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.1)));
   padding: 0.5em 2em;
   border-bottom: 1px solid #14281d;
 }
@@ -342,7 +305,6 @@ h6 {
   font-family: "Orienta", sans-serif;
   letter-spacing: 1px;
   color: #14281d;
-  border-bottom: 0.1px solid #6ba24a;
   animation-duration: 3s;
   animation-name: showup;
   animation-timing-function: ease-in-out;
@@ -531,19 +493,22 @@ aside .design-archives a::before {
   top: 5px;
 }
 
+/*Footer (General)
 footer {
-  background: #14281d;
+  background: $primary-base-color;
   text-align: center;
   padding: 1em 1em 1em 1em;
-}
-footer a {
-  text-decoration: none;
-  color: #fff;
-  padding: 1em 1em 1em 1em;
-}
-footer a:hover {
-  background: #000;
-  padding: 1em;
-}
+
+  a {
+    text-decoration: none;
+    color: $secondary-brand-color;
+    padding: 1em 1em 1em 1em;
+  }
+
+  a:hover {
+    background: $primary-brand-color;
+    padding: 1em;
+  }
+}*/
 
 /*# sourceMappingURL=style.css.map */
