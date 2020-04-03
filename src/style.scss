@@ -28,6 +28,62 @@ $secondary-base-color: #716a0d;
 $primary-brand-color: #000;
 $secondary-brand-color: #fff;
 
+@keyframes ray_anim {
+  0% {
+    //-webkit-transform: rotate(0deg);
+    transform: rotate(135deg);
+    //transform: scale(1);
+  }
+
+  100% {
+    //-webkit-transform: rotate(360deg);
+    transform: rotate(495deg);
+    //transform: scale(1.5);
+  }
+}
+
+@keyframes ray_anim2 {
+  0% {
+    //-webkit-transform: rotate(0deg);
+    transform: rotate(90deg);
+    //transform: scale(1);
+  }
+
+  100% {
+    //-webkit-transform: rotate(360deg);
+    transform: rotate(450deg);
+    //transform: scale(1.5);
+  }
+}
+
+@keyframes ray_anim3 {
+  0% {
+    //-webkit-transform: rotate(0deg);
+    transform: rotate(45deg);
+    //transform: scale(1);
+  }
+
+  100% {
+    //-webkit-transform: rotate(360deg);
+    transform: rotate(405deg);
+    //transform: scale(1.5);
+  }
+}
+
+@keyframes ray_anim4 {
+  0% {
+    //-webkit-transform: rotate(0deg);
+    transform: rotate(180deg);
+    //transform: scale(1);
+  }
+
+  100% {
+    //-webkit-transform: rotate(360deg);
+    transform: rotate(540deg);
+    //transform: scale(1.5);
+  }
+}
+
 //large-view
 @media all and (min-width: 1024px) {
   #css-zen-garden {
@@ -41,7 +97,67 @@ $secondary-brand-color: #fff;
 
     .page-wrapper {
       .intro {
-        header {}
+
+        header:before {
+          content: "";
+          position: absolute;
+          top: 88px;
+          //right: 0;
+          left: -25px;
+          bottom: 0;
+          margin: auto;
+          width: 70px;
+          height: 70px;
+          border-radius: 50%;
+          background-color: #FCEB6C;
+          opacity: 1;
+          box-shadow: 0px 0px 40px 15px #FCE850;
+          z-index: 100;
+        }
+
+        header {
+          position: relative;
+          padding: 1em;
+
+          h1:after,
+          h1:before,
+          h2:after,
+          h2:before {
+            content: "";
+            background: -webkit-linear-gradient(top, rgba(252, 240, 153, 0) 0%, rgba(252, 240, 153, 1) 50%, rgba(252, 240, 153, 0) 100%);
+            background: linear-gradient(top, rgba(252, 240, 153, 0) 0%, rgba(252, 240, 153, 1) 50%, rgba(252, 240, 153, 0) 100%);
+            opacity: 0.8;
+            position: absolute;
+            height: 200px;
+            width: 20px;
+            transform-origin: center;
+            top: 0;
+            left: 0;
+            //right: 0;
+            bottom: 0;
+            z-index: 99;
+          }
+
+          h2:before {
+            transform: rotate(135deg);
+            animation: ray_anim 80s linear infinite;
+          }
+
+          h2:after {
+            transform: rotate(45deg);
+            animation: ray_anim3 80s linear infinite;
+          }
+
+          h1:before {
+            transform: rotate(90deg);
+            animation: ray_anim2 80s linear infinite;
+          }
+
+          h1:after {
+            transform: rotate(180deg);
+            animation: ray_anim4 80s linear infinite;
+          }
+        }
 
         .preamble {}
       }
@@ -378,10 +494,10 @@ h6 {
     text-align: right;
     font-size: 1.2em;
     padding: 0.3em;
-    animation-duration: 4s;
-    animation-name: showup;
+    //animation-duration: 4s;
+    //animation-name: showup;
     color: $secondary-base-color;
-    animation-timing-function: ease-in;
+    //animation-timing-function: ease-in;
   }
 
   //animation h2

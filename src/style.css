@@ -79,6 +79,38 @@
   box-sizing: border-box;
 }
 
+@keyframes ray_anim {
+  0% {
+    transform: rotate(135deg);
+  }
+  100% {
+    transform: rotate(495deg);
+  }
+}
+@keyframes ray_anim2 {
+  0% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(450deg);
+  }
+}
+@keyframes ray_anim3 {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
+}
+@keyframes ray_anim4 {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(540deg);
+  }
+}
 @media all and (min-width: 1024px) {
   #css-zen-garden {
     /*background-image: url("assets/agriculture.jpg");*/
@@ -88,6 +120,58 @@
     background-attachment: fixed;
     animation-duration: 0.5s;
     animation-name: showup;
+  }
+  #css-zen-garden .page-wrapper .intro header:before {
+    content: "";
+    position: absolute;
+    top: 88px;
+    left: -25px;
+    bottom: 0;
+    margin: auto;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #FCEB6C;
+    opacity: 1;
+    box-shadow: 0px 0px 40px 15px #FCE850;
+    z-index: 100;
+  }
+  #css-zen-garden .page-wrapper .intro header {
+    position: relative;
+    padding: 1em;
+  }
+  #css-zen-garden .page-wrapper .intro header h1:after,
+#css-zen-garden .page-wrapper .intro header h1:before,
+#css-zen-garden .page-wrapper .intro header h2:after,
+#css-zen-garden .page-wrapper .intro header h2:before {
+    content: "";
+    background: -webkit-linear-gradient(top, rgba(252, 240, 153, 0) 0%, #fcf099 50%, rgba(252, 240, 153, 0) 100%);
+    background: linear-gradient(top, rgba(252, 240, 153, 0) 0%, #fcf099 50%, rgba(252, 240, 153, 0) 100%);
+    opacity: 0.8;
+    position: absolute;
+    height: 200px;
+    width: 20px;
+    transform-origin: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 99;
+  }
+  #css-zen-garden .page-wrapper .intro header h2:before {
+    transform: rotate(135deg);
+    animation: ray_anim 80s linear infinite;
+  }
+  #css-zen-garden .page-wrapper .intro header h2:after {
+    transform: rotate(45deg);
+    animation: ray_anim3 80s linear infinite;
+  }
+  #css-zen-garden .page-wrapper .intro header h1:before {
+    transform: rotate(90deg);
+    animation: ray_anim2 80s linear infinite;
+  }
+  #css-zen-garden .page-wrapper .intro header h1:after {
+    transform: rotate(180deg);
+    animation: ray_anim4 80s linear infinite;
   }
   #css-zen-garden .page-wrapper .main footer {
     background: #14281d;
@@ -379,10 +463,7 @@ h6 {
   text-align: right;
   font-size: 1.2em;
   padding: 0.3em;
-  animation-duration: 4s;
-  animation-name: showup;
   color: #716a0d;
-  animation-timing-function: ease-in;
 }
 @keyframes showup {
   0% {
