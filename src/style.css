@@ -220,166 +220,6 @@ sans-serif;*/
     transform: rotate(180deg);
     animation: ray-anim4 120s linear infinite;
   }
-  #css-zen-garden .page-wrapper .main footer {
-    background: #14281d;
-    padding: 1em 1em 1em 1em;
-    text-align: center;
-  }
-  #css-zen-garden .page-wrapper .main footer a {
-    border-bottom: 0px;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    color: #fff;
-    cursor: pointer;
-    font-family: "Montserrat", sans-serif;
-    margin-bottom: 5px;
-    padding: 1em;
-    position: relative;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    width: 100%;
-    z-index: 2;
-  }
-  #css-zen-garden .page-wrapper .main footer a:before,
-#css-zen-garden .page-wrapper .main footer a:after {
-    content: "";
-    position: absolute;
-    transition: inherit;
-    z-index: -1;
-  }
-  #css-zen-garden .page-wrapper .main footer a:before {
-    border: 1px solid #FFF;
-    border-left: 0;
-    border-right: 0;
-    bottom: 0;
-    height: 100%;
-    left: 50%;
-    width: 0;
-  }
-  #css-zen-garden .page-wrapper .main footer a:after {
-    background-color: #FFF;
-    height: 0;
-    left: 0;
-    top: 0;
-    width: 100%;
-  }
-  #css-zen-garden .page-wrapper .main footer a:hover {
-    color: #000;
-    font-weight: bold;
-    transition-delay: 0.3s;
-  }
-  #css-zen-garden .page-wrapper .main footer a:hover:before {
-    left: 0;
-    width: 100%;
-    transition-delay: 0s;
-  }
-  #css-zen-garden .page-wrapper .main footer a:hover:after {
-    bottom: 0;
-    height: 100%;
-    transition-delay: 0.3s;
-  }
-  #css-zen-garden .page-wrapper .sidebar {
-    /*li:nth-child(even) {
-      border-right: 5px solid #235789;
-    }*/
-    /*li:nth-child(even):hover:after {
-      background-color: $primary-base-color;
-      width: 100%;
-    }
-
-    li:hover:after {
-      background-color: #235789;
-      width: 100%;
-    }*/
-  }
-  #css-zen-garden .page-wrapper .sidebar h3 {
-    margin-left: 0;
-    margin-right: 0;
-    padding: 1em;
-    text-align: right;
-    color: #fff;
-  }
-  #css-zen-garden .page-wrapper .sidebar h3.select {
-    background-color: #14281d;
-  }
-  #css-zen-garden .page-wrapper .sidebar h3.archives {
-    background-color: #235789;
-  }
-  #css-zen-garden .page-wrapper .sidebar h3.resources {
-    background-color: #D72638;
-  }
-  #css-zen-garden .page-wrapper .sidebar li:last-child {
-    margin-bottom: 1em;
-  }
-  #css-zen-garden .page-wrapper .sidebar li {
-    background-image: gradient(linear, right top, left top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.1)));
-    background-image: -moz-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.1)));
-    background-image: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.1)));
-    border-bottom: 0px;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    color: #000;
-    cursor: pointer;
-    font-family: "Montserrat", sans-serif;
-    padding: 15px;
-    position: relative;
-    text-decoration: none;
-    width: 100%;
-    z-index: 2;
-  }
-  #css-zen-garden .page-wrapper .sidebar .design-selection li {
-    border-right: 5px solid #14281d;
-  }
-  #css-zen-garden .page-wrapper .sidebar .design-archives li {
-    border-right: 5px solid #235789;
-  }
-  #css-zen-garden .page-wrapper .sidebar .zen-resources li {
-    border-right: 5px solid #D72638;
-  }
-  #css-zen-garden .page-wrapper .sidebar li a {
-    color: #000;
-  }
-  #css-zen-garden .page-wrapper .sidebar li:hover {
-    color: #fff;
-    transition-delay: 0.1s;
-  }
-  #css-zen-garden .page-wrapper .sidebar li:hover > a:nth-child(2) {
-    transition-delay: 0.1s;
-    color: #fff;
-  }
-  #css-zen-garden .page-wrapper .sidebar li:hover > a:first-child {
-    border-bottom: 0px;
-    color: #e2efde;
-    font-weight: bold;
-    transition-delay: 0.1s;
-  }
-  #css-zen-garden .page-wrapper .sidebar li:after {
-    content: "";
-    height: 100%;
-    left: 0;
-    top: 0;
-    width: 0px;
-    position: absolute;
-    transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -webkit-transition: all 0.5s ease-in-out;
-    z-index: -1;
-  }
-  #css-zen-garden .page-wrapper .sidebar li:hover:after {
-    width: 100%;
-  }
-  #css-zen-garden .page-wrapper .sidebar .design-selection li:hover:after {
-    background-color: #14281d;
-  }
-  #css-zen-garden .page-wrapper .sidebar .design-archives li:hover:after {
-    background-color: #235789;
-  }
-  #css-zen-garden .page-wrapper .sidebar .zen-resources li:hover:after {
-    background-color: #D72638;
-  }
-
   .extra1 {
     background-image: url("assets/bird-cells.svg");
     background-size: auto 100%;
@@ -660,6 +500,167 @@ aside .design-archives a::before {
   /*if you want to change the position you can use margins or:*/
   position: relative;
   top: 5px;
+}
+
+.sidebar {
+  /*li:nth-child(even) {
+    border-right: 5px solid #235789;
+  }*/
+  /*li:nth-child(even):hover:after {
+    background-color: $primary-base-color;
+    width: 100%;
+  }
+
+  li:hover:after {
+    background-color: #235789;
+    width: 100%;
+  }*/
+}
+.sidebar h3 {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 1em;
+  text-align: right;
+  color: #fff;
+}
+.sidebar h3.select {
+  background-color: #14281d;
+}
+.sidebar h3.archives {
+  background-color: #235789;
+}
+.sidebar h3.resources {
+  background-color: #D72638;
+}
+.sidebar li:last-child {
+  margin-bottom: 1em;
+}
+.sidebar li {
+  background-image: gradient(linear, right top, left top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.1)));
+  background-image: -moz-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.1)));
+  background-image: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.1)));
+  border-bottom: 0px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  color: #000;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  padding: 15px;
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+  z-index: 2;
+}
+.sidebar .design-selection li {
+  border-right: 5px solid #14281d;
+}
+.sidebar .design-archives li {
+  border-right: 5px solid #235789;
+}
+.sidebar .zen-resources li {
+  border-right: 5px solid #D72638;
+}
+.sidebar li a {
+  color: #000;
+}
+.sidebar li:hover {
+  color: #fff;
+  transition-delay: 0.1s;
+}
+.sidebar li:hover > a:nth-child(2) {
+  transition-delay: 0.1s;
+  color: #fff;
+}
+.sidebar li:hover > a:first-child {
+  border-bottom: 0px;
+  color: #e2efde;
+  font-weight: bold;
+  transition-delay: 0.1s;
+}
+.sidebar li:after {
+  content: "";
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 0px;
+  position: absolute;
+  transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  z-index: -1;
+}
+.sidebar li:hover:after {
+  width: 100%;
+}
+.sidebar .design-selection li:hover:after {
+  background-color: #14281d;
+}
+.sidebar .design-archives li:hover:after {
+  background-color: #235789;
+}
+.sidebar .zen-resources li:hover:after {
+  background-color: #D72638;
+}
+
+footer {
+  background: #14281d;
+  padding: 1em 1em 1em 1em;
+  text-align: center;
+}
+footer a {
+  border-bottom: 0px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 5px;
+  padding: 1em;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: 100%;
+  z-index: 2;
+}
+footer a:before,
+footer a:after {
+  content: "";
+  position: absolute;
+  transition: inherit;
+  z-index: -1;
+}
+footer a:before {
+  border: 1px solid #FFF;
+  border-left: 0;
+  border-right: 0;
+  bottom: 0;
+  height: 100%;
+  left: 50%;
+  width: 0;
+}
+footer a:after {
+  background-color: #FFF;
+  height: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+footer a:hover {
+  color: #000;
+  font-weight: bold;
+  transition-delay: 0.3s;
+}
+footer a:hover:before {
+  left: 0;
+  width: 100%;
+  transition-delay: 0s;
+}
+footer a:hover:after {
+  bottom: 0;
+  height: 100%;
+  transition-delay: 0.3s;
 }
 
 /*# sourceMappingURL=style.css.map */

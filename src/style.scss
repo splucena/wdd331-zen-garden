@@ -186,193 +186,10 @@ $sun-color: #FCE850;
 
         .requirements {}
 
-        footer {
-          background: $primary-base-color;
-          padding: 1em 1em 1em 1em;
-          text-align: center;
-
-          a {
-            border-bottom: 0px;
-            box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-            color: $secondary-brand-color;
-            cursor: pointer;
-            font-family: $sans-serif;
-            margin-bottom: 5px;
-            padding: 1em;
-            position: relative;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            width: 100%;
-            z-index: 2;
-          }
-
-          a:before,
-          a:after {
-            content: "";
-            position: absolute;
-            transition: inherit;
-            z-index: -1;
-          }
-
-          a:before {
-            border: 1px solid #FFF;
-            border-left: 0;
-            border-right: 0;
-            bottom: 0;
-            height: 100%;
-            left: 50%;
-            width: 0;
-          }
-
-          a:after {
-            background-color: #FFF;
-            height: 0;
-            left: 0;
-            top: 0;
-            width: 100%;
-          }
-
-          a:hover {
-            color: #000;
-            font-weight: bold;
-            transition-delay: 0.3s;
-          }
-
-          a:hover:before {
-            left: 0;
-            width: 100%;
-            transition-delay: 0s;
-          }
-
-          a:hover:after {
-            bottom: 0;
-            height: 100%;
-            transition-delay: 0.3s;
-          }
-        }
+       
       }
 
-      .sidebar {
-
-        //select, archives, resources
-        h3 {
-          margin-left: 0;
-          margin-right: 0;
-          padding: 1em;
-          text-align: right;
-          color: $secondary-brand-color;
-        }
-
-        h3.select {
-          background-color: $primary-base-color;
-        }
-
-        h3.archives {
-          background-color: $secondary-base-color;
-        }
-
-        h3.resources {
-          background-color: $tertiary-base-color;
-        }
-
-        li:last-child {
-          margin-bottom: 1em;
-        }
-
-        li {
-          @include bg-image-gradient(255, 255, 255);
-          border-bottom: 0px;
-          //border-right: 5px solid $primary-base-color;
-          box-sizing: border-box;
-          -moz-box-sizing: border-box;
-          -webkit-box-sizing: border-box;
-          color: #000;
-          cursor: pointer;
-          font-family: $sans-serif;
-          padding: 15px;
-          position: relative;
-          text-decoration: none;
-          width: 100%;
-          z-index: 2;
-        }
-
-        /*li:nth-child(even) {
-          border-right: 5px solid #235789;
-        }*/
-        .design-selection li {
-          border-right: 5px solid $primary-base-color;
-        }
-
-        .design-archives li {
-          border-right: 5px solid $secondary-base-color;
-        }
-
-        .zen-resources li {
-          border-right: 5px solid $tertiary-base-color;
-        }
-
-        li a {
-          color: #000;
-        }
-
-        li:hover {
-          color: #fff;
-          transition-delay: 0.1s;
-        }
-
-        li:hover>a:nth-child(2) {
-          transition-delay: 0.1s;
-          color: #fff;
-        }
-
-        li:hover>a:first-child {
-          border-bottom: 0px;
-          color: #e2efde;
-          font-weight: bold;
-          transition-delay: 0.1s;
-        }
-
-        li:after {
-          content: "";
-          height: 100%;
-          left: 0;
-          top: 0;
-          width: 0px;
-          position: absolute;
-          transition: all 0.5s ease-in-out;
-          -moz-transition: all 0.5s ease-in-out;
-          -webkit-transition: all 0.5s ease-in-out;
-          z-index: -1;
-        }
-
-        li:hover:after {
-          width: 100%;
-        }
-
-        .design-selection li:hover:after {
-          background-color: $primary-base-color;
-        }
-
-        .design-archives li:hover:after {
-          background-color: $secondary-base-color;
-        }
-
-        .zen-resources li:hover:after {
-          background-color: $tertiary-base-color;
-        }
-
-        /*li:nth-child(even):hover:after {
-          background-color: $primary-base-color;
-          width: 100%;
-        }
-
-        li:hover:after {
-          background-color: #235789;
-          width: 100%;
-        }*/
-      }
+      
     }
   }
 
@@ -709,3 +526,192 @@ aside {
     top: 5px;
   }
 }
+
+
+
+.sidebar {
+
+        //select, archives, resources
+        h3 {
+          margin-left: 0;
+          margin-right: 0;
+          padding: 1em;
+          text-align: right;
+          color: $secondary-brand-color;
+        }
+
+        h3.select {
+          background-color: $primary-base-color;
+        }
+
+        h3.archives {
+          background-color: $secondary-base-color;
+        }
+
+        h3.resources {
+          background-color: $tertiary-base-color;
+        }
+
+        li:last-child {
+          margin-bottom: 1em;
+        }
+
+        li {
+          @include bg-image-gradient(255, 255, 255);
+          border-bottom: 0px;
+          //border-right: 5px solid $primary-base-color;
+          box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+          color: #000;
+          cursor: pointer;
+          font-family: $sans-serif;
+          padding: 15px;
+          position: relative;
+          text-decoration: none;
+          width: 100%;
+          z-index: 2;
+        }
+
+        /*li:nth-child(even) {
+          border-right: 5px solid #235789;
+        }*/
+        .design-selection li {
+          border-right: 5px solid $primary-base-color;
+        }
+
+        .design-archives li {
+          border-right: 5px solid $secondary-base-color;
+        }
+
+        .zen-resources li {
+          border-right: 5px solid $tertiary-base-color;
+        }
+
+        li a {
+          color: #000;
+        }
+
+        li:hover {
+          color: #fff;
+          transition-delay: 0.1s;
+        }
+
+        li:hover>a:nth-child(2) {
+          transition-delay: 0.1s;
+          color: #fff;
+        }
+
+        li:hover>a:first-child {
+          border-bottom: 0px;
+          color: #e2efde;
+          font-weight: bold;
+          transition-delay: 0.1s;
+        }
+
+        li:after {
+          content: "";
+          height: 100%;
+          left: 0;
+          top: 0;
+          width: 0px;
+          position: absolute;
+          transition: all 0.5s ease-in-out;
+          -moz-transition: all 0.5s ease-in-out;
+          -webkit-transition: all 0.5s ease-in-out;
+          z-index: -1;
+        }
+
+        li:hover:after {
+          width: 100%;
+        }
+
+        .design-selection li:hover:after {
+          background-color: $primary-base-color;
+        }
+
+        .design-archives li:hover:after {
+          background-color: $secondary-base-color;
+        }
+
+        .zen-resources li:hover:after {
+          background-color: $tertiary-base-color;
+        }
+
+        /*li:nth-child(even):hover:after {
+          background-color: $primary-base-color;
+          width: 100%;
+        }
+
+        li:hover:after {
+          background-color: #235789;
+          width: 100%;
+        }*/
+      }
+
+ footer {
+          background: $primary-base-color;
+          padding: 1em 1em 1em 1em;
+          text-align: center;
+
+          a {
+            border-bottom: 0px;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            color: $secondary-brand-color;
+            cursor: pointer;
+            font-family: $sans-serif;
+            margin-bottom: 5px;
+            padding: 1em;
+            position: relative;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            width: 100%;
+            z-index: 2;
+          }
+
+          a:before,
+          a:after {
+            content: "";
+            position: absolute;
+            transition: inherit;
+            z-index: -1;
+          }
+
+          a:before {
+            border: 1px solid #FFF;
+            border-left: 0;
+            border-right: 0;
+            bottom: 0;
+            height: 100%;
+            left: 50%;
+            width: 0;
+          }
+
+          a:after {
+            background-color: #FFF;
+            height: 0;
+            left: 0;
+            top: 0;
+            width: 100%;
+          }
+
+          a:hover {
+            color: #000;
+            font-weight: bold;
+            transition-delay: 0.3s;
+          }
+
+          a:hover:before {
+            left: 0;
+            width: 100%;
+            transition-delay: 0s;
+          }
+
+          a:hover:after {
+            bottom: 0;
+            height: 100%;
+            transition-delay: 0.3s;
+          }
+        }
