@@ -63,11 +63,7 @@ $sun-color: #fce850;
 }
 
 @mixin bg-image-gradient($r, $g, $b) {
-  background-image: gradient(linear,
-      right top,
-      left top,
-      from(rgba($r, $g, $b, 0.8)),
-      to(rgba($r, $g, $b, 0.1)));
+  background-image: -webkit-gradient(linear, right top, right bottom, from(rgba(255, 255, 255, 1.2)), to(rgba(255, 255, 255, 0.1)));
   background-image: -moz-gradient(linear,
       right top,
       left top,
@@ -561,8 +557,6 @@ h6 {
  
 	background-image: -webkit-gradient(linear, right top, right bottom, from(rgba(255, 255, 255, 1.2)), to(rgba(255, 255, 255, 0.1)));
 	border-radius: 10px;
-	backdrop-filter: blur(5px);
-	  
     padding: 0.5em 2em;
 	margin: 10px 0;
    

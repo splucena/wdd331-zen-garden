@@ -399,7 +399,7 @@ sans-serif;*/
     margin-bottom: 1em;
   }
   #css-zen-garden .page-wrapper .sidebar li {
-    background-image: gradient(linear, right top, left top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.1)));
+    background-image: -webkit-gradient(linear, right top, right bottom, from(white), to(rgba(255, 255, 255, 0.1)));
     background-image: -moz-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.1)));
     background-image: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.1)));
     border-bottom: 0px;
@@ -508,7 +508,6 @@ h6 {
 .page-wrapper .requirements {
   background-image: -webkit-gradient(linear, right top, right bottom, from(white), to(rgba(255, 255, 255, 0.1)));
   border-radius: 10px;
-  backdrop-filter: blur(5px);
   padding: 0.5em 2em;
   margin: 10px 0;
 }
@@ -735,7 +734,7 @@ aside .design-archives a::before {
   margin-bottom: 1em;
 }
 .sidebar li {
-  background-image: gradient(linear, right top, left top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.1)));
+  background-image: -webkit-gradient(linear, right top, right bottom, from(white), to(rgba(255, 255, 255, 0.1)));
   background-image: -moz-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.1)));
   background-image: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.1)));
   border-bottom: 0px;
