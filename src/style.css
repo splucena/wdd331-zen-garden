@@ -353,19 +353,19 @@
     100% {
       background-position: -900px 0px;
     }
-    @keyframes showup {
-      0% {
-        opacity: 0;
-      }
-      20% {
-        opacity: 0;
-      }
-      80% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
+  }
+  @keyframes showup {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 0;
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
     }
   }
 }

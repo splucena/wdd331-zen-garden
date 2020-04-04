@@ -331,8 +331,9 @@ $sun-color: #FCE850;
     100% {
       background-position: -900px 0px;
     }
-
-    @keyframes showup {
+  }
+	
+	 @keyframes showup {
       0% {
         opacity: 0;
       }
@@ -349,8 +350,8 @@ $sun-color: #FCE850;
         opacity: 1;
       }
     }
-  }
 }
+
 
 //mobile view background
 @media all and (min-width: 200px) and (max-width: 768px) {
