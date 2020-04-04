@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap");
 @media all and (min-width: 1024px) {
   #css-zen-garden {
     display: grid;
@@ -63,7 +65,7 @@
   #css-zen-garden .page-wrapper .sidebar {
     position: relative;
     bottom: 24.6em;
-    left: 5em;
+    left: 5.5em;
     grid-column: 3/5;
     grid-row: 4/5;
   }
@@ -79,6 +81,10 @@
   box-sizing: border-box;
 }
 
+/*$serif: "",
+serif;
+$sans-serif: "Open sans",
+sans-serif;*/
 @keyframes ray-anim {
   0% {
     -moz-transform: rotate(135deg);
@@ -162,7 +168,7 @@
     box-shadow: 0px 0px 25px 5px #FCE850;
     content: "";
     height: 70px;
-    left: -25px;
+    left: -75px;
     margin: auto;
     opacity: 1;
     position: absolute;
@@ -183,7 +189,7 @@
     background: linear-gradient(top, rgba(252, 240, 153, 0.1) 0%, #fcf099 50%, rgba(252, 240, 153, 0.1) 100%);
     bottom: 0;
     height: 200px;
-    left: 0;
+    left: -50px;
     opacity: 0.8;
     position: absolute;
     top: 0;
@@ -223,7 +229,7 @@
     -webkit-box-sizing: border-box;
     color: #fff;
     cursor: pointer;
-    font-family: "Open sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
     margin-bottom: 5px;
     padding: 1em;
     position: relative;
@@ -270,29 +276,64 @@
     height: 100%;
     transition-delay: 0.3s;
   }
-  #css-zen-garden .page-wrapper .sidebar li:first-child {
-    margin-top: 10px;
+  #css-zen-garden .page-wrapper .sidebar {
+    /*li:nth-child(even) {
+      border-right: 5px solid #235789;
+    }*/
+    /*li:nth-child(even):hover:after {
+      background-color: $primary-base-color;
+      width: 100%;
+    }
+
+    li:hover:after {
+      background-color: #235789;
+      width: 100%;
+    }*/
+  }
+  #css-zen-garden .page-wrapper .sidebar h3 {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 1em;
+    text-align: right;
+    color: #fff;
+  }
+  #css-zen-garden .page-wrapper .sidebar h3.select {
+    background-color: #14281d;
+  }
+  #css-zen-garden .page-wrapper .sidebar h3.archives {
+    background-color: #235789;
+  }
+  #css-zen-garden .page-wrapper .sidebar h3.resources {
+    background-color: #D72638;
+  }
+  #css-zen-garden .page-wrapper .sidebar li:last-child {
+    margin-bottom: 1em;
   }
   #css-zen-garden .page-wrapper .sidebar li {
-    background-image: gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.1)));
-    background-image: -moz-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.1)));
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.1)));
+    background-image: gradient(linear, right top, left top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.1)));
+    background-image: -moz-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.1)));
+    background-image: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.1)));
     border-bottom: 0px;
-    border-left: 5px solid #14281d;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     color: #000;
     cursor: pointer;
-    font-family: "Open sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
     padding: 15px;
     position: relative;
     text-decoration: none;
     width: 100%;
     z-index: 2;
   }
-  #css-zen-garden .page-wrapper .sidebar li:nth-child(even) {
-    border-left: 5px solid #235789;
+  #css-zen-garden .page-wrapper .sidebar .design-selection li {
+    border-right: 5px solid #14281d;
+  }
+  #css-zen-garden .page-wrapper .sidebar .design-archives li {
+    border-right: 5px solid #235789;
+  }
+  #css-zen-garden .page-wrapper .sidebar .zen-resources li {
+    border-right: 5px solid #D72638;
   }
   #css-zen-garden .page-wrapper .sidebar li a {
     color: #000;
@@ -323,24 +364,28 @@
     -webkit-transition: all 0.5s ease-in-out;
     z-index: -1;
   }
-  #css-zen-garden .page-wrapper .sidebar li:nth-child(even):hover:after {
-    background-color: #14281d;
+  #css-zen-garden .page-wrapper .sidebar li:hover:after {
     width: 100%;
   }
-  #css-zen-garden .page-wrapper .sidebar li:hover:after {
+  #css-zen-garden .page-wrapper .sidebar .design-selection li:hover:after {
+    background-color: #14281d;
+  }
+  #css-zen-garden .page-wrapper .sidebar .design-archives li:hover:after {
     background-color: #235789;
-    width: 100%;
+  }
+  #css-zen-garden .page-wrapper .sidebar .zen-resources li:hover:after {
+    background-color: #D72638;
   }
 
   .extra1 {
     background-image: url("assets/bird-cells.svg");
     background-size: auto 100%;
-    bottom: 2.5em;
+    top: 100px;
+    bottom: 0;
     left: 22.5em;
     position: relative;
     width: 80px;
     height: 125px;
-    transform: rotate(-10deg);
     will-change: background-position;
     animation-name: fly-cycle, showup;
     animation-timing-function: steps(10);
@@ -385,17 +430,17 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Open sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .page-wrapper p {
   text-align: justify;
-  font-family: "", serif;
+  font-family: "Merriweather", serif;
 }
 .page-wrapper p:first-child:first-letter {
   color: #14281d;
   float: left;
-  font-family: "", serif;
+  font-family: "Merriweather", serif;
   font-size: 75px;
   line-height: 60px;
   padding-top: 4px;
@@ -424,7 +469,6 @@ h6 {
   transform: scale(1);
   transition: all 0.3s ease-in-out 0.2s;
   text-transform: uppercase;
-  font-family: "Orienta", sans-serif;
   letter-spacing: 1px;
   color: #14281d;
   animation-duration: 3s;
@@ -472,7 +516,6 @@ h6 {
 .page-wrapper .benefits a,
 .page-wrapper .requirements a {
   text-decoration: none;
-  color: red;
 }
 
 .intro header {
@@ -481,7 +524,7 @@ h6 {
 .intro h1 {
   color: #14281d;
   font-size: 2.5em;
-  border-bottom: 1px solid #716a0d;
+  border-bottom: 1px solid #235789;
   text-align: right;
   animation-duration: 3s;
   animation-name: slidein;
@@ -501,7 +544,7 @@ h6 {
   text-align: right;
   font-size: 1em;
   padding: 0.3em;
-  color: #716a0d;
+  color: #235789;
 }
 @keyframes showup {
   0% {
@@ -543,7 +586,9 @@ aside .wrapper {
 }
 aside .wrapper li {
   list-style-type: none;
-  padding: 1.2em;
+  padding: 0.5em;
+  font-size: 0.9em;
+  text-align: right;
   /*transform: scale(1);
   transition: all 0.3s ease-in-out 0.2s;*/
 }
@@ -562,6 +607,7 @@ aside .wrapper li .design-name::before {
 }
 aside .wrapper h3 {
   padding: 1em;
+  font-size: 1em;
 }
 aside .wrapper h3:after {
   content: "";
@@ -611,23 +657,5 @@ aside .design-archives a::before {
   position: relative;
   top: 5px;
 }
-
-/*Footer (General)
-footer {
-  background: $primary-base-color;
-  text-align: center;
-  padding: 1em 1em 1em 1em;
-
-  a {
-    text-decoration: none;
-    color: $secondary-brand-color;
-    padding: 1em 1em 1em 1em;
-  }
-
-  a:hover {
-    background: $primary-brand-color;
-    padding: 1em;
-  }
-}*/
 
 /*# sourceMappingURL=style.css.map */

@@ -16,17 +16,30 @@
 
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap');
+
+
 // font-family
-$serif: "",
+/*$serif: "",
 serif;
 $sans-serif: "Open sans",
+sans-serif;*/
+$serif: 'Merriweather',
+serif;
+$sans-serif: 'Montserrat',
 sans-serif;
 
+
 // colors
-$primary-base-color: #14281d;
-$secondary-base-color: #716a0d;
+$primary-base-color: #14281d; // 20, 40, 29
+$secondary-base-color: #235789; // 35, 87, 137
+$tertiary-base-color: #D72638; // 61, 90, 128
 $primary-brand-color: #000;
 $secondary-brand-color: #fff;
+$tertiary-brand-color: #98C1D9;
 $sun-color: #FCE850;
 
 @mixin sun-ray($deg) {
@@ -51,6 +64,15 @@ $sun-color: #FCE850;
   border-radius: $br-tl $br-tr $br-br $br-bl;
   transform: rotate($t-deg);
   animation: $a-name 120s linear infinite;
+}
+
+@mixin bg-image-gradient($r, $g, $b) {
+  background-image: gradient(linear, right top, left top, from(rgba($r, $g, $b, 0.8)),
+      to(rgba($r, $g, $b, 0.1)));
+  background-image: -moz-gradient(linear, right top, left top, from(rgba($r, $g, $b, 0.8)),
+      to(rgba($r, $g, $b, 0.1)));
+  background-image: -webkit-gradient(linear, right top, left top, from(rgba($r, $g, $b, 0.8)),
+      to(rgba($r, $g, $b, 0.1)));
 }
 
 @include sun-ray-rotate(ray-anim, 135deg, 495deg);
@@ -102,7 +124,7 @@ $sun-color: #FCE850;
           box-shadow: 0px 0px 25px 5px #FCE850;
           content: "";
           height: 70px;
-          left: -25px;
+          left: -75px;
           margin: auto;
           opacity: 1;
           position: absolute;
@@ -124,7 +146,7 @@ $sun-color: #FCE850;
             background: linear-gradient(top, rgba(252, 240, 153, 0.1) 0%, rgba(252, 240, 153, 1) 50%, rgba(252, 240, 153, 0.1) 100%);
             bottom: 0;
             height: 200px;
-            left: 0;
+            left: -50px;
             opacity: 0.8;
             position: absolute;
             top: 0;
@@ -231,19 +253,36 @@ $sun-color: #FCE850;
       }
 
       .sidebar {
-        li:first-child {
-          margin-top: 10px;
+
+        //select, archives, resources
+        h3 {
+          margin-left: 0;
+          margin-right: 0;
+          padding: 1em;
+          text-align: right;
+          color: $secondary-brand-color;
+        }
+
+        h3.select {
+          background-color: $primary-base-color;
+        }
+
+        h3.archives {
+          background-color: $secondary-base-color;
+        }
+
+        h3.resources {
+          background-color: $tertiary-base-color;
+        }
+
+        li:last-child {
+          margin-bottom: 1em;
         }
 
         li {
-          background-image: gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.8)),
-              to(rgba(255, 255, 255, 0.1)));
-          background-image: -moz-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.8)),
-              to(rgba(255, 255, 255, 0.1)));
-          background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.8)),
-              to(rgba(255, 255, 255, 0.1)));
+          @include bg-image-gradient(255, 255, 255);
           border-bottom: 0px;
-          border-left: 5px solid $primary-base-color;
+          //border-right: 5px solid $primary-base-color;
           box-sizing: border-box;
           -moz-box-sizing: border-box;
           -webkit-box-sizing: border-box;
@@ -257,8 +296,19 @@ $sun-color: #FCE850;
           z-index: 2;
         }
 
-        li:nth-child(even) {
-          border-left: 5px solid #235789;
+        /*li:nth-child(even) {
+          border-right: 5px solid #235789;
+        }*/
+        .design-selection li {
+          border-right: 5px solid $primary-base-color;
+        }
+
+        .design-archives li {
+          border-right: 5px solid $secondary-base-color;
+        }
+
+        .zen-resources li {
+          border-right: 5px solid $tertiary-base-color;
         }
 
         li a {
@@ -295,7 +345,23 @@ $sun-color: #FCE850;
           z-index: -1;
         }
 
-        li:nth-child(even):hover:after {
+        li:hover:after {
+          width: 100%;
+        }
+
+        .design-selection li:hover:after {
+          background-color: $primary-base-color;
+        }
+
+        .design-archives li:hover:after {
+          background-color: $secondary-base-color;
+        }
+
+        .zen-resources li:hover:after {
+          background-color: $tertiary-base-color;
+        }
+
+        /*li:nth-child(even):hover:after {
           background-color: $primary-base-color;
           width: 100%;
         }
@@ -303,7 +369,7 @@ $sun-color: #FCE850;
         li:hover:after {
           background-color: #235789;
           width: 100%;
-        }
+        }*/
       }
     }
   }
@@ -312,12 +378,13 @@ $sun-color: #FCE850;
   .extra1 {
     background-image: url("assets/bird-cells.svg");
     background-size: auto 100%;
-    bottom: 2.5em;
+    top: 100px;
+    bottom: 0;
     left: 22.5em;
     position: relative;
     width: 80px;
     height: 125px;
-    transform: rotate(-10deg);
+    //transform: rotate(-10deg);
     will-change: background-position;
     animation-name: fly-cycle, showup;
     animation-timing-function: steps(10);
@@ -332,24 +399,24 @@ $sun-color: #FCE850;
       background-position: -900px 0px;
     }
   }
-	
-	 @keyframes showup {
-      0% {
-        opacity: 0;
-      }
 
-      20% {
-        opacity: 0;
-      }
-
-      80% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 1;
-      }
+  @keyframes showup {
+    0% {
+      opacity: 0;
     }
+
+    20% {
+      opacity: 0;
+    }
+
+    80% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
 }
 
 
@@ -414,7 +481,6 @@ h6 {
       transform: scale(1);
       transition: all 0.3s ease-in-out 0.2s;
       text-transform: uppercase;
-      font-family: "Orienta", sans-serif;
       letter-spacing: 1px;
       color: $primary-base-color;
       animation-duration: 3s;
@@ -449,7 +515,6 @@ h6 {
 
     a {
       text-decoration: none;
-      color: red;
     }
   }
 }
@@ -544,7 +609,9 @@ aside {
 
     li {
       list-style-type: none;
-      padding: 1.2em;
+      padding: 0.5em;
+      font-size: 0.9em;
+      text-align: right;
       /*transform: scale(1);
 		transition: all 0.3s ease-in-out 0.2s;*/
 
@@ -568,6 +635,7 @@ aside {
 
     h3 {
       padding: 1em;
+      font-size: 1em;
       //border-bottom: 1px solid $primary-base-color;
     }
 
@@ -638,21 +706,3 @@ aside {
     top: 5px;
   }
 }
-
-/*Footer (General)
-footer {
-  background: $primary-base-color;
-  text-align: center;
-  padding: 1em 1em 1em 1em;
-
-  a {
-    text-decoration: none;
-    color: $secondary-brand-color;
-    padding: 1em 1em 1em 1em;
-  }
-
-  a:hover {
-    background: $primary-brand-color;
-    padding: 1em;
-  }
-}*/
