@@ -185,8 +185,8 @@ sans-serif;*/
 #css-zen-garden .page-wrapper .intro header h2:after,
 #css-zen-garden .page-wrapper .intro header h2:before {
     content: "";
-    background: -webkit-linear-gradient(top, rgba(252, 240, 153, 0.1) 0%, #fcf099 50%, rgba(252, 240, 153, 0.1) 100%);
-    background: linear-gradient(top, rgba(252, 240, 153, 0.1) 0%, #fcf099 50%, rgba(252, 240, 153, 0.1) 100%);
+    background: -webkit-linear-gradient(to top, rgba(252, 240, 153, 0.1) 0%, #fcf099 50%, rgba(252, 240, 153, 0.1) 100%);
+    background: linear-gradient(to top, rgba(252, 240, 153, 0.1) 0%, #fcf099 50%, rgba(252, 240, 153, 0.1) 100%);
     bottom: 0;
     height: 200px;
     left: -50px;
@@ -391,7 +391,7 @@ sans-serif;*/
     animation-timing-function: steps(10);
     animation-iteration-count: infinite, 1;
     animation-duration: 1s, 4s;
-    animation-delay: 1s, 0;
+    animation-delay: 1s, 0s;
   }
 
   @keyframes fly-cycle {
