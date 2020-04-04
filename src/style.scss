@@ -114,6 +114,10 @@ $sun-color: #FCE850;
     .page-wrapper {
       .intro {
 
+        .summary {
+          margin-top: 2em;
+        }
+
         header:before {
           animation: sun-glow 5000ms infinite;
           background-color: #FCEB6C;
@@ -444,6 +448,7 @@ h6 {
   p {
     text-align: justify;
     font-family: $serif;
+    line-height: 135%;
   }
 
   p:first-child:first-letter {

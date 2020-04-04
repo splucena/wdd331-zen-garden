@@ -160,6 +160,9 @@ sans-serif;*/
     animation-duration: 0.5s;
     animation-name: showup;
   }
+  #css-zen-garden .page-wrapper .intro .summary {
+    margin-top: 2em;
+  }
   #css-zen-garden .page-wrapper .intro header:before {
     animation: sun-glow 5000ms infinite;
     background-color: #FCEB6C;
@@ -436,6 +439,7 @@ h6 {
 .page-wrapper p {
   text-align: justify;
   font-family: "Merriweather", serif;
+  line-height: 135%;
 }
 .page-wrapper p:first-child:first-letter {
   color: #14281d;
