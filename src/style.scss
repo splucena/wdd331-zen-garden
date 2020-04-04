@@ -141,6 +141,48 @@ $sun-color: #fce850;
 
 //large-view
 @media all and (min-width: 1024px) {
+	.extra1 {
+  background-image: url("assets/bird-cells.svg");
+  background-size: auto 100%;
+  top: 100px;
+  bottom: 0;
+  left: 22em;
+  position: relative;
+  width: 80px;
+  height: 125px;
+  //transform: rotate(-10deg);
+  will-change: background-position;
+  animation-name: fly-cycle, showup;
+  animation-timing-function: steps(10);
+  animation-iteration-count: infinite, 1;
+  animation-duration: 1s, 4s;
+  animation-delay: 1s, 0s;
+  //opacity: 0;
+}
+
+@keyframes fly-cycle {
+  100% {
+    background-position: -900px 0px;
+  }
+}
+
+@keyframes showup {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
   #css-zen-garden {
     /*background-image: url("assets/agriculture.jpg");*/
     background-image: url("assets/johann-siemens-EPy0gBJzzZU-unsplash.jpg");
@@ -446,7 +488,8 @@ $sun-color: #fce850;
         .zen-resources li:hover:after {
           background-color: $tertiary-base-color;
         }
-
+		
+		 
         /*li:nth-child(even):hover:after {
           background-color: $primary-base-color;
           width: 100%;
@@ -465,48 +508,7 @@ $sun-color: #fce850;
 }
 
 //bird-animation
-.extra1 {
-  background-image: url("assets/bird-cells.svg");
-  background-size: auto 100%;
-  top: 100px;
-  bottom: 0;
-  left: 22.5em;
-  position: relative;
-  width: 80px;
-  height: 125px;
-  //transform: rotate(-10deg);
-  will-change: background-position;
-  animation-name: fly-cycle, showup;
-  animation-timing-function: steps(10);
-  animation-iteration-count: infinite, 1;
-  animation-duration: 1s, 4s;
-  animation-delay: 1s, 0s;
-  //opacity: 0;
-}
 
-@keyframes fly-cycle {
-  100% {
-    background-position: -900px 0px;
-  }
-}
-
-@keyframes showup {
-  0% {
-    opacity: 0;
-  }
-
-  20% {
-    opacity: 0;
-  }
-
-  80% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
 
 //mobile view background
 @media all and (min-width: 200px) and (max-width: 768px) {
@@ -547,6 +549,7 @@ h6 {
     padding-right: 8px;
     padding-left: 3px;
   }
+	
 
   //Each Section (General)
   .summary,
@@ -555,14 +558,14 @@ h6 {
   .participation,
   .benefits,
   .requirements {
-    background-image: -webkit-gradient(linear,
-        right top,
-        left top,
-        from(rgba(255, 255, 255, 0.8)),
-        to(rgba(255, 255, 255, 0.1)));
+ 
+	background-image: -webkit-gradient(linear, right top, right bottom, from(rgba(255, 255, 255, 1.2)), to(rgba(255, 255, 255, 0.1)));
+	border-radius: 10px;
+	backdrop-filter: blur(5px);
+	  
     padding: 0.5em 2em;
-    //margin: .5em 1em;
-    border-bottom: 1px solid $primary-base-color;
+	margin: 10px 0;
+   
 
     //Each Section (H3-General)
     h3 {
@@ -668,21 +671,6 @@ h6 {
     }
   }
 
-  h1::after {
-    //content: url('logo-ver-2.png');
-    content: "";
-    background-image: url(assets/logo-ver-2.png);
-    background-size: 100% 100%;
-    display: inline-block;
-
-    /*size of your image*/
-    height: 42px;
-    width: 60px;
-
-    /*if you want to change the position you can use margins or:*/
-    position: relative;
-    top: 5px;
-  }
 }
 
 //Sidebar (General)
