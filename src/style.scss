@@ -120,8 +120,8 @@ $sun-color: #FCE850;
           h2:after,
           h2:before {
             content: "";
-            background: -webkit-linear-gradient(top, rgba(252, 240, 153, 0.1) 0%, rgba(252, 240, 153, 1) 50%, rgba(252, 240, 153, 0.1) 100%);
-            background: linear-gradient(top, rgba(252, 240, 153, 0.1) 0%, rgba(252, 240, 153, 1) 50%, rgba(252, 240, 153, 0.1) 100%);
+            background: -webkit-linear-gradient(to top, rgba(252, 240, 153, 0.1) 0%, rgba(252, 240, 153, 1) 50%, rgba(252, 240, 153, 0.1) 100%);
+            background: linear-gradient(to top, rgba(252, 240, 153, 0.1) 0%, rgba(252, 240, 153, 1) 50%, rgba(252, 240, 153, 0.1) 100%);
             bottom: 0;
             height: 200px;
             left: 0;
@@ -234,14 +234,12 @@ $sun-color: #FCE850;
         li:first-child {
           margin-top: 10px;
         }
-
+		
         li {
-          background-image: gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.8)),
-              to(rgba(255, 255, 255, 0.1)));
-          background-image: -moz-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.8)),
-              to(rgba(255, 255, 255, 0.1)));
-          background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.8)),
-              to(rgba(255, 255, 255, 0.1)));
+		  
+		    background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.8)),
+        to(rgba(255, 255, 255, 0.1)));
+
           border-bottom: 0px;
           border-left: 5px solid $primary-base-color;
           box-sizing: border-box;
@@ -323,7 +321,7 @@ $sun-color: #FCE850;
     animation-timing-function: steps(10);
     animation-iteration-count: infinite, 1;
     animation-duration: 1s, 4s;
-    animation-delay: 1s, 0;
+    animation-delay: 1s, 0s;
     //opacity: 0;
   }
 

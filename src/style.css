@@ -179,8 +179,8 @@
 #css-zen-garden .page-wrapper .intro header h2:after,
 #css-zen-garden .page-wrapper .intro header h2:before {
     content: "";
-    background: -webkit-linear-gradient(top, rgba(252, 240, 153, 0.1) 0%, #fcf099 50%, rgba(252, 240, 153, 0.1) 100%);
-    background: linear-gradient(top, rgba(252, 240, 153, 0.1) 0%, #fcf099 50%, rgba(252, 240, 153, 0.1) 100%);
+    background: -webkit-linear-gradient(to top, rgba(252, 240, 153, 0.1) 0%, #fcf099 50%, rgba(252, 240, 153, 0.1) 100%);
+    background: linear-gradient(to top, rgba(252, 240, 153, 0.1) 0%, #fcf099 50%, rgba(252, 240, 153, 0.1) 100%);
     bottom: 0;
     height: 200px;
     left: 0;
@@ -274,8 +274,6 @@
     margin-top: 10px;
   }
   #css-zen-garden .page-wrapper .sidebar li {
-    background-image: gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.1)));
-    background-image: -moz-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.1)));
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.1)));
     border-bottom: 0px;
     border-left: 5px solid #14281d;
@@ -346,7 +344,7 @@
     animation-timing-function: steps(10);
     animation-iteration-count: infinite, 1;
     animation-duration: 1s, 4s;
-    animation-delay: 1s, 0;
+    animation-delay: 1s, 0s;
   }
 
   @keyframes fly-cycle {
