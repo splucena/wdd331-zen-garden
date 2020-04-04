@@ -16,29 +16,25 @@
 
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap");
 
 // font-family
 /*$serif: "",
 serif;
 $sans-serif: "Open sans",
 sans-serif;*/
-$serif: 'Merriweather',
-serif;
-$sans-serif: 'Montserrat',
-sans-serif;
-
+$serif: "Merriweather", serif;
+$sans-serif: "Montserrat", sans-serif;
 
 // colors
 $primary-base-color: #14281d; // 20, 40, 29
 $secondary-base-color: #235789; // 35, 87, 137
-$tertiary-base-color: #D72638; // 61, 90, 128
+$tertiary-base-color: #d72638; // 61, 90, 128
 $primary-brand-color: #000;
 $secondary-brand-color: #fff;
-$tertiary-brand-color: #98C1D9;
-$sun-color: #FCE850;
+$tertiary-brand-color: #98c1d9;
+$sun-color: #fce850;
 
 @mixin sun-ray($deg) {
   -moz-transform: rotate($deg);
@@ -65,12 +61,27 @@ $sun-color: #FCE850;
 }
 
 @mixin bg-image-gradient($r, $g, $b) {
-  background-image: gradient(linear, right top, left top, from(rgba($r, $g, $b, 0.8)),
-      to(rgba($r, $g, $b, 0.1)));
-  background-image: -moz-gradient(linear, right top, left top, from(rgba($r, $g, $b, 0.8)),
-      to(rgba($r, $g, $b, 0.1)));
-  background-image: -webkit-gradient(linear, right top, left top, from(rgba($r, $g, $b, 0.8)),
-      to(rgba($r, $g, $b, 0.1)));
+  background-image: gradient(
+    linear,
+    right top,
+    left top,
+    from(rgba($r, $g, $b, 0.8)),
+    to(rgba($r, $g, $b, 0.1))
+  );
+  background-image: -moz-gradient(
+    linear,
+    right top,
+    left top,
+    from(rgba($r, $g, $b, 0.8)),
+    to(rgba($r, $g, $b, 0.1))
+  );
+  background-image: -webkit-gradient(
+    linear,
+    right top,
+    left top,
+    from(rgba($r, $g, $b, 0.8)),
+    to(rgba($r, $g, $b, 0.1))
+  );
 }
 
 @include sun-ray-rotate(ray-anim, 135deg, 495deg);
@@ -100,6 +111,38 @@ $sun-color: #FCE850;
   }
 }
 
+@keyframes wave {
+  0% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 0deg);
+  }
+
+  30% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 5deg);
+  }
+
+  60% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -10deg);
+  }
+}
+
+@keyframes flutter {
+  0% {
+    background-position: 200% 0px;
+  }
+
+  30% {
+    background-position: 60% -5px;
+  }
+
+  70% {
+    background-position: -70% 5px;
+  }
+
+  100% {
+    background-position: -200% 0px;
+  }
+}
+
 //large-view
 @media all and (min-width: 1024px) {
   #css-zen-garden {
@@ -113,17 +156,16 @@ $sun-color: #FCE850;
 
     .page-wrapper {
       .intro {
-
         .summary {
           margin-top: 2em;
         }
 
         header:before {
           animation: sun-glow 5000ms infinite;
-          background-color: #FCEB6C;
+          background-color: #fceb6c;
           bottom: 0;
           border-radius: 50%;
-          box-shadow: 0px 0px 25px 5px #FCE850;
+          box-shadow: 0px 0px 25px 5px #fce850;
           content: "";
           height: 70px;
           left: -75px;
@@ -144,8 +186,18 @@ $sun-color: #FCE850;
           h2:after,
           h2:before {
             content: "";
-            background: -webkit-linear-gradient(to top, rgba(252, 240, 153, 0.1) 0%, rgba(252, 240, 153, 1) 50%, rgba(252, 240, 153, 0.1) 100%);
-            background: linear-gradient(to top, rgba(252, 240, 153, 0.1) 0%, rgba(252, 240, 153, 1) 50%, rgba(252, 240, 153, 0.1) 100%);
+            background: -webkit-linear-gradient(
+              to top,
+              rgba(252, 240, 153, 0.1) 0%,
+              rgba(252, 240, 153, 1) 50%,
+              rgba(252, 240, 153, 0.1) 100%
+            );
+            background: linear-gradient(
+              to top,
+              rgba(252, 240, 153, 0.1) 0%,
+              rgba(252, 240, 153, 1) 50%,
+              rgba(252, 240, 153, 0.1) 100%
+            );
             bottom: 0;
             height: 200px;
             left: -50px;
@@ -174,17 +226,22 @@ $sun-color: #FCE850;
           }
         }
 
-        .preamble {}
+        .preamble {
+        }
       }
 
       .main {
-        .explanation {}
+        .explanation {
+        }
 
-        .participation {}
+        .participation {
+        }
 
-        .benefits {}
+        .benefits {
+        }
 
-        .requirements {}
+        .requirements {
+        }
 
         footer {
           background: $primary-base-color;
@@ -217,7 +274,7 @@ $sun-color: #FCE850;
           }
 
           a:before {
-            border: 1px solid #FFF;
+            border: 1px solid #fff;
             border-left: 0;
             border-right: 0;
             bottom: 0;
@@ -227,7 +284,7 @@ $sun-color: #FCE850;
           }
 
           a:after {
-            background-color: #FFF;
+            background-color: #fff;
             height: 0;
             left: 0;
             top: 0;
@@ -255,7 +312,6 @@ $sun-color: #FCE850;
       }
 
       .sidebar {
-
         //select, archives, resources
         h3 {
           margin-left: 0;
@@ -263,6 +319,48 @@ $sun-color: #FCE850;
           padding: 1em;
           text-align: right;
           color: $secondary-brand-color;
+        }
+
+        h3.select,
+        h3.archives,
+        h3.resources {
+          position: relative;
+          //display: inline-block;
+          box-sizing: border-box;
+          //box-shadow: -2px 2px 5px 2px rgba(0, 0, 0, 0.5);
+          transform: perspective(400px) rotate3d(0, 1, 0, 0deg);
+          transform-origin: right;
+          animation: wave 8s cubic-bezier(0.16, 0.14, 0.82, 0.73) infinite;
+          width: 100%;
+          z-index: 100;
+        }
+
+        h3.select:before,
+        h3.archives:before,
+        h3.resources:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+
+          background-image: -webkit-gradient(
+            linear,
+            0 -25%,
+            100% top,
+            color-stop(0%, rgba(255, 255, 255, 0)),
+            color-stop(20%, rgba(255, 255, 255, 0)),
+            color-stop(30%, rgba(0, 0, 0, 0.04)),
+            color-stop(40%, rgba(255, 255, 255, 0.2)),
+            color-stop(60%, rgba(255, 255, 255, 0)),
+            color-stop(65%, rgba(255, 255, 255, 0.2)),
+            color-stop(80%, rgba(0, 0, 0, 0.05)),
+            color-stop(100%, rgba(255, 255, 255, 0))
+          );
+          background-size: 200%;
+          animation: flutter 8s cubic-bezier(0.16, 0.14, 0.82, 0.73) infinite;
+          z-index: 101;
         }
 
         h3.select {
@@ -322,12 +420,12 @@ $sun-color: #FCE850;
           transition-delay: 0.1s;
         }
 
-        li:hover>a:nth-child(2) {
+        li:hover > a:nth-child(2) {
           transition-delay: 0.1s;
           color: #fff;
         }
 
-        li:hover>a:first-child {
+        li:hover > a:first-child {
           border-bottom: 0px;
           color: #e2efde;
           font-weight: bold;
@@ -421,7 +519,6 @@ $sun-color: #FCE850;
   }
 }
 
-
 //mobile view background
 @media all and (min-width: 200px) and (max-width: 768px) {
   #css-zen-garden {
@@ -469,9 +566,13 @@ h6 {
   .participation,
   .benefits,
   .requirements {
-
-    background-image: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0.8)),
-        to(rgba(255, 255, 255, 0.1)));
+    background-image: -webkit-gradient(
+      linear,
+      right top,
+      left top,
+      from(rgba(255, 255, 255, 0.8)),
+      to(rgba(255, 255, 255, 0.1))
+    );
     padding: 0.5em 2em;
     //margin: .5em 1em;
     border-bottom: 1px solid $primary-base-color;

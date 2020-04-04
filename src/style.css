@@ -135,19 +135,44 @@ sans-serif;*/
 }
 @keyframes sun-glow {
   0% {
-    box-shadow: 0px 0px 25px 5px #FCE850;
+    box-shadow: 0px 0px 25px 5px #fce850;
   }
   10% {
-    box-shadow: 0px 0px 25px 10px #FCE850;
+    box-shadow: 0px 0px 25px 10px #fce850;
   }
   20% {
-    box-shadow: 0px 0px 25px 15px #FCE850;
+    box-shadow: 0px 0px 25px 15px #fce850;
   }
   30% {
-    box-shadow: 0px 0px 25px 20px #FCE850;
+    box-shadow: 0px 0px 25px 20px #fce850;
   }
   40% {
-    box-shadow: 0px 0px 25px 25px #FCE850;
+    box-shadow: 0px 0px 25px 25px #fce850;
+  }
+}
+@keyframes wave {
+  0% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 0deg);
+  }
+  30% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 5deg);
+  }
+  60% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -10deg);
+  }
+}
+@keyframes flutter {
+  0% {
+    background-position: 200% 0px;
+  }
+  30% {
+    background-position: 60% -5px;
+  }
+  70% {
+    background-position: -70% 5px;
+  }
+  100% {
+    background-position: -200% 0px;
   }
 }
 @media all and (min-width: 1024px) {
@@ -165,10 +190,10 @@ sans-serif;*/
   }
   #css-zen-garden .page-wrapper .intro header:before {
     animation: sun-glow 5000ms infinite;
-    background-color: #FCEB6C;
+    background-color: #fceb6c;
     bottom: 0;
     border-radius: 50%;
-    box-shadow: 0px 0px 25px 5px #FCE850;
+    box-shadow: 0px 0px 25px 5px #fce850;
     content: "";
     height: 70px;
     left: -75px;
@@ -249,7 +274,7 @@ sans-serif;*/
     z-index: -1;
   }
   #css-zen-garden .page-wrapper .main footer a:before {
-    border: 1px solid #FFF;
+    border: 1px solid #fff;
     border-left: 0;
     border-right: 0;
     bottom: 0;
@@ -258,7 +283,7 @@ sans-serif;*/
     width: 0;
   }
   #css-zen-garden .page-wrapper .main footer a:after {
-    background-color: #FFF;
+    background-color: #fff;
     height: 0;
     left: 0;
     top: 0;
@@ -300,6 +325,31 @@ sans-serif;*/
     text-align: right;
     color: #fff;
   }
+  #css-zen-garden .page-wrapper .sidebar h3.select,
+#css-zen-garden .page-wrapper .sidebar h3.archives,
+#css-zen-garden .page-wrapper .sidebar h3.resources {
+    position: relative;
+    box-sizing: border-box;
+    transform: perspective(400px) rotate3d(0, 1, 0, 0deg);
+    transform-origin: right;
+    animation: wave 8s cubic-bezier(0.16, 0.14, 0.82, 0.73) infinite;
+    width: 100%;
+    z-index: 100;
+  }
+  #css-zen-garden .page-wrapper .sidebar h3.select:before,
+#css-zen-garden .page-wrapper .sidebar h3.archives:before,
+#css-zen-garden .page-wrapper .sidebar h3.resources:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: -webkit-gradient(linear, 0 -25%, 100% top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(20%, rgba(255, 255, 255, 0)), color-stop(30%, rgba(0, 0, 0, 0.04)), color-stop(40%, rgba(255, 255, 255, 0.2)), color-stop(60%, rgba(255, 255, 255, 0)), color-stop(65%, rgba(255, 255, 255, 0.2)), color-stop(80%, rgba(0, 0, 0, 0.05)), color-stop(100%, rgba(255, 255, 255, 0)));
+    background-size: 200%;
+    animation: flutter 8s cubic-bezier(0.16, 0.14, 0.82, 0.73) infinite;
+    z-index: 101;
+  }
   #css-zen-garden .page-wrapper .sidebar h3.select {
     background-color: #14281d;
   }
@@ -307,7 +357,7 @@ sans-serif;*/
     background-color: #235789;
   }
   #css-zen-garden .page-wrapper .sidebar h3.resources {
-    background-color: #D72638;
+    background-color: #d72638;
   }
   #css-zen-garden .page-wrapper .sidebar li:last-child {
     margin-bottom: 1em;
@@ -336,7 +386,7 @@ sans-serif;*/
     border-right: 5px solid #235789;
   }
   #css-zen-garden .page-wrapper .sidebar .zen-resources li {
-    border-right: 5px solid #D72638;
+    border-right: 5px solid #d72638;
   }
   #css-zen-garden .page-wrapper .sidebar li a {
     color: #000;
@@ -377,7 +427,7 @@ sans-serif;*/
     background-color: #235789;
   }
   #css-zen-garden .page-wrapper .sidebar .zen-resources li:hover:after {
-    background-color: #D72638;
+    background-color: #d72638;
   }
 
   .extra1 {
