@@ -79,36 +79,69 @@
   box-sizing: border-box;
 }
 
-@keyframes ray_anim {
+@keyframes ray-anim {
   0% {
+    -moz-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
     transform: rotate(135deg);
   }
   100% {
+    -moz-transform: rotate(495deg);
+    -webkit-transform: rotate(495deg);
     transform: rotate(495deg);
   }
 }
-@keyframes ray_anim2 {
+@keyframes ray-anim2 {
   0% {
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
   }
   100% {
+    -moz-transform: rotate(450deg);
+    -webkit-transform: rotate(450deg);
     transform: rotate(450deg);
   }
 }
-@keyframes ray_anim3 {
+@keyframes ray-anim3 {
   0% {
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
   }
   100% {
+    -moz-transform: rotate(405deg);
+    -webkit-transform: rotate(405deg);
     transform: rotate(405deg);
   }
 }
-@keyframes ray_anim4 {
+@keyframes ray-anim4 {
   0% {
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
   }
   100% {
+    -moz-transform: rotate(540deg);
+    -webkit-transform: rotate(540deg);
     transform: rotate(540deg);
+  }
+}
+@keyframes sun-glow {
+  0% {
+    box-shadow: 0px 0px 25px 5px #FCE850;
+  }
+  10% {
+    box-shadow: 0px 0px 25px 10px #FCE850;
+  }
+  20% {
+    box-shadow: 0px 0px 25px 15px #FCE850;
+  }
+  30% {
+    box-shadow: 0px 0px 25px 20px #FCE850;
+  }
+  40% {
+    box-shadow: 0px 0px 25px 25px #FCE850;
   }
 }
 @media all and (min-width: 1024px) {
@@ -122,18 +155,19 @@
     animation-name: showup;
   }
   #css-zen-garden .page-wrapper .intro header:before {
+    animation: sun-glow 5000ms infinite;
+    background-color: #FCEB6C;
+    bottom: 0;
+    border-radius: 50%;
+    box-shadow: 0px 0px 25px 5px #FCE850;
     content: "";
+    height: 70px;
+    left: -25px;
+    margin: auto;
+    opacity: 1;
     position: absolute;
     top: 88px;
-    left: -25px;
-    bottom: 0;
-    margin: auto;
     width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    background-color: #FCEB6C;
-    opacity: 1;
-    box-shadow: 0px 0px 40px 15px #FCE850;
     z-index: 100;
   }
   #css-zen-garden .page-wrapper .intro header {
@@ -145,33 +179,37 @@
 #css-zen-garden .page-wrapper .intro header h2:after,
 #css-zen-garden .page-wrapper .intro header h2:before {
     content: "";
-    background: -webkit-linear-gradient(top, rgba(252, 240, 153, 0) 0%, #fcf099 50%, rgba(252, 240, 153, 0) 100%);
-    background: linear-gradient(top, rgba(252, 240, 153, 0) 0%, #fcf099 50%, rgba(252, 240, 153, 0) 100%);
+    background: -webkit-linear-gradient(top, rgba(252, 240, 153, 0.1) 0%, #fcf099 50%, rgba(252, 240, 153, 0.1) 100%);
+    background: linear-gradient(top, rgba(252, 240, 153, 0.1) 0%, #fcf099 50%, rgba(252, 240, 153, 0.1) 100%);
+    bottom: 0;
+    height: 200px;
+    left: 0;
     opacity: 0.8;
     position: absolute;
-    height: 200px;
-    width: 20px;
-    transform-origin: center;
     top: 0;
-    left: 0;
-    bottom: 0;
+    transform-origin: center;
+    width: 20px;
     z-index: 99;
   }
   #css-zen-garden .page-wrapper .intro header h2:before {
+    border-radius: 0 0 40% 40%;
     transform: rotate(135deg);
-    animation: ray_anim 80s linear infinite;
+    animation: ray-anim 120s linear infinite;
   }
   #css-zen-garden .page-wrapper .intro header h2:after {
+    border-radius: 0 40% 0 40%;
     transform: rotate(45deg);
-    animation: ray_anim3 80s linear infinite;
+    animation: ray-anim3 120s linear infinite;
   }
   #css-zen-garden .page-wrapper .intro header h1:before {
+    border-radius: 40% 40% 0 0;
     transform: rotate(90deg);
-    animation: ray_anim2 80s linear infinite;
+    animation: ray-anim2 120s linear infinite;
   }
   #css-zen-garden .page-wrapper .intro header h1:after {
+    border-radius: 40% 0 40% 0;
     transform: rotate(180deg);
-    animation: ray_anim4 80s linear infinite;
+    animation: ray-anim4 120s linear infinite;
   }
   #css-zen-garden .page-wrapper .main footer {
     background: #14281d;
