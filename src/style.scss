@@ -492,7 +492,7 @@ $sun-color: #fce850;
         }
 
         header:before {
-          animation: sun-glow 5000ms infinite;
+          animation: sun-glow 5000ms infinite, morning 10s linear;
           background-color: #fceb6c;
           bottom: 0;
           border-radius: 50%;
@@ -506,7 +506,7 @@ $sun-color: #fce850;
           top: 88px;
           width: 70px;
           z-index: 100;
-          animation: morning 10s linear;
+          //animation: morning 10s linear;
         }
 
         header {
