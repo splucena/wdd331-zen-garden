@@ -184,7 +184,7 @@ sans-serif;*/
     position: absolute;
     width: 80px;
     height: 125px;
-    will-change: background-position transform;
+    will-change: background-position, transform;
     animation-name: fly-cycle, fly-right-one;
     animation-timing-function: steps(10), linear;
     animation-iteration-count: infinite, infinite;
@@ -200,7 +200,7 @@ sans-serif;*/
     position: absolute;
     width: 80px;
     height: 125px;
-    will-change: background-position transform;
+    will-change: background-position, transform;
     animation-name: fly-cycle, fly-right-two;
     animation-timing-function: steps(10), linear;
     animation-iteration-count: infinite, infinite;
