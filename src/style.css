@@ -198,6 +198,7 @@ sans-serif;*/
     animation-iteration-count: infinite, infinite;
     animation-duration: 1s, 17s;
     animation-delay: 0s, 0s;
+    z-index: 110;
   }
 
   .extra2 {
@@ -214,6 +215,7 @@ sans-serif;*/
     animation-iteration-count: infinite, infinite;
     animation-duration: 1s, 15s;
     animation-delay: 0s, 0s;
+    z-index: 111;
   }
 
   .extra3 {
@@ -230,6 +232,7 @@ sans-serif;*/
     animation-iteration-count: infinite, infinite;
     animation-duration: 1s, 18s;
     animation-delay: 0s, 0s;
+    z-index: 112;
   }
 
   @keyframes fly-cycle {
