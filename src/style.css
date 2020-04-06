@@ -187,53 +187,6 @@ sans-serif;*/
   .extra1 {
     background-image: url("assets/bird-cells.svg");
     background-size: auto 100%;
-    top: 100px;
-    bottom: 0;
-    position: relative;
-    width: 80px;
-    height: 125px;
-    will-change: background-position transform;
-    animation-name: fly-cycle, fly-right-one;
-    animation-timing-function: steps(10), linear;
-    animation-iteration-count: infinite, infinite;
-    animation-duration: 1s, 17s;
-    animation-delay: 0s, 0s;
-  }
-
-  .extra2 {
-    background-image: url("assets/bird-cells.svg");
-    background-size: auto 100%;
-    top: 100px;
-    bottom: 0;
-    position: relative;
-    width: 80px;
-    height: 125px;
-    will-change: background-position transform;
-    animation-name: fly-cycle, fly-right-two;
-    animation-timing-function: steps(10), linear;
-    animation-iteration-count: infinite, infinite;
-    animation-duration: 1s, 15s;
-    animation-delay: 0s, 0s;
-  }
-
-  .extra3 {
-    background-image: url("assets/bird-cells.svg");
-    background-size: auto 100%;
-    top: 100px;
-    bottom: 0;
-    position: relative;
-    width: 80px;
-    height: 125px;
-    will-change: background-position;
-    animation-name: fly-cycle, fly-right-two;
-    animation-timing-function: steps(10), linear;
-    animation-iteration-count: infinite, infinite;
-    animation-duration: 1s, 20s;
-    animation-delay: 0s, 0s;
-  }
-  .extra3 .extra1 {
-    background-image: url("assets/bird-cells.svg");
-    background-size: auto 100%;
     top: 120px;
     bottom: 0;
     position: absolute;
@@ -246,7 +199,8 @@ sans-serif;*/
     animation-duration: 1s, 17s;
     animation-delay: 0s, 0s;
   }
-  .extra3 .extra2 {
+
+  .extra2 {
     background-image: url("assets/bird-cells.svg");
     background-size: auto 100%;
     top: 80px;
@@ -261,7 +215,8 @@ sans-serif;*/
     animation-duration: 1s, 15s;
     animation-delay: 0s, 0s;
   }
-  .extra3 .extra3 {
+
+  .extra3 {
     background-image: url("assets/bird-cells.svg");
     background-size: auto 100%;
     top: 140px;
@@ -276,6 +231,7 @@ sans-serif;*/
     animation-duration: 1s, 18s;
     animation-delay: 0s, 0s;
   }
+
   @keyframes fly-cycle {
     100% {
       background-position: -900px 0px;
@@ -331,64 +287,6 @@ sans-serif;*/
     }
     100% {
       transform: translateY(0vh) translateX(100vw) scale(0);
-    }
-  }
-
-  @keyframes fly-cycle {
-    100% {
-      background-position: -900px 0px;
-    }
-  }
-  @keyframes fly-right-two {
-    0% {
-      transform: translateY(-4vh) translateX(-10vw) scale(0.6);
-    }
-    10% {
-      transform: translateY(4vh) translateX(10vw) scale(0.6);
-    }
-    20% {
-      transform: translateY(-4vh) translateX(30vw) scale(0.6);
-    }
-    30% {
-      transform: translateY(4vh) translateX(50vw) scale(0.6);
-    }
-    40% {
-      transform: translateY(-4vh) translateX(70vw) scale(0.6);
-    }
-    50% {
-      transform: translateY(4vh) translateX(90vw) scale(0.6);
-    }
-    51% {
-      transform: translateY(-4vh) translateX(110vw) scale(0.6);
-    }
-    100% {
-      transform: translateY(0vh) translateX(110vw) scale(0.6);
-    }
-  }
-  @keyframes fly-right-one {
-    0% {
-      transform: scale(0.3) translateX(-10vw);
-    }
-    10% {
-      transform: translateY(2vh) translateX(10vw) scale(0.6);
-    }
-    20% {
-      transform: translateY(0vh) translateX(30vw) scale(0.8);
-    }
-    30% {
-      transform: translateY(4vh) translateX(50vw) scale(0.8);
-    }
-    40% {
-      transform: translateY(2vh) translateX(70vw) scale(0.8);
-    }
-    50% {
-      transform: translateY(0vh) translateX(90vw) scale(0.8);
-    }
-    60% {
-      transform: translateY(0vh) translateX(110vw) scale(0.8);
-    }
-    100% {
-      transform: translateY(0vh) translateX(110vw) scale(0.6);
     }
   }
   @keyframes showup {
